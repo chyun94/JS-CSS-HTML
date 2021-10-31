@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오브젝트</title>
+</head>
+<body>
+    <script>
+        //1.
+        // 아래와 같이 만들게 되면 인자가 많아지면 추가해야 할 부분이 많아져서 관리하기 힘들어짐. 그래서 obj를 사용해야함
+        const name = 'choi';
+        const age = 11;
+        print(name, age);
+        function print(name,age){
+            console.log(name);
+            console.log(age);
+        }
+
+        // obj로 관리하기
+        function print(person){
+            console.log(person.name);
+            console.log(person.age);
+        }
+        const choi = {name : 'choi' , age:11};
+        print(choi);
+
+        // obj만드는 방법
+        const obj1 = {};
+        const obj2 = new Object();
+
+        //아래와 같이 추가와 삭제가 나중에 가능 하기도 하다
+        choi.hasJob = true;
+        console.log(choi.hasJob);
+
+        delete choi.hasJob;
+        console.log(choi.hasJob);
+
+        // 2. 계산된 프로펄티스
+        console.log(choi.name);
+        console.log(choi['name']);
+        //위에서 삭제를 했으니 언디파인으로 나온다.
+        console.log(choi.hasJob);
+
+        function printValue(obj,key){
+            console.log(obj[key]);
+        }
+        printValue(choi,'name');
+        printValue(choi,'age');
+
+        //3. 프로펄티 벨류 쇼틓렌드
+        const person1 = { name: 'bob', age: 2};
+        const person2 = { name: 'jamse', age: 3};
+        const person3 = { name: 'lee', age: 4};
+        const person4 = { name: 'choi', age:28};
+        console.log(person4);
+
+        //4. Constuctor Function
+        function makePerson(name,age){        
+                // this ={}''
+                this.name = name;
+                this.age = age;
+        }
+
+        //5. in operator (true,false undefined)
+        console.log('name' in choi);
+        console.log('age' in choi);
+        console.log('adress' in choi);
+        console.log(choi.adress);
+
+        // 6. for .. in , for .. of
+        //for (key in obj)
+        //아래는 이전 것들을 지우는 것
+        console.clear();
+        for (key in choi){
+            console.log(key);
+        }
+
+        //for of (배열과 같은 배열 리스트를 사용한다)
+        const array = [1,2,4,5];
+
+        for(let i =0; i<array.length; i++){
+            console.log(array[i]);
+        }
+        // 위처럼 코드를 작성해도 괜찮지만 for of를 사용하여 아래처럼 좀 더 간단히 가능한다
+        for (value of array){
+            console.log(value);
+        }
+
+        // 7. cloning
+        const user = {name: 'choi', age: '20'};
+        console.log(user);
+        const user2 = user;
+        user2.name = 'coder';
+        console.log(user);
+
+        //old way
+        const user3 = {};
+        for(key in user){
+            user3[key] = user[key];
+        }
+        console.log(user3);
+
+        const user4 = {};
+        Object.assign(user4)
+    </script>
+</body>
+</html>

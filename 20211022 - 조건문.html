@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>조건문</title>
+
+</head>
+<body>
+<h3> 조건문 <h3>
+<pre>
+
+조건문: 참인지 거짓인지에 따라 서로 다른 코드를 실행하는 문법.
+
+if: if는 가장 처음 조건식으로 무조건 나온다.
+	if하나만 있어도 1set의 조건식이다.
+else if: else if는 있어도 없어도 여러개 있어도 상관없고 무조건
+	if뒤에 나와야 한다.
+else: else는 조건식을 쓰지 않는다.(위 조건식에 못들어가면 else로 진입)
+	else는 있어도 없어도 무관, 단 하나만 나올 수 있다.
+	
+
+<!-- <button onclick="temp()">Click</button> -->
+
+<hr>
+
+</pre>
+
+<script>	
+
+// function temp(){
+// 	temp = prompt("현재 기온은 몇도인가요?");
+
+// 	if(temp>=20)
+// 	{
+// 		document.write("자켓을 입지 '않'는다");	
+// 	} 
+// 	else{
+// 		document.write("자켓을 입는다.");
+// 	}
+// }
+
+
+
+var temp = prompt("온도를 입력하세요");
+if(temp>=20){
+	document.write("자켓을 두고 나간다51.");
+}else{
+	//else일때만 아래 식이 출력됨
+	if(temp>10 && temp<20){
+		document.write("10~20의 경우 자켓을 들고 간다");
+	}
+	else{
+		document.write("0~10인 경우 자켓을 입는다.");
+	}
+
+}
+document.write("<br>");
+
+if(temp>=20){
+	document.write("20이상");
+}else if(temp>10 && temp<20){
+	document.write("10~20사이");
+}else{
+	document.write("0~10사이");
+}
+
+
+// 사용자에게 현재 온도를 입력 받아 온도가 20도 이상이면 
+// 자켓을 입지 않는다. 미만이면 입는다.
+
+
+</script>
+
+
+
+</body>
+</html>

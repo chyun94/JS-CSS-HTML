@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지역변수와 전역변수</title>
+
+</head>
+<body>
+<h3> 지역변수와 전역변수<h3>
+<pre>
+전역 변수와 지역 변수의 이름이 같을 때,
+this키워드를 사용하면 전역변수에 접근할 수 있다.
+
+<h3>document.write() 함수 사용 </h3>
+write 함수의 재료로 문자열 + 변수의 조합이 가능하다.
+write 함수는 문자열 출력이 가능하다.
+write 함수는 숫자 출력이 가능하다.
+write 함수는 html 태그 출력이 가능하다 (문자열로 묶어준다"")
+
+<h3> 문자열 내 문자열 </h3>
+
+문자열 안에 다른 문자여을 포함하고자 하면 단일 인용 부호를 사용한다.
+
+<h3>식과 연산자</h3>
+식을 계산해서 결과를 얻는 과정: 연산
+연산자의 종류
+1. 산술연산: + - * / %
+2. 증감연산: ++ -- 변수의 앞 또는 뒤에 사용할 수 있으며 1씩 증감 가능.
+		연산자가 변수의 앞: 전위 연산자
+		연산자가 변수의 뒤: 후위 연산자
+		++가 변수 앞에 있거나 뒤에 있거나 1증가는 공통사항.
+		전위 연산자는 선 연산 후 대입 a=++b -> a에 먼저 들어가기 전에 b가 먼저 ++ 되고 a에 들어간다.
+		후위 연산자는 선 대입 후 연산 a=b++ -> a에 먼저 들어가기전에 +된 상태에서 a에 들어간다.
+
+3. 대입연산: = += -=
+	= : 우측에 있는 식을 좌측에 대입
+	대입연사자는 속도가 빨라서 사용한다.
+
+4. 비교연산: < > <= >= == !=
+	연산의 결과값이 true 아니면 false가 나온다
+	
+
+5. 논리연산: && || !
+
+
+<hr>
+
+</pre>
+<script>	
+
+var a =10;
+var b = ++a;		//증감연산자 ++가 후위에 나오는 경우
+//var f = ++a;
+
+document.write(b+"<br>");
+document.write(a+"<br>");
+//document.write(f+"<br>");
+
+document.write("<hr>");
+
+var c = 10;
+var d = ++c;		//증감연산자가 ++가 전위에 나오는 경우
+document.write(d);
+
+document.write("<hr>");
+
+var x = 10;
+var y = 20;
+var result = (x>5)
+var result2 = (x>y)
+var result3 = (x == y)
+document.write(result);
+document.write(result2);
+document.write(result3);
+document.write("<br>"+x);
+
+</script>
+
+
+
+</body>
+</html>

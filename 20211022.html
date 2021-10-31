@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>전역변수, 지역변수</title>
+
+</head>
+<style>
+
+</style>
+
+<body>
+<h3> 전역변수와 지역변수</h3>
+<pre>
+
+간단하게 함수 안은 지역변수 밖은 전역변수 라고 생각하면 된다.
+
+<h3> this키워드로 전역 변수 접근 </h3>
+전역 변수와 지역 변수의 이름이 같을 떄,
+this 키워드를 사용하면 전역 변수에 접근할 수 있다.
+<hr>
+
+</pre>
+
+<script>	
+
+var x = 10;
+
+function f()
+{
+	var x = 100;		// 함수 안에 존재하는 지역변수
+	document.write(x);		// 함수안 x를 출력
+	document.write(this.x);	// this키워드를 사용하면 함수 안에서 전역변수 호출이 가능하다.
+}
+
+f();				// f라는 함수 호출
+
+document.write(x);			// 전역변수 x 출력
+
+
+
+</script>
+<hr>
+</body>
+</html>

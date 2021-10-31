@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지역변수와 전역변수</title>
+
+</head>
+<body>
+<h3> 논리연산자<h3>
+<pre>
+
+논리연산
+1. and연산자: 연산자 좌측식과 우측식 모두 참이면 참을 리턴한다
+2. or 연산자: 연산자 좌측식과 우측식 중 하나라도 참 이면 참을 리턴한다
+3. Not 연산자: 기존 참 거짓을 반대로 바꿔준다
+		true -> false
+		false -> true
+
+<h3> 문자열 연산 </h3>
+1. 문자열+문자열: 문자열
+2. 문자열+숫자 : 문자열
+3. 숫자+문자열: (숫자)문자열
+4. 숫자+숫자 : 실제 숫자 연산됨
+
+<hr>
+
+</pre>
+<script>	
+/*
+var score = 90;
+var age = 20;
+var result1 = (score >80);
+var result2 = (age<25);
+document.write(result1+"<br>");
+document.write(result2+"<br>");
+
+var result3 = (score>80) && (age<25);
+document.write(result3+"<br>");
+
+var result4 = (score>100) || (age<25);
+document.write(result4+"<br>");
+
+var result5 = !result4;
+document.write(result5);
+
+document.write("<hr>");
+
+var x = "abc";
+var y ="de";
+var z=23;
+var m = 35;
+var mm = "abc" + 23 + 44;
+var mn = 23+44+"abc";
+
+document.write(x+y+z);
+document.write(z+m);
+document.write(x+z);
+
+document.write("abc"+23+44+"<br>");
+document.write(mm+"<br>");
+document.write(mn+"<br>");
+
+*/
+
+
+
+var x=true; y=false;
+document.write("x=" + x + ", y=" + y + "<br><br>");
+document.write("x && y : "+ (x&&y) +"<br>");
+document.write("x || y : "+ (x||y) +"<br>");
+document.write("!x : " + (!x) + "<br>");
+document.write("<hr>");
+document.write("(3>2) && (3<4):" + ((3>2) && (3<4)) +"<br>");
+document.write("(3==-2) || (-1<0): " + ((3==2) || (-1<0)));
+
+
+
+</script>
+
+
+
+</body>
+</html>

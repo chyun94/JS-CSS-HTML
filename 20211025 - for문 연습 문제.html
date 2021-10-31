@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for문 연습 문제</title>
+</head>
+<body>
+    
+    <script>
+        // 1~10까지의 합을 구하는 for문 만들기
+        sum=0;
+        for(var i=1; i<=10; i++){
+            // sum = sum +i;
+            // 0 (sum) + 1 = 1
+            // 1 + 2 = 3
+            // 3 + 3 = 6
+            // 6 + 4 = 10 ... 45 + 10 = 55
+            sum += i
+            document.write(sum+"<br>");
+        }
+        document.write(sum+"<br>");
+        // 10~100까지 모든 숫자를 더한 합을 출력하는 for문
+        sum=0;
+        for(var i=10; i<=100; i++){
+            sum += i
+        }
+        document.write("<br>"+sum+"<br>");
+        
+        // 10부터 100까지 짝수의 합
+        sum2 = 0;
+        for(var i=10; i<=100; i+=2){
+            sum2 += i
+        }
+        document.write("<br>"+sum2);
+
+        // 숫자 2개를 입력받고 처음 입력받은 숫자부터 두 번째 입력받은 숫자까지의 합이
+        // 짝수면 합이 짝수, 홀수면 합이 홀수
+
+        
+        var x = parseInt(prompt("숫자를 입력 하세요 1"));
+        var y = parseInt(prompt("숫자를 입력 하세요 2"));
+        
+        var sum = 0;
+        //
+        for(var i=x; i<=y; i++){
+            sum = sum + i;
+        }
+        document.write("<br>x번부터 y번까지의 합:"+sum);
+
+        if(sum%2 == 0){
+            document.write("<br>짝수에영");
+        }else if(sum%2 == 1){
+            document.write("<br>홀수에영");
+        }
+    </script>
+</body>
+</html>

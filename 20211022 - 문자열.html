@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>지역변수와 전역변수</title>
+
+</head>
+<body>
+<h3> 지역변수와 전역변수<h3>
+<pre>
+전역 변수와 지역 변수의 이름이 같을 때,
+this키워드를 사용하면 전역변수에 접근할 수 있다.
+
+<h3>document.write() 함수 사용 </h3>
+write 함수의 재료로 문자열 + 변수의 조합이 가능하다.
+write 함수는 문자열 출력이 가능하다.
+write 함수는 숫자 출력이 가능하다.
+write 함수는 html 태그 출력이 가능하다 (문자열로 묶어준다"")
+
+<h3> 문자열 내 문자열 </h3>
+
+문자열 안에 다른 문자여을 포함하고자 하면 단일 인용 부호를 사용한다.
+
+<h3>식과 연산자</h3>
+식을 계산해서 결과를 얻는 과정: 연산
+연산자의 종류
+1. 산술연산: + - * / %
+2. 증감연산: ++ --
+3. 대입연산: =
+4. 비교연산: < > <= >= == !=
+5. 논리연산: && || !
+
+
+<hr>
+
+</pre>
+<script>	
+
+	var oct =015;		// 015는 8진수 10진수로 13
+	var hex = 0x15;		//0x14는 16진수. 10진수로 21
+	var condition = true;		//True로 하면 안됨
+
+	document.write("8진수 015는 십진수로"+oct+"<br>");
+	document.write("16진수 0x15는 십진수로" +hex+"<br>");
+	document.write("condition은"+condition+"<br>");
+	document.write('문자열: 단일인용부호로도 표현'+"<br>");
+	document.write("그녀는\"누구세요\"라고 했습니다."+"<br>");
+	document.write("12'34'5"+'<br>');	
+	document.write('12"34"5'+'<br>');
+	
+document.write("<hr>");
+
+
+var x=32;			/ /정수
+var y=10;			// 실수
+document.write(x/y);		// 실수 x.x소수점 표현
+
+
+
+</script>
+
+
+
+</body>
+</html>

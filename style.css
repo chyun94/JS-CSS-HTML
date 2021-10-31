@@ -1,0 +1,35 @@
+.container{
+    width: 640px;
+    margin: 0 auto;
+}
+.imgbox{
+    width: 640px;
+    height: 400px;
+    overflow: hidden;
+}
+.img{
+    width: 640px;
+    height: 400px;
+}
+button, button:active, button:focus{
+    width: 100px; 
+    height: 30px;
+    border: none;
+    color: white;
+    background-color: teal;
+    outline: none;
+    border-radius: 0 0 14px 14px;
+    font-size: large;
+}
+button:hover{
+    background-color: thistle;
+}
+button:disabled{
+    background-color: wheat;
+}
+.prev{
+    float: left;
+}
+.next{
+    float: right;
+}

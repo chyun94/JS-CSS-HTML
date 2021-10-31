@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 반복문 </title>
+</head>
+
+<body>
+    <h3>반복문</h3>
+    <pre>
+        자바스크립트 언어에는 동일한 코드를 반복할 수 있는 3 가지 방법이 있다
+        1. for문
+            ㄴ> 반복 횟수를 아는 경우에 사용
+            for(초기문; 조건식; 반복 후 작업){
+                작업 문자(code)
+            }
+            <hr>
+        2. while문
+            ㄴ> 
+        3. do-while문
+            ㄴ>
+    </pre>
+    <div>상자</div>
+    <hr>
+    <script>
+        //for문 예제
+        for (var i=0; i<5; i++){
+            document.write(i);
+        }
+
+        // for문으로 폰트 10px~35px 크기 출력
+        for(var size=10; size<=35; size+=5){
+            // document.write("<span ");
+            // document.write("style='font-size:" + size +"px'>");
+            // document.write(size + "px");
+            // document.write("</span>");
+            
+            document.write("<span style= 'font-size:"+ size + "px'>"+size +"px"+"</span>");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch문</title>
+</head>
+<body>
+    <h3> switch문의 구성 방법</h3>
+    <pre>
+        switch(식){
+            case 값1: 식의 결과가 값 1과 같을 때 진입
+            실행문 1;
+            break;
+            default: 어느 값과도 같지 않을 때 진입
+            실행문 x;
+        }
+        <hr>
+    </pre>
+    <!-- <button onclick="number()">Button</button> -->
+    <script>
+        //사용자에게 하나의 숫자를 입력받아 변수X에 저장하고
+        // 변수 X가 1일때 2일때 3일때 각각 다른 메세지 출력하는 코드 작성
+        /*
+        function number(){
+            // number=prompt("숫자를 입력해 주세요"); 두 번을 쓸 필요가 없다
+            var x = prompt("입력하신 숫자는"+number+"입니다.");
+            if(x==1){
+                document.write("1을 입력 하셨습니다.");
+            }else if(x==2){
+                document.write("2를 입력 하셨습니다.");
+            }else if(x==3){
+                document.write("3을 입력 하셨습니다.");
+            }
+        }
+        
+        var x = prompt("입력한 숫자");
+        switch (x){
+            case "1":
+                document.write("입력된 값은 1입니다");
+                break;
+            case "2":
+                document.write("입력된 값은 2입니다");
+                break;
+            case "3":
+                document.write("입력된 값은 3입니다.");    
+                break;
+            case "4":
+                document.write("입력된 값은 4이상입니다.");
+                break;
+            default:        // default의 위치는 어디든 상관X
+                document.write("값 뭔지 몰랑");
+        }
+        
+        사용자에게 숫자를 두 번 입력 받아서
+        첫 번째 입력받은 숫자는 변수 x에 저장
+        두 번째 입력받은 숫자는 변수 y에 저장
+        x와y의 합이 10이면 두 수의 합이 10입니다 를 출력하고
+        20이면 두 수의 합이 20다를 출력하는 스위치문 작성
+        
+
+        //prompt 함수는 사용자의 입력 받은 값은 모두 문자열로 저장을 한다.
+        var x = prompt("첫 번째 숫자를 입력하세요");
+        var y = prompt("두 번째 숫자를 입력하세요");
+        
+        x=parseInt(x);
+        y=parseInt(y);
+
+        switch(x+y){
+            case 10:
+                document.write("10입니다.");
+                break;
+            case 20:
+                document.write("20입니다.");
+                break;
+            default:
+                document.write("???");
+                break;
+                
+        }
+        */
+    </script>
+</body>
+</html>

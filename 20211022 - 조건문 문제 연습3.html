@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h3>조건문 문제 연습3</h3>
+    <pre>
+        문제
+        돈이 3000원 이상이면 택시를 타고 가고
+        2000원 이상 3000원 미만이면 버스를 타고
+        0원 이상 2000원 미만이면 걸어가고
+        카드가 있으면 택시를 탈 수 있다
+
+        ture,false를 이용 해볼 것
+
+        var m = true;
+        if(m){
+            document("if문 진입");
+        }
+        <hr>
+        <button onclick="cashcard()">Cash</button>
+
+    </pre>
+    <script>
+        function cashcard(){
+            cashcard = prompt("카드를 소지하고 계신가요?");
+            alert("입력 내용:"+cashcard);
+            if(cashcard){
+            document.write("카드로 택시 타실 수 있습니다");
+            }else{//카드가 없는 경우
+            let money = prompt("소지 금액을 입력 해주세요");
+            if(money >= 3000){
+                document.write("택시를 타실 수 있습니다");
+            }else if(money >= 2000){
+                document.write("택시비는 부족하니 버스를 타실 수 있습니다");
+            }else if(money >= 0){
+                document.write("이왕 건강을 생각해서 걸어 가시는건 어떨까요?");
+            }else{
+                document.write("입력이 잘못 되었습니다");
+            }
+        }
+    }
+
+        /*
+        var card = true;
+        var money = prompt("현재 소지하고 있는 현금은 얼마신가요?",0000);
+        if(money >= 3000){
+            document.write("현재"+money+"원 이상이 있네요, 택시를 타기에 충분하세요")
+        }else if(money < 3000 && money >=2000 ){
+            document.write("택시 타기엔 현급이 부족하세요, 버스를 타고 가요");
+        }else if(money > 0 && money < 2000){
+            document.write("현재 현금이"+money+"원 있네요, 이왕 건강을 생각해서 걸어가시죠");
+        }else if(card){
+            document.write("카드가 있네요 택시를 타고 가실 수 있습니다.");
+        }else{
+            
+        }
+
+        var cashcard = confirm("카드 소지 여부");
+        //거절을 누르면 바로 아래인 if else문으로 넘어감, 확인을 누르면 바로 아래의 if문으로 넘어감 
+        if(cashcard){
+            document.write("카드로 택시 타실 수 있습니다");
+        }else{//카드가 없는 경우
+            var money = prompt("소지 금액을 입력하시오");
+            if(money >= 3000){
+                document.write("택시를 타실 수 있습니다");
+            }else if(money >= 2000){
+                document.write("버스를 타실 수 있습니다");
+            }else if(money >= 0){
+                document.write("걸어가실 수 있습니다");
+            }else{
+                document.write("입력이 잘못 되었습니다");
+            }
+        }
+        */
+    </script>
+</body>
+</html>
