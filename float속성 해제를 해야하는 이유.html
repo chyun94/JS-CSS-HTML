@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float속성 해제를 해야하는 이유</title>
+</head>
+<style>
+    *{margin: 0; padding: 0;}
+    li{
+        list-style-type: none;
+    }
+    body{
+        font-size: 12px "굴림",Gulim ; 
+        margin:20px;
+    }
+    #container{
+        width: 600px;
+        padding: 10px;
+        background: blanchedalmond;
+        border: 5px solid teal;
+    }
+    h1{
+        text-align: center;
+        padding: 10px;
+    }
+    p{
+        text-align: justify;
+    }
+    .green{
+        float: left;
+        width: 250px;
+        padding: 15px;
+        background: lightgoldenrodyellow;
+    }
+    .coffee{
+        float: right;
+        width: 250px;
+        padding: 15px;
+        background: salmon;
+    }
+    /* float속성 해제 처리 아래 속성이 없으면 겹쳐짐*/
+    #container:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+</style>
+<!-- 
+문단 정렬 방식을 정하는 속성은 text-align입니다. 속성의 값은 다음과 같습니다.
+left : 왼쪽 정렬입니다.
+right : 오른쪽 정렬입니다.
+center : 가운데 정렬입니다.
+justify : 양쪽 정렬입니다.
+initial : 기본값으로 설정합니다.
+inherit : 부모 요소의 속성값을 상속받습니다.
+-->
+<body>
+    <div id="container">
+        <h1>녹차와 커피</h1>
+        <div class="green">
+            <p>
+                문단 정렬 방식을 정하는 속성은 text-align입니다. 속성의 값은 다음과 같습니다. <br>
+                left : 왼쪽 정렬입니다.<br>
+                right : 오른쪽 정렬입니다.<br>
+                center : 가운데 정렬입니다.<br>
+                justify : 양쪽 정렬입니다.<br>
+                initial : 기본값으로 설정합니다.<br>
+                inherit : 부모 요소의 속성값을 상속받습니다.
+            </p>
+        </div>
+        <div class="coffee">
+            <p>
+            문단 정렬 방식을 정하는 속성은 text-align입니다. 속성의 값은 다음과 같습니다.<br>
+            left : 왼쪽 정렬입니다.<br>
+            right : 오른쪽 정렬입니다.<br>
+            center : 가운데 정렬입니다.<br>
+            justify : 양쪽 정렬입니다.<br>
+            initial : 기본값으로 설정합니다.<br>
+            inherit : 부모 요소의 속성값을 상속받습니다.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

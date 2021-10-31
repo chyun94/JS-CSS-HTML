@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2단 레이어</title>
+</head>
+<style>
+*{margin: 0; padding: 0;}
+.wrap{
+    padding: 10px;
+    background-color: black;
+    /* overflow: hidden; */
+    text-align: center;
+}
+header{
+    background: blanchedalmond;
+    width: 100%;
+    margin-bottom: 10px;
+}
+h1{
+    color: black;
+}
+.container{
+    /* float: left; */
+    position: relative;
+    background-color: aqua;
+    /* width: 100%; */
+    margin-bottom: 10px;
+    padding: 10px;
+    overflow: auto;
+}
+.sidemenu{
+    position: absolute;
+    /* float: left; */
+    width: 200px;
+    height: 100px;
+    background-color: darkolivegreen;
+    /* margin-left: 10px; */
+    margin-right: 10px;
+    margin: 10px;
+}
+.content{
+    left: 420px;
+    position: relative;
+    /* float: right; */
+    width: 300px;
+    height: 200px;
+    background-color: darkmagenta;
+    margin: 10px;
+}
+footer{
+    background-color: burlywood;
+    /* 위의 컨테이너를 따라가지 않게 하기 위함 */
+    clear: both;
+    width: 100%;
+}
+span{
+    display: block;
+    color: coral;
+}
+h2{
+    color: white;
+}
+
+</style>
+<body>
+    <div class="wrap">
+        <header>
+            <h1> Header</h1>
+        </header>
+        <div class="container">
+            <h2>container <span>float:left width:100%</span></h2>
+            <div class="sidemenu"> <h2>side menu <span>float:left</span> </h2></div>
+            <div class="content"> <h2>content <span>float:right</span></h2></div>
+        </div>
+        <footer><h2>footer</h2></footer>
+    </div>
+</body>
+</html>

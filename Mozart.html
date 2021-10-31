@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6c9a0f58c2.js" crossorigin="anonymous"></script>
+    <title>Mozart</title>
+</head>
+<style>
+a, a:link {
+  color: #000;
+  text-decoration: none;
+}
+/* text position */
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: left;
+}
+/* under line position,size */
+ul li a {
+  display: block;
+  padding: 10px;
+  position: relative;
+  font-size: 20px;
+}
+
+ul li a::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+/* under line size */
+.menu1 li a::after {
+  width: 0;
+  height: 5px;
+  background: #5d8cef;
+  left: 50%;
+}
+ul li a:hover::after {
+  width: 100%;
+  left: 0;
+  transition: all .3s;
+}
+h3{
+    padding-left: 20px;
+}
+
+h3:hover{
+    color: violet;
+}
+h1:hover{
+    color: violet;
+}
+i:hover{
+    color: violet;
+    font-size: 20px;
+}
+span {
+  position: relative;
+  font-weight: bold;
+  color: black;
+}
+span::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 5px;
+  position: absolute;
+  left: 0%;
+  bottom: 0px;
+  background: rgba(200, 125, 220, .6);
+}
+p:hover span::after {
+  width: 100%;
+  transition: width .3s;
+}
+a.tip {
+/* 
+border-bottom: 1px dashed;
+이걸 해주면 점선이 생긴다
+*/
+text-decoration: none
+}
+
+a.tip:hover {
+/* 
+cursor: help;
+이걸 해주면 마우스 커서가 ? 로 표시가 된다
+*/
+position: relative
+}
+
+a.tip span {
+display: none
+}
+
+a.tip:hover span {
+padding: 5px 20px 5px 5px;
+display: block;
+left: 0px;
+margin: 10px;
+width:  300px;
+font-size: 20px;
+position: absolute;
+top: 10px;
+text-decoration: none;
+
+}
+
+.tags {
+  display: inline;
+  position: relative;
+}
+
+.tags:hover:after {
+  background: #333;
+  background: rgba(0, 0, 0, .8);
+  border-radius: 5px;
+  bottom: -34px;
+  color: #fff;
+  content: attr(gloss);
+  left: 20%;
+  padding: 5px 15px;
+  position: absolute;
+  z-index: 98;
+  width: 350px;
+}
+
+.tags:hover:before {
+  border: solid;
+  border-color: #333 transparent;
+  border-width: 0 6px 6px 6px;
+  bottom: -4px;
+  content: "";
+  left: 50%;
+  position: absolute;
+  z-index: 99;
+}
+.img{
+    filter: drop-shadow(5px 5px 5px #000); 
+
+}
+</style>
+<body>
+    <form action="">
+        <div style="padding-left: 20px;">
+        <header>
+        <div>
+            <h1> <a href="https://ko.wikipedia.org/wiki/%EB%B3%BC%ED%94%84%EA%B0%95_%EC%95%84%EB%A7%88%EB%8D%B0%EC%9A%B0%EC%8A%A4_%EB%AA%A8%EC%B0%A8%EB%A5%B4%ED%8A%B8"> 볼프강 아마데우스 모차르트 </a> <h3> Wolfgang Amadeus Mozart</h3></h1>
+            <hr>
+            <div style="display: flex;">
+                <img class="img" src="img/Wolfgang-amadeus-mozart_1.jpg" align="left" width="260px" height="auto" style="padding-top: 20px;">
+                    <div style= width:440px;padding-left:20px; >
+                    <h4>볼프강 아마데우스 모차르트</h4>                        
+                    <p>
+                        (독일어: Wolfgang Amadeus Mozart, 
+                        1756년 1월 27일 ~ 1791년 12월 5일)는 
+                        오스트리아의 서양 고전 음악 작곡가이다.
+                    </p> 
+                    <p>
+                        궁정 음악가였던 <span>아버지 레오폴트 
+                        모차르트</span> 에게 피아노와 바이올린을 배웠고, 
+                        그 후 요한 세바스티안 바흐의 
+                        아들로 잘 알려진 요한 크리스티안 
+                        바흐에게 작곡법과 지휘를 배웠다.
+                    </p>
+                    <p> 
+                        그는 음악 역사상 가장 위대한 작곡가 
+                        중 한명으로 여겨지며 35년이라는 
+                        짧은 생애 <span> 교향곡,오페라,
+                        협주곡, 소나타</span>를 작곡했다. 
+                        오늘날 모차르트는 “음악의 신동”이라는 
+                        별칭으로 불리며 널리 존경받고 있다.
+                    </p>        
+                </div>
+            </div>
+            <div style="padding-left: 80px; padding-top: 20px;">(1800~1900)</div>
+
+        </div>
+
+        </header>
+        <br>
+        
+        <!-- 
+        음... 해당 메뉴로 이동이 안됨, 오류는 아님, 다른 요소와 같이 사용 불가능한 듯! 찾아볼것
+        <p><a href="#Section_further_down1">생애</a></p>
+        <p><a href="#Section_further_down2">죽음</a></p>
+        <p><a href="#Section_further_down3">음악</a></p> 
+        폰트, 이모티콘 추가하는법 다시 익히기
+        -->
+
+        <a class="tags" gloss="Did you try Click here??" 
+        onclick="this.nextSibling.style.display=(this.nextSibling.style.display=='none')?'block':'none';" href="javascript:void(0)">
+            <summary style="cursor: pointer;"><i class="fas fa-bars"></span></i><section>
+
+                <article>
+                    <ul class="menu1">
+                        <li><a href="#" style="font-weight: bold;" id="#Section_further_down1">생애</a></li>
+                    </ul>
+                    
+                    <div style="width: 500px; padding-left: 50px;">
+                        <p style="padding-bottom: 5px;">
+                        모차르트는 1756년 1월 27일 잘츠부르크에서 태어나서, 궁정 음악가였던 아버지 에게 피아노와 바이올린을 배웠고, 
+                        다섯살 때 이미 작곡을 하기 시작했으며,1764년에서 1765년 사이에 바흐로부터 처음으로 교향곡을 작곡하는 법을 
+                        배웠는데 이것이 모차르트가 수많은 교향곡을 남기는 계기가 되었다. 모차르트는 빈에서 1784년에 14세인 베토벤을 
+                        만나 베토벤을 교육시키는데 전념하기도 했다.
+                        <br>
+                        1756년 1월 27일 오스트리아 잘츠부르크에서 아버지 레오폴트 모차르트와 어머니 안나 마리아 모차르트의 자식으로 태어났다.
+                        [1] 형제로는 7남매가 있었는데, 그중 5명은 어린 나이에 죽고 누나 마리아 안나 모차르트, 일명 '나넬'만이 남아있었다. 
+                        출생 직후 가톨릭 성당에서 세례명은 요하네스 크리소스토무스 볼프강구스 테오필루스 모차르트
+                        (라틴어: Johannes Chrysostomus Wolfgangus Theophilus Mozart)였다. 흔히 알려진 중간 성명인 아마데우스(독일어: Amadeus)는
+                        세례명 중간 성명의 그리스어 어원 테오필루스(Theophilus)를 라틴어로 바꾼 것이다.
+                        <br>
+                        아버지인 레오폴트 모차르트는 아우크스부르크 태생으로[2] 잘츠부르크 궁정 관현악단의 카펠마이스터였는데, 볼프강의 누나인 
+                        나넬이 7살일 때 건반악기를 가르쳤다. 전한 바에 따르면, 볼프강은 세 살 때부터 누나를 보고 스스로 건반을 다루고 연주하는 
+                        법을 터득했다고 한다. 레오폴트 모차르트는 어린 아들의 재주를 알아보았고, 볼프강에게 직접 피아노와 바이올린을 가르쳤다.
+                        <br>
+                        K. 1에서 K. 5까지의 곡들이 이 때 작곡되어 《나넬의 음악책Nannerl Notenbuch》로 출판되었다. 여기에 쓴 레오폴트의 기록에 
+                        따르면, 어린 볼프강은 네 살 때 여러 곡을 배웠으며 다섯 살 때 이미 작곡을 하기 시작했다. 현대에는 이 기록을 그대로 믿지는 
+                        않지만, K. 1a, b, c가 몇 주 이내에 작곡되었다는 사실에는 대부분 동의한다.[3]
+                        <br>
+                        사람들은 어린 모차르트의 작곡을 믿지 못했기 때문에 집에서 그를 시험하기도 하였지만, 모차르트는 그 사람들에게 뛰어난 작곡 
+                        실력과 재능을 보였고, 사람들은 비로소 모차르트를 믿기 시작하였다는 일화도 있다.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    
+                    <ul class="menu1">
+                        <li><a href="#" style="font-weight: bold;" id="#Section_further_down2">죽음</a></li>
+                    </ul>
+
+                    <div style="width: 500px; padding-left: 50px;">
+                        <p>
+                            모차르트의 죽음과 원인에 대해서는 수많은 전설을 비롯하여 학설이 많다. <br>
+                            낭만적인 주장으로는 모차르트의 건강이 점점 약해지면서 그의 모습과 작품들 
+                            역시 다가오는 죽음과 함께 쇠퇴하였다는 것이 있다. 반면에 다른 학자들은 
+                            모차르트의 마지막 해가 그에게 성공적이었으며, 그의 죽음이 가족들에게 
+                            충격이었다는 점을 들어 그의 죽음이 급작스러웠다고 주장한다. <br>
+                            그의 죽음의 원인 또한 추측이 무성하다. 
+                            기록에는 그가 "무수히 난 좁쌀만한 발열"("hitziges Frieselfieber")로 
+                            죽었다고 되어 있는데, 현대의학으로 진단할 수 있는 것에 비해서는 충분한 
+                            정보가 되지 못하고 있다. 사인에 대한 학설 중에는 선모충병, 중독, 류머티스열, 
+                            덜 익힌 돼지고기에 의한 식중독 등이 있다. 환자의 피를 뽑았던 당시의 의술도 
+                            모차르트의 죽음을 앞당기는 데에 이바지했다고 본다. 볼프강 아마데우스 모차르트는 
+                            1791년 12월 5일 오전 0시 55분경에 죽었다. 아내 콘스탄체는 모차르트가 완성하지 
+                            못한 작품 레퀴엠의 완성을 여러 제자에게 맡겼으나 끝내 완성하지 못하다가 결국 
+                            프란츠 크사버 쥐스마이어가 완성했다. <br>
+                            모차르트가 가난과 무관심 속에서 죽었다는 이야기가 흔하나, 그에게는 나름 
+                            만족할 만한 수입이 있었다는 주장도 설득력 있다. 예컨대 모차르트는 체코 프라하
+                            같이 멀리 떨어진 곳에서 꾸준한 작곡 의뢰를 받기도 했다. <br>
+                            그가 말년에 전성기 때만큼의 명성을 누리지는 못했던 근거로 돈을 꿔 달라고 쓴 
+                            편지가 들리기도 하지만 또 통설에 의하면 이는 단순히 수입이 부족해서가 아니라 모
+                            차르트의 방탕함 때문이었을 것으로 추정된다. 그 실례로 모차르트가 입은 옷은 보석
+                            들로 치장된 화려한 의상이었으며 도박으로 돈을 낭비하기도 했다고 한다. <br>
+                            모차르트는 죽은 후 빈 외곽의 성, 마르크스 묘지에 묻혔다. New Groove에 따르면 
+                            그가 여러 사람과 함께 묻힌 것은 사실이나 이는 가난에 따른 것이 아니라 당시
+                            빈의 중산층의 일반적 장례 풍습대로였다. 묘비가 나무였던 것 또한 당시 오스트리아 빈 중
+                            산층의 흔한 장례 풍습에 따른 것이었다고 하는데, 실제로 당시 빈에서는 화려한 장례가 엄
+                            격히 금지되었다. 전설에 따르면 장례식 날 비가 오고, 천둥이 쳤다고 하나 위 출처에 따르
+                            면 사실은 구름 한 점 없는 쾌청한 날이었다고 한다. <br> 현재 모차르트의 무덤의 위치를 알 수
+                            없는 것은 성 마르크스 묘지가 더 많은 묘지를 수용하기 위해 이장을 거듭하였기 때문이다
+                            . 아내 콘스탄체 모차르트는 남편이 죽은 후 추모 음악회, 미발표 작품의 출판 등으로 경제
+                            적으로 성공하였다. 1809년 그녀는 덴마크 출신의 외교관이던 게오르크 니콜라우스 폰 니센
+                            (Georg Nikolaus von Nissen)과 재혼했다. 그들은 덴마크로 이주했다가 오스트리아 잘츠
+                            부르크로 돌아와 여생을 마감했다. 콘스탄체와 새 남편은 모두 모차르트에 대한 전기를 남겼다.
+                        </p>
+                    </div>
+                </article>
+
+                <article>
+                    <ul class="menu1">
+                        <li><a href="#" style="font-weight: bold;" id="#Section_further_down3">음악</a></li>
+                    </ul>
+                    <div style="width: 500px; padding-left: 50px;">
+                    <p>오페라, 교향곡, 행진곡, 관현악용 무곡, 피아노 협주곡, 바이올린 협주곡, 교회용 성악곡, 칸타타, 미사곡 등 
+                        다양한 장르를 아우르며 600 여곡을 작곡하여 후대에 남겼다.볼프강 아마데우스 모차르트는 여러 장르의 많은 음악 작품을 남겼다. 그의 많은 작품 가운데 특히 오페라, 피아노 협주곡, 교향곡, 그리고 현악 사중주와 현악 오중주 작품들이 유명하다. 모차르트는 또 피아노 솔로와, 여러 형태의 실내악, 미사곡 및 여러 종교 음악, 무곡들, 디베르티멘토 등도 작곡했다.</p>
+                    </div>
+                </article>
+                </section>
+            </summary>
+        </a>
+            
+
+        <footer style="padding-top: 4%; text-align: center; color:black">
+            <div style="border: 1px; background-color:lightgoldenrodyellow; opacity: 50%; height: 30px;">
+                2017 년 10월 7일 작성, 위키피디어 참고
+            </div>
+        </footer>
+    </div>
+    </form>
+</body>
+</html>

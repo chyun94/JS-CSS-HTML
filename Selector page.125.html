@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Seletor </title>
+</head>
+<style type="text/css">
+*{background-color: darkorange;}
+    p{
+        color: blue;
+        }
+    #ctxt{
+        color: burlywood;
+    }
+    .class{
+        color: chartreuse;
+    }
+    li{
+        /* 
+        li>h3 안에 아래의 요소를 사용하지 않는 이유는
+        li>h3을 해석을 하자면 li안에 있는 h3 (자손)만
+        주는 요소값 이기 때문에 li에는 적용이 안된다.
+        그러므로 li타입을 따로 빼줘서 적용하는 것이다.
+        */
+        text-decoration: none;
+        list-style: none;
+    }
+    li>h3{
+        color: ghostwhite;
+    }
+    h3 + h4{
+        color: darkslateblue;
+    }
+    h1[class]{
+        color: darkslateblue;
+    }
+</style>
+<body>
+    <!-- 
+        h1{color: blue; background:red}
+        {color: blue; background:red} -> 선언부
+        h1 -> 선택자
+        color: blue; -> 선언
+        color -> 속성
+        blue -> 속성의 값
+    -->
+
+    <p> My color is  blue (type selector) </p>
+    <p id="ctxt"> My color is  burlywood (id selector) </p>
+    <p class="class"> My color is  chartreuse (class selector) </p>
+    <li>
+        <h3>My color is ghostwhite</h3>
+    </li>
+    <ul>
+        <li>
+            <h3>이것도 가능하다. 자식 선택자이기 떼문에 ul의 자식은 li이고 li의 자식은 h3이 된다.</h3>
+        </li>
+    </ul>
+
+    <h3>인접 선택자h3</h3>
+    <h4>나는 색이 바뀐다h4</h4>
+    <h4>나는 색이 바뀌지 않는다 여기서 알 수 있는 부븐은 h3바로 다음줄에 오는 h4만 바뀌는 것을 알 수 있다.</h4>
+    <h1 class>속성 선택자</h1>
+    <!-- 
+        page 132,135
+     -->
+</body>
+</html>

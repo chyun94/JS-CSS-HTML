@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress요소와 meter요소 page103</title>
+</head>
+<body>
+    <!-- 
+        pregress요소는 다운로드의 진행 상황 같은 내용을 표시할 시 사용되는 요소
+        mteter요소는 정해져 있는 범위의 값에서 현재 상태의 값을 나타낼 때 사용
+    -->
+    <h1>Progress요소와 meter요소</h1>
+    <h2>File Download</h2>
+    <p>Downloading: <progress max="100"> <span>0</span>% </progress> </p>
+    <h2>Vote</h2>
+    <!-- 아래의 low와 high 요소는 투표율의 높낮음에 따라 색을 지정해주는 요소 -->
+    <p>VoteSituation: <meter min="0" max="100" value="20" low="30" high="60" title="percent"> 20% </meter> </p>
+</body>
+</html>

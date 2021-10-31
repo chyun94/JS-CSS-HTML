@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div, span{
+        width: 80px;
+        height: 80px;
+        margin: 20px;
+    }
+    div{
+        /* 블럭 레벨은 한 줄에 하나 */
+        background: red;
+        display: inline-block;
+        /* display: inline; 으로 하면 아무것도 표시가 되지 않음
+        인라인은 컨텐츠 자체만을 꾸며주는 것 */
+    }
+    span{
+        /* 인라인 레벨은 한 줄에 여러개 */
+        /* display: block; 로 바꾸면 div처럼 한 줄에 하나만 나옴*/
+        background: blue;
+    }
+</style>
+<body>
+    <!-- block level의 대표적인 요소 div -->
+    <div></div>
+    <div></div>
+    <div></div>
+    <!-- Inline level의 대표적인 요소 span 은 안에 내용이 있어야 표기가 됨-->
+    <span></span>
+    <span></span>
+    <span></span>
+</body>
+</html>

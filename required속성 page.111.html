@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>required속성 page.111</title>
+</head>
+<body>
+    <p><strong>*</strong> 표시는 필수입력 항목입니다.</p>
+    <!-- 아래 form 태그를 입력해야 submit이나 reset요소를 사용할 수 있다. -->
+    <form action="">
+    <legend>필드 유효성 검사</legend>
+    <ul>
+        <li> 
+            <label for="name"> <strong>*</strong>Name</label>
+            <!-- autocomplete속성은 자동완성 기능의 유무 판단 on/off로 가능 -->
+            <input type="text" id="name" required="required" placeholder="name" autocomplete="off"> 
+        </li>
+        <p>
+            <!-- 
+                list속성도 있는데 이는 자동완성 기능과 비슷한 개념이다 
+                입력한 단어가 들어있는 모든 값을 보여줌
+            -->
+            <label for="course">StarA~Z:</label>
+            <input type="text" id="course" list="word">
+            <datalist id="word">
+                <option value="apple"></option>
+                <option value="banana"></option>
+                <option value="cat"></option>
+                <option value="dot"></option>
+                <option value="event"></option>
+                <option value="float"></option>
+                <option value="google"></option>
+            </datalist>
+        </p>
+    </ul>
+    <p><input type="submit" value="insert"></p>
+</form>
+</body>
+</html>

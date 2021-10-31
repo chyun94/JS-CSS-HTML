@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FontFace기능</title>
+</head>
+<style  폰트 주소;>
+        @font-face {
+    font-family: 'myFirstFont';
+    src: url(font/BMJUA_ttf.ttf), url(BMJUA_otf.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+</style>
+<style>
+    /* 
+    https://webclub.tistory.com/356
+     */
+    /* 앞에 *의 뜻은 전체를 뜻함으로 아래는 전체 폰트 사이즈를 30px로 정해준다는 것이다 
+    *{
+        font-size: 2em;
+    }
+    */
+    body{
+        font-size: 20px;
+    }
+    html{
+        font-size: 30px;
+    }
+h1{
+    font-family: 'myFirstFont';
+}
+h2{
+    font-family: 'IM_Hyemin-Bold';
+}
+h1.italic{
+    font-style: italic;
+    font-weight: bolder;
+}
+h1.italic2{
+    font-weight: bold;
+}
+h1.italic3{
+    font-weight: 100;
+}
+h1.italic4{
+    font-weight: 200;
+}
+h1.italic5{
+    font-weight: 300;
+}
+h1.italic6{
+    font-weight: 400;
+}
+h1.italic7{
+    font-weight: 500;
+}
+h1.italic8{
+    font-weight: 800;
+}
+p{
+    font-size: 16px;
+    font-weight: bold;
+}
+span{
+    font-size: 2em;
+}
+
+</style>
+<body>
+
+    <h1 class="italic">폰트-myFirstFont-italic-bolder</h1>
+    <h1 class="italic2">폰트-myFirstFont-bold</h1>
+    <h1 class="italic3">폰트-myFirstFont-100</h1>
+    <h1 class="italic4">폰트-myFirstFont-200</h1>
+    <h1 class="italic5">폰트-myFirstFont-300</h1>
+    <h1 class="italic6">폰트-myFirstFont-400</h1>
+    <h1 class="italic7">폰트-myFirstFont-500</h1>
+    <h1 class="italic8">폰트-myFirstFont-800</h1>
+    <h2>폰트-IM_Hyemin-Bold</h2>
+    <p>현재 크기의 <span>2배</span> 크기로</p>
+    
+    <!-- 
+        @fint-face{
+            font-family: @@@
+            src: url(BMJUA_ttf), url(BMJUA_otf);
+        }
+        위와 같이 내 컴퓨터에 있는 폰트를 불러올 수 있다.
+        물론 내 컴퓨터 외의 주소를 링크로 불러와서 가져올 수 있다.
+     -->
+
+
+<!-- 
+vmin / vmax
+
+vmin과 vmax는 너비값과 높이값에 최대,최소값을 지정 가능
+ex) 1280 x 1000 사이즈의 웹사이트가 있으면 
+1vmin = 10px 1vmax=12.8px
+(최대 사이즈가 1280이고 최소 사이즈가 1000이기 때문)
+즉!!
+vmin: 뷰포트 너비 또는 높이를 기준으로 하는 최소 값
+vmax: 뷰포트 너비 또는 높이를 기준으로 하는 최대 값
+
+
+ex & ch
+
+em과rem과 비슷한 개념 -> 현재 폰트 사이즈에 의존
+ex) width: 10ch 는 문자열10개의 넓이
+(문자 하나가 5px이면 넓이는 50px 이라는뜻?)
+ex 단위의 정의 -> 현재 폰트의 x-높이값 또는 em의 절반 값
+(x-높이값은 소문자 x의 높이값 이기도함 이로 인해 폰트의 중간 지점을 알 수 있다
+타이포그래픽에서 메밀 조정시 사용한다고 함)
+
+tip
+넹 잘 하셨네요. 살짝 팁을 드리자면 ex eh 같은 경우 잘 사용은 안 하지만 가끔 폰트 뭉겔 때 사용하시면 나름 좋아요. 
+vmin vmax 같은 경우에는 반응형 적인 사이트를 할 때 더 좋긴한데 vw가 더 효과적이고요
+-->
+</body>
+</html>

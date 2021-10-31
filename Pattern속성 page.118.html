@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern속성 page.118</title>
+</head>
+<body>
+    <!-- 
+        pattern속성은 required속성처럼 필드의 값을 체크해 주는 속성
+        required 속성은 일반적으로 인풋 타입의 형식을 갖고 있지만
+        pattern 속성은 '정규 표현식' 방법으로 입력값과 정규식이 일치해야 한다.
+     -->
+     <form action="">
+         <fieldset>
+            <legend>Pattern속성</legend>
+            <p>
+                <label for="tel">PhoneNumber:</label>
+                <input type="tel" id="tel" pattern="\d{2,3}\d{3,4}\d{4}" title=""
+                placeholder=" '-'생략 가능" maxlength="11">
+            </p>
+            <p><input type="submit" value="send"></p>
+        </fieldset>
+     </form>
+</body>
+</html>

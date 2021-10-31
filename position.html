@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<style type="text/scc">
+    *{margin: 0%; padding: 0%;}
+    li{
+        list-style-type: none;
+    }
+    body{
+        font: 12px/1.5 "굴림", Gulim; margin: 20px; background: url("img/화보.jpg");
+    }
+    #box{
+        position: relative; width: 300px; background: url("img/화보.jpg");
+    }
+    .red{
+        background: red;
+    }
+    .blue{
+        background: blue;position: absolute; z-index: 2; left: 50px; top: 30px;
+    }
+    .green{
+        background: green; position: relative; left: 30px; top: 20px;
+    }
+    p{
+        width: 50px; height: 30px; padding: 10px; color: purple; font-weight: bold;
+    }
+</style>
+<body>
+    <div id="box">
+        <p class="red"> 네모난 상자의 위치는 어디</p>
+        <p class="blue"> 네모난 상자의 위치는 어디</p>
+        <p class="green"> 네모난 상자의 위치는 어디</p>
+    </div>
+</body>
+</html>

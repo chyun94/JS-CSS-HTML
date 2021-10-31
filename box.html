@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div1{
+        width: 300px;
+        height: 300px;
+        margin: 30px;
+        padding:30px;
+        border: 10px solid;
+        background-color: blanchedalmond;
+        /* 
+        content-box : 지정한 CSS width 및 height를 컨텐츠 영역에만 적용합니다. 
+        border, padding, margin은 따로 계산되어 전체 영역이 설정값보다 커질 수 있습니다.
+        border-box : 지정한 CSS width 및 height를 전체 영역에 적용합니다. 
+        border, padding, margin을 모두 합산하기 때문에 컨텐츠 영역이 설정값보다 적어질 수 있습니다.
+        
+        <div> 태그 등의 영역 크기를 100px으로 설정했을 때
+        100px 이상으로 <div>가 더 튀어나와서 크기를 100px으로 딱 맞추고 싶다? box-sizing : border-box;
+        100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box;
+        */
+        box-sizing: content-box;
+    }
+    .div2{
+        width: 300px;
+        height: 300px;
+        margin: 30px;
+        padding:30px;
+        border: 10px solid;
+        background-color: blanchedalmond;
+        border-radius: 10px 30px 50px 70px;
+        /* 
+        content-box : 지정한 CSS width 및 height를 컨텐츠 영역에만 적용합니다. 
+        border, padding, margin은 따로 계산되어 전체 영역이 설정값보다 커질 수 있습니다.
+        border-box : 지정한 CSS width 및 height를 전체 영역에 적용합니다. 
+        border, padding, margin을 모두 합산하기 때문에 컨텐츠 영역이 설정값보다 적어질 수 있습니다.
+
+        <div> 태그 등의 영역 크기를 100px으로 설정했을 때
+        100px 이상으로 <div>가 더 튀어나와서 크기를 100px으로 딱 맞추고 싶다? box-sizing : border-box;
+        100px 미만으로 <div>가 더 적게 나와서 컨텐츠 영역만 100px으로 맞추고 싶다? box-sizing : content-box;
+        */
+        box-sizing: border-box;
+    }
+    .box1{
+        background-repeat: no-repeat;
+        background-position: right top;
+        background-size: 30% 30%;
+    }
+    .img{
+        width: 100px;
+        height: auto;
+        background-position: right top;
+    }
+    .box2{
+        background-size: 100%;
+        background-attachment: fixed;
+    }
+</style>
+<body>
+    <div class="div1"> : > content-box </div>
+    <br>
+    <div class="div2"> : > border-box</div2>
+    
+    사진 넣는 법
+    <div class="1" style="background-image: url();"></div>
+        <!-- 
+            이미지 로딩 하는 방법
+            https://www.codingfactory.net/11004
+        -->
+
+    <div class="box1">
+        <img class="img" src="img/Wolfgang-amadeus-mozart_1.jpg" alt="">
+    </div>    
+
+    <div class="box2">
+        <img src="img/화보 (1).jpg" alt="">
+    </div>
+
+</body>
+</html>

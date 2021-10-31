@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 해제 하는 방법</title>
+</head>
+<style type="text/css">
+    *{margin: 0; padding: 0;}
+    li{
+        list-style-type: none;
+    }
+    body{
+        font: 12px/1.5"굴림",Gulim; margin: 10px;
+    }
+    #container{
+        float: left; width: 530px; background: lightcoral;
+    }
+    .menu{
+        float: left; width: 130px; padding: 10px; 
+    }
+    .content{
+        float: right; width: 350px;padding: 10px; border-left: 2px solid steelblue;
+    }
+    #footer{
+        clear: both;
+    }
+    address{
+        font-style: normal;padding: 10px;background: burlywood;width: 510px;
+    }
+</style>
+<body>
+    <div id="container">
+        <!-- .menu>ul>(li>a[href=#])*3 -->
+        <div class="menu">
+            <ul>ㅜ
+                <!-- 
+                    a태그는 인라인 요소이기 때문에 가로 세로 값을 정해줘도 나타나지 않음
+                    그래서 li태그에 가로 세로값을 정해주면 나온다
+                    그런데 a태그에 display block 속성을 주면 값을 적용 시킬 수 있다
+                -->
+                <li><a href="#">회사소개</a></li>
+                <li><a href="#">제품안내</a></li>
+                <li><a href="#">커뮤니티</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <p>그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥아무말이나 해 그냥 아무말이나 해 그냥</p>
+        </div>
+    </div>
+    <div id="footer">
+        <address>a;sldasdpiasdyuwjbaskj</address>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경속성</title>
+</head>
+<style>
+    *{margin: 0%;padding: 0%;}
+    header{
+        width: 950px;
+        height: 60px;
+        flex-direction: row;
+        background: yellow;
+        position: sticky;
+    }
+    .container{
+        padding: 0px;
+        margin: 0 auto;
+        width:  950px;
+        height: 600px;
+        position: relative;
+    }
+    section{
+        display: flex;
+        justify-content: space-between;
+    }
+    section div{
+        width: 200px;
+        height: 600px;
+        background: violet;
+        float: left;
+    }
+    footer{
+        width: 960px;
+        height: 80px;
+        background: aqua;
+        clear: both;
+    }
+    main{
+        width: 950px;
+        height: 600px;
+        background: blue;
+    }
+</style>
+<body>
+    <header>
+        <div> 950 * 60</div>
+    </header>
+    <section>
+        <div id="container">
+            <div> 200*600 </div>
+            <main> 600px </main>
+            <div> 200*600 </div>
+        </div>
+    </section>
+    <footer>
+        <div>80px</div>
+    </footer>
+</body>
+</html>

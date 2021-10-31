@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(img/화보\ \(1\).jpg);
+        background-repeat: no-repeat;
+        /* background-position: right bottom; */
+    }
+    p{
+        padding: 20px;
+        font-weight: bold;
+    }
+    .back{
+        background-attachment: fixed;
+    }
+    .box{
+        width: 500px;
+    }
+    .box div{
+        width: 150px;
+        height: 150px;
+        border: lightgreen solid 10px;
+        background-image: url(img/pngwing.com\ \(4\).png);
+        background-repeat: no-repeat;
+        margin: 20px 5px;
+        /* 
+        아래의 플롯을 안하면 세로로 나옴
+        */
+        float: left;
+        position: relative;
+        
+    }
+.b1{
+    background-size: 50px;
+}
+.b2{
+    background-size: 50%;
+}
+.b3{
+    background-size: contain;
+}
+.b4{
+    background-size: cover;
+}
+</style>
+<body>
+    <h1>background-attachment 속성</h1>
+    <p class="back"> 
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+        배경 이미지 고정 여부 <br><br><br>배경 이미지 고정 여부 <br><br><br>
+       
+    </p>
+    <div class="box">
+        <div class="b1"> 가로 세로 50px </div>
+        <div class="b2"> 가로 세로 50%</div>
+        <div class="b3"> contain </div>
+        <div class="b4"> cover </div>
+    </div>
+    <!-- 
+        background-clip은 보더 패딩 컨텐츠를 기준으로 이미지를 자르는 것
+     -->
+</body>
+</html>

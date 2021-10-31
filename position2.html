@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+<style>
+    div{
+        width: 50px;
+        height: 50px;
+        margin-bottom: 20px;
+        background: red;
+    }
+    .container{
+        background: yellow;
+        left: 20px;
+        top: 20px;
+        /* position: static; -> */
+        position: relative; 
+    }
+    .box{
+        background: blue;
+        left: 20px;
+        top: 20px;
+        /* 
+        position: relative; -> 원래 자리에서 옮겨 지는 것
+        position: fixed; -> 상자에서 완전히 벗어나 페이지에서 옮겨 지는 것
+        position: sticky; -> 원래 자리에 있으면서 고정 되는것(스크롤 내려도 같이 따라옴)
+        */
+        position: absolute;
+    }
+</style>
+<body>
+    <article class="container"width>
+        <div></div>
+        <div class="box"> I am a good boy</div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </article>
+</body>
+</html>
