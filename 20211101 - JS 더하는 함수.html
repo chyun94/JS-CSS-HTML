@@ -39,7 +39,10 @@ prompt(), write(), confirm()
 
 function evalParseIntNaN(){
     var res = eval("2*3+4*6");                  //30이 출력 되야 함.
-    document.write("eval="+res+"<br>");            
+    document.write("eval="+res+"<br>");   
+    
+    var int = eval("44+12+4-30+2*15");
+    document.write(int+"<br>");
 
     var m = parseInt("32");                     //문자열 저장이지만 정수로 출력됨
     document.write("parseInt="+m+"<br>");
@@ -50,6 +53,16 @@ function evalParseIntNaN(){
     n = parseInt("hello");
     if(isNaN(n))
     document.write("hello는 문자열 입니다.");
+
+    v = parseInt("kakao");
+    v2 = eval("123123");
+    if(isNaN(v2)){
+
+        document.write("문자열입니다.");
+    }else{
+        document.write("정수입니다.");
+        document.write("복습완료");
+    }
 }
 </script>
 <script>
