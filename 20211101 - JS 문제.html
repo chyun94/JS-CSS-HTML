@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+
     <pre>
         1. 문제 
         사용자에게 숫자나 문자 아무거나 입력받아서 입력받은
@@ -67,48 +68,62 @@
         // // 아래 출력문은 문자를 입력해도 합이 나온다.
         // document.write("전체 합은"+total+"입니다.");
         
-        // 문제 3
-        //함수 선언
-        function add(a,b){
-            return a+b;
-        }
-        function sub(a,b){
-            return a-b;
-        }
-        function mul(a,b){
-            return a*b;
-        }
-        function div(a,b){
-            return a/b;
-        }
+        // // 문제 3
+        // //함수 선언 (각각 연산에 맞는 함수 선언)
+        // function add(a,b){
+        //     return a+b;
+        // }
+        // // add라는 함수에 a,b값을 주고 a+b를 리턴해준다(값을 준다)
+        // function sub(a,b){
+        //     return a-b;
+        // }
+        // // sub이라는 함수명에 a-b식을 리턴해준다
+        // function mul(a,b){
+        //     return a*b;
+        // }
+        // // mul이라는 함수에 a*b식을 리턴
+        // function div(a,b){
+        //     return a/b;
+        // }
+        // // div라는 함수에 a/b라는 식을 리턴
 
-        //변수 선언, 식
-        var first = 0;
-        var second = 0;
-        for(var i=0; i<2; i++){
-            var input = parseInt(prompt("입력 1"));
-            if(isNaN()){
-                document.write("숫자만 입력");
-                break;
-            }else{
-                if(i==0){
-                    first=input;
-                }else{
-                    second=input;
-                    var mode = prompt("연산선택");
-                    if(mode == '더하기'){
-                        document.write(add(first,second));
-                    }else if(mode == '빼기'){
-                        document.write(sub(first,second));
-                    }else if(mode == '곱하기'){
-                        document.write(mul(first,second));
-                    }else if(mode == '나누기'){
-                        document.write(div(first,second));
-                    }
-                }
-            }
-        }
+        // //변수 선언, 식
+        // var first = 0;
+        // // 첫 숫자를 입력시 저장하기 위한 변수
+        // var second = 0;
+        // // 두 번째 숫자 입력 저장하기 위한 변수
         
+        // for(var i=1; i<5; i++){         //  i가 0부터 시작해서 4미만이 될 때까지 반복되는 반복문
+
+        //     //  input 변수에 정수로 변환한 문자열 입력
+        //     var input = parseInt(prompt("숫자 입력"+i+"번째"));
+
+        //     //  input이 정수가 아닐경우 밖으로
+        //     if(isNaN(input)){
+        //         document.write("숫자만 입력");
+        //         break;
+        //     }else{
+        //         //  i가 0과 같다는 것은 위에서 숫자를 다 입력 했다는 뜻
+        //         if(i==0){
+        //             first = input;
+
+        //         // 그러므로 숫자 다음인 연산자 선택을 해줘야 한다.
+        //         }else{      // i가1일때 두 번째 propmt 입력 받은 값에 대한 처리하는 조건식
+        //             second = input; // second변수에 저장
+        //             var mode = prompt("연산선택");  
+        //             //조건문을 사용해서 mode에 저장된 연산자와 같은 식의 함수를 불러오고, 그에 맞는 값 출력문
+        //             if(mode == '+'){
+        //                 document.write(add(first,second));
+        //             }else if(mode == '-'){
+        //                 document.write(sub(first,second));
+        //             }else if(mode == '*'){
+        //                 document.write(mul(first,second));
+        //             }else if(mode == '/'){
+        //                 document.write(div(first,second));
+        //             }
+        //         }
+        //     }
+        // }
         
 
         
