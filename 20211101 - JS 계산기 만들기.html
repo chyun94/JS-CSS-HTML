@@ -6,36 +6,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS이용해서 계산기 만들기</title>
 </head>
+<style>
+        table {
+            border-collapse: collapse;
+            text-align: center;
+            cursor: pointer;
+        }
+        td {
+            padding: 5px 10px;
+            text-align: center;
+        }
+        td:hover{
+            background: rgb(101, 112, 90);
+            box-shadow: 0 0 10px chocolate;
+        }
+        input {
+            text-align: right;
+            border: none;
+            background: '';
+        }
+        input:focus {
+            outline: none;
+        }
+
+</style>
+<pre>
+    계산기의 구조
+    1. table
+    2. colspan과 rowpan
+    3. 스타일링 - 이건 보류
+    
+    식 입력 받기
+    1. html태그의 onclick속성 사용
+    2. js함수와 같이 연동
+</pre>
 <body>
-    <div class="calculator">
-        <input type="text" id="resultFld" placeholder="식을 입력하세요">
-        <br>
-        <input type="button" value="7" onclick="btn_click(7)">
-        <input type="button" value="8" onclick="btn_click(8)">
-        <input type="button" value="9" onclick="btn_click(9)">
-        <input type="button" value="/" onclick="cal('/')">
-        <br>
-        <input type="button" value="4" onclick="btn_click(4)">
-        <input type="button" value="5" onclick="btn_click(5)">
-        <input type="button" value="6" onclick="btn_click(6)">
-        <input type="button" value="*" onclick="cal('*')">
-        <br>
-        <input type="button" value="1" onclick="btn_click(1)">
-        <input type="button" value="2" onclick="btn_click(2)">
-        <input type="button" value="3" onclick="btn_click(3)">
-        <input type="button" value="-" onclick="cal('-')">
-        <br>
-        <input type="button" value="0" onclick="btn_click(0)">
-        <input type="button" value="00" onclick="btn_click(00)">
-        <input type="button" value="C" onclick="clear_del()">
-        <input type="button" value="+" onclick="cal('+')">
-        <br>
-        <input type="button" value="계산하기" onclick="compute()">
-    </div>
+    <table border="1">
+        <tr>
+            <td colspan="4">
+                <input type="text" id="display">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="result">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3" onclick="reset()">AC</td>
+            <td onclick="add('/')">/</td>
+        </tr>
+        <tr>
+            <td onclick="add(7)">7</td>
+            <td onclick="add(8)">8</td>
+            <td onclick="add(9)">9</td>
+            <td onclick="add('*')">*</td>
+        </tr>
+        <tr>
+            <td onclick="add(4)">4</td>
+            <td onclick="add(5)">5</td>
+            <td onclick="add(6)">6</td>
+            <td onclick="add('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="add(1)">1</td>
+            <td onclick="add(2)">2</td>
+            <td onclick="add(3)">3</td>
+            <td onclick="add('+')">+</td>
+        </tr>
+        <tr>
+            <td colspan="2" onclick="add(0)">0</td>
+            <td onclick="add('.')">.</td>
+            <td onclick="calculate()">=</td>
+        </tr>
+    </table>
+    
+
 
     <script>
+        //  add라는 함수는 html의 input 태그를 불러 오는 함수이다.
+    function add(char){
+        var display = document.getElementById('display');
+        //  display.value 는 input태그 안에 들어 있는 값을 의미.
+        //  char은 input태그의 값 뒤에 문자를 추가해 주는 역할
+        display.value += char;
+    }
 
+    //  계산 값 출력 함수
+    function calculate(){
+        var display = document.getElementById('display');
+        // 식 계산 후 result 변수에 저장
+        var result = eval(display.value);
+        document.getElementById('result').value = result;
+    }
 
+    // 식 초기화 하는 함수
+    function reset(){
+        document.getElementById('display').value = "";
+        document.getElementById('result').value = "";
+    }
     </script>
 </body>
 </html>
