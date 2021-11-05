@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date객체를 이용한 문제 1</title>
+</head>
+<style>
+    div{
+        background: brown;
+        color: wheat;
+        width: 80px;
+
+    }
+</style>
+<body>
+    <pre>
+        <h3>페이지 방문 초시간이 짝수면 violet, 홀수면 lightskyblue배경으로 바뀌게</h3>
+
+        <div onclick="button1()">ClickHere!</div>
+    </pre>
+    <script>
+        var time = '';
+        function button1(getFullYear,getMonth,getDate,getHours,getMinutes,getSeconds)
+        {
+            
+                var current = new Date();
+                //ㄴ> 현재 시간 값을 가진 Date 객체 생성
+                if(current.getSeconds()%2 == 0){
+                    document.body.style.backgroundColor = 'skyblue';
+                }else{
+                    document.body.style.backgroundColor = 'lightgreen';
+                }
+                
+                //document를 사용한 순간 문서는 이렇게 저장 되어서 돌아올 수 없다. 그래서 console를 사용해서 해야한다.
+                document.write(time);
+        
+                document.write(time+"현재 시간: " +current.getFullYear(),"년 " +current.getMonth(),"월 " 
+                +current.getDate(),"일" +current.getHours(),"시 "
+                +current.getMinutes(),"분 "+current.getSeconds(),"초<br>");   
+
+        }
+
+            
+            
+    </script>
+    
+</body>
+</html>

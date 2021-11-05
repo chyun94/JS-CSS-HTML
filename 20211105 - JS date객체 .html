@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        
+        <h3>Date 객체</h3>
+        Date객체는 시간 정보를 담는 객체
+        new키워드로 생성
+        1. var now = newDate()  - 객체화
+
+        2. var start = new Date(2021,10,5);
+        
+        <h3>Date 객체의 주요 메소드</h3>
+        getFullyear(): 2021과 같지 네자리 연도 리턴
+        getMonth(): 0~11사이의 정수를 리턴
+        getDate(): 한 달 내의 날짜 리턴(1~31)
+        getDay():한 주 내 요일을 정수로 리턴(일요일=0,토요일=6)
+        getHours(): 0~23사이의 정수 시간 리턴
+        getMinutes(): 0~59사이 정수 분 리턴
+        getSeconds(): -~59사이 정수 초 리턴
+        getTime(): 1970년 1월1일0시0분0초 기준으로 현재까지 경과된 밀리초 단위 리턴
+        getMilliseconds(): 0~999사이의 정수 밀리초 리턴
+
+        <div onclick="milli()">Time</div>
+    </pre>
+    <hr>
+    <script>
+        // var now = new Date();
+        // // 날짜도 index와 같이 0부터 시작을 하기 때문에 10월로 입력하면 11월로 출력이 된다.
+        // var start = new Date(2021,10,5);
+        // console.log(now);
+        // console.log(start);
+
+        function milli(){
+            var now = new Date();
+            console.log(now.getTime());
+        }
+
+
+    </script>
+</body>
+</html>

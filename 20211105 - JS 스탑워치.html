@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스톱워치</title>
+</head>
+<style>
+    div{
+        background: wheat;
+        width: 60px;
+        text-align: center;
+        font-size: large;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+    div:hover{
+        background: darkblue;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <pre>
+        a. milli sec 단위까지 측정
+        b. 누가 가장 05:00 정확하게 맞추는지 
+        c. 사용자 이름을 입력
+        d. 사용자 마다 기록을 측정(저장)
+
+        1. 시작 버튼: 타이머가 시작
+        2. 중지 버튼: 시작으로부터 몇초가 지났는지 console에 표현
+        3. 저장 버튼: 누른 시점의 시간이 기록된다
+
+        게임 시작시 사용자 이름 입력 후 시작,정지,자동으로 기록 저장, 1등 표시
+        
+        <hr>
+        <div onclick="start()">start</div>
+        <div onclick="stop()">stop</div>
+        <div onclick="restart()">result</div>
+        <hr>
+    </pre>
+
+    <script>
+        var startTime ;
+        var stoptime  ;
+        var second_result = 0 ;
+        var millisecond_box = 0;
+        
+        var arrName=[];
+        var arrResult=[];
+        var count= -1;
+
+        var user = prompt("이름을 입력해 주세요");
+
+        console.log("사용자: "+ user);
+        function start(){
+
+            startTime = new Date();
+            console.log("사용자: "+user)
+            console.log("Second 시작 시간:"+startTime.getSeconds());
+        }
+        
+        function stop(){
+            count++;
+            stoptime = new Date();
+            console.log("Second 정지 시간: "+stoptime.getSeconds());
+            var result = (stoptime.getTime()-startTime.getTime())/1000;
+            console.log((count+1)+"번째 플레이어"+user+"의경과시간: " + result);
+            
+            arrResult[count]=((stoptime-startTime)/1000);
+            console.log("현재까지 기록:"+arrResult);
+            select();
+        }
+        
+        function select(){
+            var arrRank=[];
+            for(var i=0; i<count+1; i++){
+                if(arrResult[i]>5){
+                    arrRank[i]=((arrResult[i]-5)*1000);
+                }else{
+                    arrRank[i]=((5-arrResult[i])*1000);
+                }
+            }
+            console.log(arrRank);
+
+            //  arrrank요소중 가장 작은 수를 골라야 한다
+        }
+        
+        function restart(){
+                user = prompt("새로운 유저");
+                console.log("새로운 사용자");
+        }
+        console.clear();
+        
+            
+        
+    </script>
+</body>
+</html>
