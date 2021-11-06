@@ -37,49 +37,60 @@
         <hr>
         <div onclick="start()">start</div>
         <div onclick="stop()">stop</div>
-        <div onclick="restart()">result</div>
+        <div onclick="restart()">restart</div>
         <hr>
     </pre>
 
     <script>
         var startTime ;
         var stoptime  ;
-        var second_result = 0 ;
-        var millisecond_box = 0;
-        
-        var arrName=[];
-        var arrResult=[];
-        var count= -1;
+        var arrName=[];     //  arrName이라는 배열 상자 만들어주기
+        var arrResult=[];   //  결과 값을 저장해주는 상자 만들기
+        var count= -1;      //  카운트는 변수에 -1 이라는 값을 저장해주기
+        var arrResult2=[];
 
         var user = prompt("이름을 입력해 주세요");
-
         console.log("사용자: "+ user);
-        function start(){
 
+        //  html에 생성된 start버튼에 시작 기능을 부여한다
+        //  start라는 기능 안에 (참고사이트:https://dororongju.tistory.com/116) new Date();현재 날짜를 입력해준다
+        //  start버튼을 누른 시점으로 부터 시간을 입받아 console.log로 출력해주는 코드를 입력해준다.
+        function start(){
             startTime = new Date();
             console.log("사용자: "+user)
-            console.log("Second 시작 시간:"+startTime.getSeconds());
+            console.log("시작 시간:"+startTime.getSeconds());
         }
         
+        //  html에 생성된 stop버튼에 멈추는 기능을 부여한다
+        //  count박스에 -1부터 하나씩 증가하는 코드를 작성되어 있는데, 정지를 누를때마다 1씩 증가하는 코드를 작성하여 값을 셀 수 있게 한다. 
+        //  result라는 새로운 변수를 생성하여 시간차를 계산할 수 있는 코드를 작성한다.
+        //  앞서 만들었던 결과값을 저장해주는 arrResult라는 array(배열)상자를 가져와 결과를 arrResult상자에 대입(저장) 한다.
         function stop(){
             count++;
             stoptime = new Date();
-            console.log("Second 정지 시간: "+stoptime.getSeconds());
+            console.log("정지 시간: "+stoptime.getSeconds());
             var result = (stoptime.getTime()-startTime.getTime())/1000;
-            console.log((count+1)+"번째 플레이어"+user+"의경과시간: " + result);
+            console.log((count+1)+"번째 게임 "+user+"의 경과시간: " + result +"초");
             
-            arrResult[count]=((stoptime-startTime)/1000);
+            arrResult[count]=(result);
             console.log("현재까지 기록:"+arrResult);
-            select();
+            //  ranking()함수(기능)을 가져온다. 왜냐, 멈췄을 때 순위를 보여줘야 하기 때문이다.
+            //  굳이 함수명을 rankingt 안해도 무관, 이 함수는 순위를 나열하는 함수임을 기억하자.
+            ranking();
         }
         
-        function select(){
+        //  ranking이라는 함수(기능)에 arrRank라는 arrya(배열) 박스를 만들어 준다.
+        //  반복문을 사용해 카운트 되는만큼 값을 저장한다. 출력시 최대 5개까지만 나올 수 있도록 출력을 한다.
+        function ranking(){
             var arrRank=[];
-            for(var i=0; i<count+1; i++){
+            for(var i=0; i<count+1 && i<5; i++){
                 if(arrResult[i]>5){
                     arrRank[i]=((arrResult[i]-5)*1000);
                 }else{
                     arrRank[i]=((5-arrResult[i])*1000);
+                }
+                if(arrResult[i] == 4){
+                    arrResult=[];
                 }
             }
             console.log(arrRank);
@@ -88,10 +99,10 @@
         }
         
         function restart(){
+                console.clear();
                 user = prompt("새로운 유저");
                 console.log("새로운 사용자");
         }
-        console.clear();
         
             
         
