@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알림창 만들기</title>
+    <link rel="stylesheet" href="20211107 인강.css">
+</head>
+<body>
+    <pre>
+        Alert창 만들기
+    </pre>
+    <h2 id="hello">안녕하세요</h2>
+    <h2 id="hi">올때메로나</h2>
+    <hr>
+    <div class="alert-box" id="asd">
+        <h2>Alert Box</h2>
+    </div>
+    <button onclick="알림창열기('block')"> Open </button>
+    <button onclick="알림창열기('none')"> Close </button>
+    <hr>
+
+    </div>
+    
+    <script>
+{
+        document.getElementById('hello').innerHTML = '안녕';
+        document.getElementById('hi').style.fontSize = '30px';
+}
+        //웹문서 '.'은 ~의
+
+        // document.getElementById('???').??? = '???';
+        //빈칸은 무엇으로든 바꿀 수 있다. html요소의 생상 사이즈 마진 패딩 등
+        // .innerHTML자리에 style.color 이런 식으로 (.의 의미는 ~의 가된다)
+        // 속성 이런건 검색을 해보면 된다
+
+        // = 등호는 오른쪽걸 왼쪽에 '대입' 해주세요 라는 뜻이다
+        
+        //파라미터를 사용하면 함수를 업그레이드 할 수 있다!
+        function 알림창열기(구멍){
+            document.getElementById('asd').style.display = 구멍; 
+        }
+
+        {
+        // function 알림창닫기(){
+        //     document.getElementById('asd').style.display = 'none';
+        // }
+        // 알림창닫기();
+    }
+{
+        function add(){
+            2+1
+        }
+        function add2(){
+            3+1
+        }
+        function add3(){
+            4+1
+        }
+        //위의 함수들은 다 비슷하다 그러므로 하나로 만들어 줄 수 있다
+        function add(pluse){
+            2+pluse
+        }
+        pluse(1);   //pluse자리에 1을 넣어서 실행해 달라는 말. 파라미터 문법 아주 죠습니다 : >
+    }
+
+        
+    </script>
+</body>
+</html>

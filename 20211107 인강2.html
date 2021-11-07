@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="20211107 인강2.css">
+</head>
+<body>
+
+    <hr>
+    <div class="A" id="input"> 
+        <p id="title"> Alert박스</p>
+        <button id="close"> X </button>
+    </div>     
+    <button onclick="알림창1열기('ID를 입력하지 않았습니다.')">ID</button>
+    <button onclick="알림창1열기('PW를 입력하지 않았습니다.')">PW</button>
+
+
+    <script>
+
+        // function 알림창1열기(){
+        //     //  제목 바꾸기
+        //     document.getElementById('title').innerHTML ='ID를 입력하지 않았습니다.';
+        //     //  열기
+        //     document.getElementById('alert').innerHTML ='block';
+        // }
+        // function 알림창2열기(){
+        //     document.getElementById('title').innerHTML ='PW를 입력하지 않았습니다.';
+        //     document.getElementById('alert').innerHTML ='block';
+        // }
+        function 알림창1열기(구멍){
+            document.getElementById('title').innerHTML = 구멍;
+        }
+        // addEventListener('이벤트요소',기능){}
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
