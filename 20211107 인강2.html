@@ -10,33 +10,36 @@
 <body>
 
     <hr>
-    <div class="A" id="input"> 
-        <p id="title"> Alert박스</p>
-        <button id="close"> X </button>
-    </div>     
-    <button onclick="알림창1열기('ID를 입력하지 않았습니다.')">ID</button>
-    <button onclick="알림창1열기('PW를 입력하지 않았습니다.')">PW</button>
-
-
+    <div class="alert-box" id="alert"> 
+        <p id="title"> Alert-BOX </p>
+        <button onclick="close_box('none')">CLOSE</button>
+    </div>
+    <button class="A" onclick="open_box('ID를 입력해 주세요')">BUTTON1</button>
+    <button class="A" onclick="open_box('PW를 입력해 주세요')">BUTTON2</button>
     <script>
 
-        // function 알림창1열기(){
-        //     //  제목 바꾸기
-        //     document.getElementById('title').innerHTML ='ID를 입력하지 않았습니다.';
-        //     //  열기
-        //     document.getElementById('alert').innerHTML ='block';
+        // function open_box(){
+        //     document.getElementById('alert').style.display='block';
         // }
-        // function 알림창2열기(){
-        //     document.getElementById('title').innerHTML ='PW를 입력하지 않았습니다.';
-        //     document.getElementById('alert').innerHTML ='block';
-        // }
-        function 알림창1열기(구멍){
-            document.getElementById('title').innerHTML = 구멍;
+        function close_box(){
+            document.getElementById('alert').style.display='none';
         }
-        // addEventListener('이벤트요소',기능){}
-        document.getElementById('close').addEventListener('click',function(){
-            document.getElementById('alert').style.display = 'none';
-        });
+
+        // 함수 업그레이드 - 파라미터
+        function open_box(parameters){
+            document.getElementById('title').innerHTML = parameters;
+            document.getElementById('alert').style.display= 'block';
+        }
+
+        // open_box(123);
+        // open_box('안녕');
+        // 등과 같이 여러 타입을 입력해서 작성 가능
+        // function add(parameters){
+        //     1+parameters
+        // }
+        // parameters(2);
+        
+
     </script>
 </body>
 </html>
