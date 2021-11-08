@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="JavaScript 인강2.css">
+</head>
+<body>
+    <hr>
+    <h4 id="test" class="yellow-bg">안녕하세요</h4>
+    <hr>
+    <div class="alert-box" id="alert"> 
+        <p id="title"> Alert-BOX </p>
+        <!-- onclick="close_box('none')" -->
+        <button id="close" >CLOSE</button>
+    </div>
+    <button class="A" onclick="open_box('ID를 입력해 주세요')">BUTTON1</button>
+    <button class="A" onclick="open_box('PW를 입력해 주세요')">BUTTON2</button>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+        
+    </script>
+    <script>
+        // document.querySelector('#test');
+        // document.querySelectorAll('#test')[0];
+        // .text도 있는데 text는 글자만 바꿀 수 있기에 html로 해야 모든걸 바꿀 수 있다.
+        // $('#test').html(''); 빈 공간은 그대로 출력한다
+        $('#test').html('안녕');
+        $('#test').css('color', 'green');
+        $('#test').attr('src','')
+        $('#yellow-bg').css('color','yellow');
+
+        function open_box(){
+            document.getElementById('alert').style.display='block';
+        }
+        // function close_box(){
+        //     document.getElementById('alert').style.display='none';
+        // }
+
+        // 함수 업그레이드 - 파라미터
+        function open_box(parameters){
+            document.getElementById('title').innerHTML = parameters;
+            document.getElementById('alert').style.display= 'block';
+        }
+        // close button eventListener
+        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('alert').style.display = 'none';
+        });
+        // open_box(123);
+        // open_box('안녕');
+        // 등과 같이 여러 타입을 입력해서 작성 가능
+        // function add(parameters){
+        //     1+parameters
+        // }
+        // parameters(2);
+        
+
+    </script>
+ 
+</body>
+</html>

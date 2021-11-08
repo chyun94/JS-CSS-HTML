@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단/ 난수로 복권 만들기</title>
+</head>
+<body>
+    <pre>
+        <h3>Math를 활용한 구구단</h3>
+        function randomInt(){
+            return Math.floor(Math.random()*9)+1;
+        }
+        //구구단 문제 생성
+        var ques = randomInt()+"*"+randomInt();
+        //사용자로부터 답 입력
+        var user = prompt(ques+"값은?");
+    
+        if(user == null){
+            document.write("구구단 연습을 종료합니다")
+        }else{
+            var ans = eval(ques);
+            if(ans == user){
+                document.write("정답!<br>");
+            }else{
+                document.write("틀렸어요<br>");
+            }
+            document.write("정답은 "+ques+"="+"<strong>"+ans+"</strong>입니다.<br>");
+        }
+        <h3>Math를 활용한 복권</h3>
+        *규칙*
+        1. 사용자에게 몇 게임 할 것인지 물어보기
+        2. 사용자에게 6개의 번호를 입력 받음(수동)
+        3. 사용자가 특정 수를 지정 가능(반자동)
+        4. 6개 숫자 모두 자동(자동)
+
+        1등 6
+        2등 5+보너스 번호
+        3등 5
+        4등 4
+        5등 3
+        
+
+        1~10    노
+        11~20   파
+        21~30   빩
+        31~40   보
+        41~45
+    </pre>
+    <hr>
+
+<Script>
+    function randomInt(){
+        return Math.floor(Math.random()*45)+1;
+    }
+
+    //  게임 몇 회 진행 할 것인지 물어보기
+    var xLotto =[];
+    var gameCount = prompt("몇 회 하시겠습니까?");
+    document.write(gameCount+"회 진행");
+    //  게임 횟수 반복문
+    for(var i = 1; i<gameCount.length; i++){
+        
+    }
+    for(var j=0; j<6; j++){
+        var insertNum = prompt("번호를 입력해 주세요");
+    }
+    document.write("입력하신 번호: " + insertNum);
+
+    //  숫자 7개 입력하기
+    // var lotto = [];
+    // var insertNum = [];
+    // for(var i=1; i<7; i++){
+    //     var insertLotto = prompt("입력");
+    //     document.write(i+"번째 입력하신 숫자는: "+insertLotto+ "입니다.<br>");
+    //     if(insertNum == lotto){
+    //         document.write("1등 당첨");
+    //     }else if(){
+    //         document.write("2등 당첨");
+    //     }else if(){
+    //         document.write("3등 당첨");
+    //     }else if(){
+    //         document.write("4등 당첨");
+    //     }else if(){
+    //         document.write("5등 당첨");
+    //     }else{
+    //         document.write("꽝 ㅎ");
+    //     }
+    // }
+    
+</Script>
+</body>
+</html>
