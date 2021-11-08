@@ -42,23 +42,20 @@
     </pre>
 
     <script>
-        var startTime ;
-        var stoptime  ;
+        var startTime ;     //  현재 시간을 저장하는 변수
+        var stoptime  ;     //  현재 시간을 저장하는 변수
         var arrName=[];     //  arrName이라는 배열 상자 만들어주기
         var arrResult=[];   //  결과 값을 저장해주는 상자 만들기
-        var count= -1;      //  카운트는 변수에 -1 이라는 값을 저장해주기
-        var arrResult2=[];
+        var count= -1;      //  정지 버튼을 눌렀을 시 stop함수에서 사용, 카운트는 변수에 -1 이라는 값을 저장해주기 (index로 활용 할 변수)
 
         var user = prompt("이름을 입력해 주세요");
-        console.log("사용자: "+ user);
 
         //  html에 생성된 start버튼에 시작 기능을 부여한다
         //  start라는 기능 안에 (참고사이트:https://dororongju.tistory.com/116) new Date();현재 날짜를 입력해준다
         //  start버튼을 누른 시점으로 부터 시간을 입받아 console.log로 출력해주는 코드를 입력해준다.
         function start(){
             startTime = new Date();
-            console.log("사용자: "+user)
-            console.log("시작 시간:"+startTime.getSeconds());
+            console.log("사용자: "+user+"시작 시간:"+startTime.getSeconds()+"초");
         }
         
         //  html에 생성된 stop버튼에 멈추는 기능을 부여한다
@@ -66,13 +63,12 @@
         //  result라는 새로운 변수를 생성하여 시간차를 계산할 수 있는 코드를 작성한다.
         //  앞서 만들었던 결과값을 저장해주는 arrResult라는 array(배열)상자를 가져와 결과를 arrResult상자에 대입(저장) 한다.
         function stop(){
-            count++;
-            stoptime = new Date();
+            count++;    //stop버튼을 누르면 stop함수가 호출되며 count를 1증가 시킨다
+            stoptime = new Date();  //함수 호출 시 시간 정보를 담은 새로운 객체를 새롭게 생성한다.
             console.log("정지 시간: "+stoptime.getSeconds());
-            var result = (stoptime.getTime()-startTime.getTime())/1000;
+            var result = (stoptime.getTime()-startTime.getTime())/1000; //result에 (stoptome-starttime)/1000의 값을 대입한다.
             console.log((count+1)+"번째 게임 "+user+"의 경과시간: " + result +"초");
-            
-            arrResult[count]=(result);
+            arrResult[count]=(result);  //플레이어들의 기록을 저장하기 위해 선언한 arrResult배열의 count인덱스에 저장
             console.log("현재까지 기록:"+arrResult);
             //  ranking()함수(기능)을 가져온다. 왜냐, 멈췄을 때 순위를 보여줘야 하기 때문이다.
             //  굳이 함수명을 rankingt 안해도 무관, 이 함수는 순위를 나열하는 함수임을 기억하자.
@@ -82,24 +78,33 @@
         //  ranking이라는 함수(기능)에 arrRank라는 arrya(배열) 박스를 만들어 준다.
         //  반복문을 사용해 카운트 되는만큼 값을 저장한다. 출력시 최대 5개까지만 나올 수 있도록 출력을 한다.
         function ranking(){
+            // 5초와 차이가 적은 기록 순으로 담기 위한 arrRank배열 생성
             var arrRank=[];
             for(var i=0; i<count+1 && i<5; i++){
-                if(arrResult[i]>5){
-                    arrRank[i]=((arrResult[i]-5)*1000);
-                }else{
-                    arrRank[i]=((5-arrResult[i])*1000);
-                }
-                if(arrResult[i] == 4){
-                    arrResult=[];
+                if(arrResult[i]>5){ //만약 arrResult[i]가 5초과면 i는 i-5*1000을 arrRank[i]에 대입한다.
+                    arrRank[i]=((arrResult[i]-5)*1000); // 기록이 5보다 크면 5에서 기록을 뺀다(양수)
+                }else{  // 또는 5미만이면 arrRank[i]에 5-arrResult[i]*1000한 값을 대입한다.
+                    arrRank[i]=((5-arrResult[i])*1000); // 기록이 5보다 작으면 5에서 기록을 뺀다(양수)
                 }
             }
             console.log(arrRank);
-
-            //  arrrank요소중 가장 작은 수를 골라야 한다
+            //  arrRank요소중 가장 작은 수를 골라야 한다
+            var win = 0;    // 5초와 기록 차가 적은 점수를 담기 위한 변수
+            var winnerIndex = 0;    //  몇 번째 플레이어인지 보기 위한 변수
+            for(var j=0; j<arrRank.length; j++){    //0부터arrRank에 담긴 요소의 객수만큼 반복
+                if(j==0){   // 첫 바퀴는 따로 분류하여 처리
+                    win = arrRank[j];   //  첫 바퀴,arrRank배열의 가장 처음 요소는 가장 작은 수 라고 가정하여 win변수에 무조건 대입
+                }else{  // 첫 바퀴가 아닌 그 외 모든 반복 경우
+                    if(win>arrRank[j]){ //첫 바퀴에 win에 담아 놓은 기록과 2~n번째 기록과 비교하여 win에 담긴 값이 더 큰 수이면
+                        win = arrRank[j];   //  win변수에 arrRank[j]의 기록으로 갱신
+                        winnerIndex=j;  //winnerIndex는 추후 콘솔 출력을 위한 것(몇 번째 플레이어인지)
+                    }
+                }
+            }
+            console.log((win/1000)+"차이"+(winnerIndex+1)+"번째 플레이어가 1등");   //win변수에 저장한 5초 차이 수치를 출력하고 플레이어 출력
         }
         
         function restart(){
-                console.clear();
                 user = prompt("새로운 유저");
                 console.log("새로운 사용자");
         }
