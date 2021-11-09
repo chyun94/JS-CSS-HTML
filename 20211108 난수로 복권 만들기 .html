@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>구구단/ 난수로 복권 만들기</title>
 </head>
+<style>
+.lotto_box{
+    background: rgb(48, 47, 47);
+    border: 1px solid rgb(91, 247, 18);
+    border-radius: 14px;
+    width: 200px;
+    height: 80px;
+    box-shadow: 0 0 10 black;
+    text-align: center;
+    line-height: 80px;
+}
+.lotto_box .lotto_button{
+    color: blanchedalmond;
+    background: transparent;
+    border: 1px solid lawngreen;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.lotto_box .lotto_button:hover{
+    color: whitesmoke;
+    font-size: 20px;
+    background: rgb(56, 41, 41);
+    border-radius: 8px;
+}
+</style>
 <body>
     <pre>
         <h3>Math를 활용한 구구단</h3>
@@ -48,6 +73,9 @@
         31~40   보
         41~45
     </pre>
+    <div class="lotto_box" id="">
+        <button id="lottoStart" class="lotto_button">--LottoStart--</button>
+    </div>
     <hr>
 
 <Script>
