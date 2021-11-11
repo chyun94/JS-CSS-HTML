@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.yellow{
+    background: yellow;
+}
+</style>
+<body>
+    <h4 id="test">배경색을 Jquery로 바꿔보기</h4>
+    
+    <p class="greeting">Hi</p>
+    <p class="greeting">Hi</p>
+    <p class="greeting">Hi</p>
+
+    <button class="btn">버튼1</button>
+    <button class="btn">버튼2</button>
+    <button class="btn">버튼3</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>        
+<script>
+    $('#test').html('Hellow');
+    // $('#test').text('Hellow2');
+    // $('#test').htrml();//그냥 출력만 하고 싶을 시
+    // $('#test').attr('속성','값');
+    // $('#test').addClass('yellow'); ->클레스를 불러오는 것
+
+    //JS로 class를 찾아 바꾸는 방법(배열 방법으로 바꿔줘야 한다.)
+    document.getElementsByClassName('greeting')[0].innerHTML = '안녕';
+    document.getElementsByClassName('greeting')[1].innerHTML = '안녕';
+    document.getElementsByClassName('greeting')[2].innerHTML = '안녕';
+
+    $('.greeting').html('한번에 바꾸기');
+    $('.greeting').eq(0).html('하나만 바꾸기');
+    // $('.btn').eq(1).toggleClass().hide();
+    $('.btn:eq(1)').toggleClass().hide();
+
+    // document.getElementsByClassName('btn')[0].addEventListener('click',function(){
+    //     document.getElementsByClassName('greeting')[0].style.display = 'none';
+    // })
+    // document.getElementsByClassName('btn')[1].addEventListener('click',function(){
+    //     document.getElementsByClassName('greeting')[0].style.display = 'block';
+    // })
+
+    // $('.btn').on('click',function(){
+    //     $('.greeting').hide();
+    // })
+    // $('.btn').on('click',function(){
+    //     $('.greeting').show();
+    // })
+    // $('.btn').on('click',function(){
+    //     $('.greeting').slideUp();
+    // })
+
+    // document.getElementsByClassName('btn')[0].addEventListener('멀라멀라');
+    // document.getElementsByClassName('btn')[1].addEventListener('멀라멀라');
+    // document.getElementsByClassName('btn')[2].addEventListener('멀라멀라');
+
+    // $('.btn').on('click','h4',function(){
+    //     아무거나
+    // })
+
+
+
+</script>
+</body>
+</html>
