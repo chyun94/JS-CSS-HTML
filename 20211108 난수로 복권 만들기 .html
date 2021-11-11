@@ -30,10 +30,34 @@
     background: rgb(56, 41, 41);
     border-radius: 8px;
 }
+.winning_box{
+    background: rgb(48, 47, 47);
+    border: 1px solid rgb(91, 247, 18);
+    border-radius: 14px;
+    width: 200px;
+    height: 80px;
+    box-shadow: 0 0 10 black;
+    text-align: center;
+    line-height: 80px;
+}
+.winning_box .winning_button{
+    color: blanchedalmond;
+    background: transparent;
+    border: 1px solid lawngreen;
+    cursor: pointer;
+    border-radius: 8px;
+}
+.winning_box .winning_button:hover{
+    color: whitesmoke;
+    font-size: 20px;
+    background: rgb(56, 41, 41);
+    border-radius: 8px;
+}
+
 </style>
 <body>
     <pre>
-        <h3>Math를 활용한 구구단</h3>
+        <!-- <h3>Math를 활용한 구구단</h3>
         function randomInt(){
             return Math.floor(Math.random()*9)+1;
         }
@@ -71,52 +95,109 @@
         11~20   파
         21~30   빩
         31~40   보
-        41~45
+        41~45 -->
     </pre>
-    <div class="lotto_box" id="">
-        <button id="lottoStart" class="lotto_button">--LottoStart--</button>
+    <div>
+        <div class="lotto_box" id="">
+            <button id="lottoStart" class="lotto_button" onclick="lotto_click(input_game)">자동 구매</button>
+        </div>
+        <hr>
+        <div class="lotto_box" id="">
+            <button id="lottoStart" class="lotto_button" onclick="lotto_click(input_game)">수동 구매</button>
+        </div>
+        <hr>
+        <div class="winning_box">
+            <button id="lottowinning" class="winning_button" onclick="winning_lotto(arr)">--WinnerNumber--</button>
+        </div>
+        <hr>
     </div>
     <hr>
 
 <Script>
-    function randomInt(){
-        return Math.floor(Math.random()*45)+1;
-    }
+    //로또 당첨 번호
+    var arr = [];
+    var bonous = Math.floor(Math.random()*45+1);
+    var winner = arr+bonous;
+    
 
-    //  게임 몇 회 진행 할 것인지 물어보기
-    var xLotto =[];
-    var gameCount = prompt("몇 회 하시겠습니까?");
-    document.write(gameCount+"회 진행");
-    //  게임 횟수 반복문
-    for(var i = 1; i<gameCount.length; i++){
+    function winning_lotto(parameters){
+        // document.getElementById('lottowinning').innerHTML = parameters;
+        
+        for(var i = 0; i < 6; i++){
+            arr.push(Math.floor(Math.random()*45)+1); //배열의 마지막 요소 제거
+            for(var c = 0; c<i; c++){
+                if (arr[i] === arr[c]) {
+                    arr();
+                }
+            }
+        }
+        // 중복처리 + 오름차순 ㅎ
+        if(arr.indexOf(bonous) == -1){
+            // alert("Find");
+            arr.sort(function (a,b) {
+                return a-b;
+            });
+            document.write("금주의 당첨 번호: "+arr +"+"+bonous);
+            console.log("금주의 당첨 번호: "+arr +"+"+bonous);
+        }
+    }
+    //게임 횟수, 게임 번호 입력
+    var insert_number = new Array();
+    var input_game = new Array();
+    function lotto_click(parameters,winner, insert_number){
+        // document.getElementById('lottoStart').innerHTML = parameters;
+        input_game = parseInt(prompt("몇 회 진행 하시겠습니까?"));
+        for(var i=0; i<input_game && i<5; i++){
+            document.write("["+i+"]"+"회 진행, 입력번호:");
+            console.log("["+i+"]"+"회 진행, 입력번호:");
+            for(var j=0; j<i; j++);{
+                insert_number = prompt("1~45사이의 번호 7개를 입력해 주세요").split(",");
+                document.write(insert_number+"<br>");
+                console.log(insert_number+"<br>");
+            }
+        }
         
     }
-    for(var j=0; j<6; j++){
-        var insertNum = prompt("번호를 입력해 주세요");
-    }
-    document.write("입력하신 번호: " + insertNum);
 
-    //  숫자 7개 입력하기
-    // var lotto = [];
-    // var insertNum = [];
-    // for(var i=1; i<7; i++){
-    //     var insertLotto = prompt("입력");
-    //     document.write(i+"번째 입력하신 숫자는: "+insertLotto+ "입니다.<br>");
-    //     if(insertNum == lotto){
-    //         document.write("1등 당첨");
-    //     }else if(){
-    //         document.write("2등 당첨");
-    //     }else if(){
-    //         document.write("3등 당첨");
-    //     }else if(){
-    //         document.write("4등 당첨");
-    //     }else if(){
-    //         document.write("5등 당첨");
-    //     }else{
-    //         document.write("꽝 ㅎ");
-    //     }
-    // }
+    function result(winner, insert_number) {
+        var count = 0;
+        var same = 0;
+        var winner = [];
+
+        for(var i=o; i<winner.length; i++){
+            if(winner[i] == 0)
+            count++;
+        }
+        document.write(winner);
+        console.log(winner);
+        for(var i=0; i<winner.length; i++){
+            for(var j=0; j<insert_number; j++){
+                if(winner[i] != 0 && winner[i] == insert_number[j]){
+                    same++;
+                    winner[i] = 0;
+                    break;
+                }
+            }
+        }
+        winner[0] = lottoRank(same+count);
+        winner[1] = lottoRank(same);
+        return winner;
+    }
+    function lottoRank(nums) {
     
+    if(nums == 6)
+        return 1;
+    else if(nums == 5)
+        return 2;
+    else if(nums == 4)
+        return 3;
+    else if(nums == 3)
+        return 4;
+    else if(nums == 2)
+        return 5;
+    else
+        return 6;
+}
 </Script>
 </body>
 </html>
