@@ -28,13 +28,13 @@
         // .text도 있는데 text는 글자만 바꿀 수 있기에 html로 해야 모든걸 바꿀 수 있다.
         // $('#test').html(''); 빈 공간은 그대로 출력한다
         $('#test').html('안녕');
-        $('#test').css('color', 'green');
+        $('#test').css('color', 'blue');
         $('#test').attr('src','')
         $('#yellow-bg').css('color','yellow');
 
-        function open_box(){
-            document.getElementById('alert').style.display='block';
-        }
+        // function open_box(){
+        //     document.getElementById('alert').style.display='block';
+        // }
         // function close_box(){
         //     document.getElementById('alert').style.display='none';
         // }
@@ -45,7 +45,7 @@
             document.getElementById('alert').style.display= 'block';
         }
         // close button eventListener
-        document.getElementById('close').addEventListener('click',function(){
+            document.getElementById('close').addEventListener('click',function(){
             document.getElementById('alert').style.display = 'none';
         });
         // open_box(123);

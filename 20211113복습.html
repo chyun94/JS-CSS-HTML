@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS로 속성 바꾸기</title>
+</head>
+<style>
+
+div{
+    margin-left: 100px;
+    width: 150px;
+    height: 20px;
+}
+h2.js{
+    font-size: 40px;
+}
+
+</style>
+<body>
+    <pre>
+        1번 문제
+        자바스크립트를 통해서 안^녕!을 다른 문자로 바꾸기
+        <h2 id="hello">안^녕!</h2>
+
+        <hr>
+        2번 문제
+        자바스크립트를 활용해서 무지개 박스 7개를 만들기
+        <!-- div#*7 -->
+        <div>
+            <div id="red"> </div>
+            <div id="orange"> </div>
+            <div id="yellow"> </div>
+            <div id="green"> </div>
+            <div id="blue"> </div>
+            <div id="navy"> </div>
+            <div id="purple"> </div>
+        </div>
+
+        <hr>
+        3번 문제
+        자바스크립트를 활용해서 아래의 글자 크기를 바꾸기
+        <h2 id="jas">JavaScript</h2>
+    </pre>
+    
+    <script>
+        document.getElementById('hello').innerHTML = '안녕';
+
+        document.getElementById('red').style.background ='red';
+        document.getElementById('orange').style.background ='orange';
+        document.getElementById('yellow').style.background ='yellow';
+        document.getElementById('green').style.background ='green';
+        document.getElementById('blue').style.background ='blue';
+        document.getElementById('navy').style.background ='navy';
+        document.getElementById('purple').style.background ='purple';
+
+        document.getElementById('jas').style.fontSize='30px';
+    </script>
+</body>
+</html>

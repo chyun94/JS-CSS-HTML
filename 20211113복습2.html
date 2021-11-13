@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS버튼,function활용</title>
+</head>
+<style>
+    div.box_oc{
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        color: rgb(233, 223, 89);
+        background: navy;
+        font-weight: bold;
+        display: block;
+        line-height: 40px;
+        
+    }
+    button{
+        float: left;
+        margin: 10px;
+    }
+    
+</style>
+<body>
+        <pre>
+            문제 1
+            버튼을 생성하고 자바스크립트를 통해서 버튼의 열고 닫기 만들기
+
+            문제 2
+            만든 박스,버튼을 자바스크립트를 이용해서 꾸미기
+
+            문제 3
+            LEFT와 RIGHT를 누를시 박스 안의 텍스트 바뀌게 만들기
+        </pre>
+        <div id="oc" class="box_oc">
+            BOX_OPEN_CLOSE
+        </div>
+        <button id="b1" class="b1" onclick="open_close('왼쪽 버튼을 눌렀습니다')"> LEFT </button>
+        <button id="b2" class="b2" onclick="open_close('none')"> CLOSE </button>
+        <button id="b4" class="b4" onclick="open_close('block')"> OPEN </button>
+        <button id="b3" class="b3" onclick="open_close('오른쪽 버튼을 눌렀습니다')"> RIGHT </button>
+    <script>
+        // 문제1,3
+        function open_close(params) {
+            document.getElementById('oc').style.display = params;
+            document.getElementById('oc').innerText = params;
+        }
+
+        // 문제2
+        document.getElementById('oc').style.borderRadius = '10px';
+        document.getElementById('b1').style.borderRadius = '10px';
+        document.getElementById('b2').style.borderRadius = '10px';
+        document.getElementById('b3').style.borderRadius = '10px';
+        document.getElementById('b4').style.borderRadius = '10px';
+    </script>
+</body>
+</html>
