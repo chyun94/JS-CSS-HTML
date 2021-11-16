@@ -6,8 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    .test1{
+        color: rgb(221, 212, 255);
+        background: rgb(52, 82, 7);
+    }
+    .test1:hover{
+        background: palegoldenrod;
+        color: honeydew;
+    }
+</style>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<pre>
+    <h1 id="test1">jQuery 배경색 바꾸기</h1>
+    <h3>jQuery는 id값을 통해, .addClass속성을 사용하여 부여한 스타일 속성을 가져올 수 있다. 
+        클레스의 hover,active는 따로 작성하지 않고 클레스명만 입력하면 가져올 수 있다.
+    </h3>
+    .attr()을 사용한 속성 변경
+    img 태그의 src나 a 태그의 href와 같은 속성을 변경할 수 있는 함수이다.
+    a태그의 href 속성을 변경하여 다른 홈페이지로 링크되도록 한다.
+    img태그의 src 속성을 변경하여 다른 사진이 표시되도록 한다.
+
+    <p class="t1">one</p>
+    <p class="t1">one</p>
+    <p class="t1">one</p>
+    <p class="t2">two</p>
+    <p class="t2">two</p>
+    <p class="t2">two</p>
+    <p class="t3">three</p>
+    <p class="t3">three</p>
+    <p class="t3">three</p>
+    <p class="t3">three</p>
+    <p class="t4">four</p>
+
+    <button class="button">Button1</button>
+    <button class="button">Button2</button>
+    <button class="button">Button3</button>
+    <button class="button">Button4</button>
+</pre>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $('#test1').html('html의 텍스트 바꾸기');
+    $('#test1').addClass('test1');
+
+    // JS로 바꾸기
+    document.getElementsByClassName('t1')[0].innerHTML = '일';
+    document.getElementsByClassName('t1')[1].innerHTML = '일-일';
+    document.getElementsByClassName('t1')[2].innerHTML = '일-이';
+    document.getElementsByClassName('t2')[0].innerHTML = '이';
+
+    // jquery를 이용하여 한번에 바꾸기
+    $('.t2').html('t2은 3개가 있다. 이걸 한 번에 T2으로 바꾸자');
+    $('.t3').eq(0).html('t3는 4개가 있는데 4개중 첫번째만 바꾸자 eq()함수를 활용해서');
+    $('.t3').eq(3).html('t3는 4개가 있는데 4개중 네번째를 이렇게 바꾸자 eq()함수를 활용해서');
     
+    // jquery를 이용하여 버튼 속성 바꾸기
+    $('.button:eq(0)').toggleClass().hide();
+    $('.button:eq(1)').toggleClass().show();
+    $('.button:eq(1)').toggleClass().slideDown();
+ 
+        
+</script>
 </body>
 </html>
