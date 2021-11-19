@@ -7,49 +7,82 @@
     <title>Document</title>
     <link rel="stylesheet" href="Untitled-2.css">
 </head>
+<style>
+    h3{
+        color: whitesmoke;
+        padding: 10px;
+    }
+</style>
 <body>
     <pre>
         <div class="container">
             <a href="#">
-                <button onclick="lotto_click()"><span>Self-Buy</span></button>
+                <button onclick="self_click()"><span>Self-Buy</span></button>
             </a>
             <a href="#">
                 <button onclick="outo_click()"><span>Auto-Buy</span></button>
             </a>
+            <br><br>
+            <h3>구입량(개) </h3>
+            <input type="text" id="current_amount" placeholder="0">
+            <br>
+            <h3>총 구입금액(원) </h3>
+            <input type="text" id="current_charge" placeholder="0">
+            <br><br>
+            <a href="#" style="width: 120px; height: 60px;">
+                <button onclick="result_time()"> <span>Result</span></button>
+            </a>
+            <br><br>
+            <p id="current_time"></p>
         </div>
     </pre>
     <script>
-    let arr = [];
-    let bonous = Math.floor(Math.random()*45+1);
-    let winner = arr+bonous;
+    var lott = [];
     let insert_number = new Array();
-    let input_game = new Array();
     let total =[];
     let buy_count = -1;   //구매 횟수
     let save = -1;
+    
+    //수량 함수
     function current_Amount()
     {
         return current_amount.value = (buy_count+1);
     }
+    //입금 함수
     function current_Charge()
     {
         return current_charge.value = (buy_count+1)*1000;
     }
-    function lotto_click(){
-        input_game = parseInt(prompt("몇 회 진행 하시겠습니까?"));
-        for(var i=0; i<input_game && i<5; i++){
-            document.write("["+(i+1)+"]"+"회 진행 입력번호: ");
+    //랜덤 숫자
+    function randomInt()
+    {
+        return Math.floor(Math.random()*45)+1;
+    }
+
+    function self_click(){
+        var input_game = parseInt(prompt("몇 회 진행 하시겠습니까?"));
+        buy_count = buy_count+input_game;
+        for(var i=save+1; i<buy_count; i++){
+            //게임 횟수 담는 배열 생성
+            var ques=[];
             for(var j=0; j<6; j++);{
-                insert_number = prompt("1~45사이의 번호 7개를 입력해 주세요");
-                document.write(insert_number+"<br>");
+                // 각 게임당 입력 할 번호 저장 코드
+                ques[j] = parseInt(prompt(j+1)+"번째 번호를 입력.");
+                ques.sort(function(a,b){
+                    return a-b;
+                });
             }
+            input[i] = ques;
+            console.log((i+1)+"번째 게임 입력 번호: " + ques+"<br>");
         }
+        save = buy_count;
+        current_Amount();
+	    current_Charge();
     }
 
     function outo_click(){
         let buy_lotto = parseInt(prompt("몇장 구매하시겠습니까?"));
         buy_count = buy_count+buy_lotto;
-        
         for(var i = save+1; i < buy_count; i++){
             let ques=[];
             // arr.push(Math.floor(Math.random()*45)+1); //배열의 마지막 요소 제거
@@ -63,13 +96,134 @@
             }
             input[i] =ques;
         }
-        console.log(input);
         save = buy_count;
         current_Amount();
 	    current_Charge();
-        
-        
+    }
+    function result_time(){
+        //var time = new Date();
+        //var oclock = (Math.floor(time.getSeconds()/10)+1)*10
+        // if(now.getSeconds()>=0 && now.getSeconds()<=30)
+        // {
+        //     result();
+        // }
+        // else
+        // {
+        //     var time_alert = alert("당첨발표는 0~30 초 사이에 볼 수 있습니다.");
+        // }
+    }
 
+    function result(){
+        //로또 번호 뽑기
+        for(var i=0; i<7; i++){
+		var overlap = randomInt();
+		if(i == 0) lott[i] = overlap;
+		for(var j=0; j<i; j++)
+		{
+			if(lott[j] == overlap)
+			{
+				i--;
+				break;
+			}
+			else if(lott[j] != overlap && j==i-1)
+			{
+				lott[i] = overlap;
+			}
+		}
+
+		if(lott.indexOf(overlap) == -1) lott[i] = overlap;
+		else i--;
+	}
+	bonus = lott.splice(6,1); //보너스 번호 추출
+
+	for(var j=0; j<lott.length;j++) // 로또번호 오름차순으로 정리
+	{
+		for(var i=0; i<lott.length-j; i++)
+		{
+			if(lott[i]>lott[i+1])
+			{
+				var z = lott[i];
+				lott[i] = lott[i+1];
+				lott[i+1] = z;
+			}
+		}
+	}
+	console.log("로또번호 : "+lott+ " + 보너스 번호 : " + bonus +"<br><hr><br>");
+	
+	var no5 = 0;
+	var no4 = 0;
+	var no3 = 0;
+	var no2 = 0;
+	var no1 = 0;
+
+	for(var a = 0; a<buy_count+1; a++)
+	{
+		console.log((a+1)+"번째 구매한 로또번호 : " + input[a]);
+		var z = 0;
+		var test = [];
+		test = input[a];
+		console.log(" / 당첨번호 ");
+		for(var i=0; i<6; i++)
+		{
+			for(var j=0; j<=5; j++)
+			{
+				if(test[j]==lott[i])
+				{
+					console.log(lott[i]+" ");
+					z++;
+				}
+			}
+		}
+		console.log("/ ");
+		if(z==3) 
+		{
+			console.log("5등 당첨");
+			no5 ++;
+		}
+		else if(z==4) 
+		{
+			console.log("4등 당첨");
+			no4 ++;
+		}
+		else if(z==5)
+		{
+			var r=0;
+			for(var j=0; j<=5; j++)
+			{
+				if(a[j] == bonus) r++;
+			}
+			if(r != 0) 
+			{
+				console.log("보너스 번호 "+bonus + "/ 2등 당첨");
+				no2 ++;
+			}
+			else 
+			{
+				console.log("3등 당첨");
+				no3 ++;
+			}
+			
+		}
+		else if(z==6) 
+		{
+			console.log("1등 당첨");
+			no1 ++;
+		}
+		else 
+        console.log("당첨 안됨");
+		console.log("<br><hr><br>");
+	}
+
+	console.log("1등 당첨 : " +no1+"개 / 1인당 당첨금액 : 100,000,000원<br>");
+	console.log("2등 당첨 : " +no2+"개 / 1인당 당첨금액 : 50,000,000원<br>");
+	console.log("3등 당첨 : " +no3+"개 / 1인당 당첨금액 : 1,500,000원<br>");
+	console.log("4등 당첨 : " +no4+"개 / 1인당 당첨금액 : 50,000원<br>");
+	console.log("5등 당첨 : " +no5+"개 / 1인당 당첨금액 : 5,000원<br>");
+	console.log("미당첨 : " +(click_count+1-no1-no2-no3-no4-no5)+"개 <br>");
+	console.log("총 상금 : "+(no1*100000000+no2*50000000+no3*1500000+no4*50000+no5*5000)+"원");
+// 1등 4% 2등 25% 3등 25%
+}
+/*{
         while(count < buy_lotto){
             for(let i=0; i<lotto_num.length; i++){
                 lotto_num[i] = Math.floor(Math.random()*45)+1;
@@ -105,7 +259,8 @@
             document.write("꽝");
         }
         
-    }
+}
+*/
     </script>
 </body>
 </html>

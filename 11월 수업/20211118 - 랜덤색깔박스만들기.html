@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: inline-block;
+        width: 20%;
+        height: 200px;
+        line-height: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+</style>
+<body>
+    <h3>색상 추천</h3>
+    <hr>
+    <script>
+        var random = Math.floor(Math.random()*17);
+        var random2 = Math.floor(Math.random()*17);
+        document.write("오늘 당신의 행운의 숫자는 "+random2+"째입니다."+"<br>");
+        document.write("1-2-3-4"+"<br>"+"5-6-7-8"+"<br>"+"9-10-11-12"+"<br>"+"13-14-15-16");
+        document.write("<br>");
+        // 안쪽 포문을 실행하고 난 뒤 그 것을 네 번 실행한다.
+        for(var i=0; i<4; i++){                     //y축
+            for(var j=0; j<4; j++){                 //x축
+                // 여기서 작성하면 총 16개가 반복됨
+                var r=Math.floor(Math.random()*256);
+                var g=Math.floor(Math.random()*256);
+                var b=Math.floor(Math.random()*256);
+                document.write("<div style='background-color:");
+                document.write("rgb("+r+","+g+","+b+")'>");
+                //<div style = 'background-color:rgb(r,g,b)'>
+                document.write("rgb("+r+","+g+","+b+")");
+                document.write("</div>");
+            }
+            document.write("<br>");
+        }
+        
+    </script>
+</body>
+</html>

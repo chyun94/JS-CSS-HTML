@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        <div class="box" id="boxy" onclick="func1(x,y)">[Result]</div>
+        <div onclick="speed += 100,console.log(speed)">BTN1</div>
+        <div onclick="speed -= 100,console.log(speed)">BTN2</div>
+    </pre>
+    <script>
+        var speed = 1000;
+        var x = parseInt(prompt('take number1'));
+        var y = parseInt(prompt('take number2'));
+        function func1(a,b){
+
+            number = a+b;
+            // 함수 불러서 사용하기
+            func2(number)
+
+        }
+        function func2(a)
+        {
+            a=a.toString()
+            func3(a)
+        }
+        function func3(a)
+        {
+            a=a+"입니다";
+            console.log(a);
+        }
+
+
+
+
+    </script>
+</body>
+</html>

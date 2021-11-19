@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="20211118 - JS 인터벌.js">
+</head>
+<style>
+    div.size{
+        width: 340px;
+    }
+    div.same{
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        border: 1px solid brown;
+        display: inline-block;
+        cursor: pointer;
+    }
+    div#button1,#button2,#button3{
+        width: 100px;
+        height: 40px;
+        margin-bottom: 20px;
+        border: 1px solid black;
+        line-height: 40px;
+        text-align: center;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    div#button1:hover,#button2:hover,#button3:hover{
+        background: darkblue;
+        color: floralwhite;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <pre>
+        1. 총45개의 div로 칸 생성
+        2. div에 모두 click이벤트 리스너 등록
+        3. setInterval() 활용
+        4. 45개 중 랜덤으로 div를 선정 bg이미지를 검정색으로 변경
+        5. 1개의 랜덤 타겟만 검정색 나머지는 흰색
+        6. 보더 라디어스로 원형
+        7. 1초마다 랜덤 타겟이 변경
+        8. 하단 +,- 버튼으로 갱신되는 시간 변경 (기본 1초) 
+        * 0.1초씩 증감
+        9. 검정색 원을 누르면 +1점
+        10. 잘못 누르면 -0.5점
+        11. 총 30개의 랜덤 검정 원형 생성
+    </pre>
+    <div class="size">
+        <div class="same" id="1" onclick="findMe(this)"></div>
+        <div class="same" id="2" onclick="findMe(this)"></div>
+        <div class="same" id="3" onclick="findMe(this)"></div>
+        <div class="same" id="4" onclick="findMe(this)"></div>
+        <div class="same" id="5" onclick="findMe(this)"></div>
+        <div class="same" id="6" onclick="findMe(this)"></div>
+        <div class="same" id="7" onclick="findMe(this)"></div>
+        <div class="same" id="8" onclick="findMe(this)"></div>
+        <div class="same" id="9" onclick="findMe(this)"></div>
+        <div class="same" id="10" onclick="findMe(this)"></div>
+        <div class="same" id="11" onclick="findMe(this)"></div>
+        <div class="same" id="12" onclick="findMe(this)"></div>
+        <div class="same" id="13" onclick="findMe(this)"></div>
+        <div class="same" id="14" onclick="findMe(this)"></div>
+        <div class="same" id="15" onclick="findMe(this)"></div>
+        <div class="same" id="16" onclick="findMe(this)"></div>
+        <div class="same" id="17" onclick="findMe(this)"></div>
+        <div class="same" id="18" onclick="findMe(this)"></div>
+        <div class="same" id="19" onclick="findMe(this)"></div>
+        <div class="same" id="20" onclick="findMe(this)"></div>
+        <div class="same" id="21" onclick="findMe(this)"></div>
+        <div class="same" id="22" onclick="findMe(this)"></div>
+        <div class="same" id="23" onclick="findMe(this)"></div>
+        <div class="same" id="24" onclick="findMe(this)"></div>
+        <div class="same" id="25" onclick="findMe(this)"></div>
+        <div class="same" id="26" onclick="findMe(this)"></div>
+        <div class="same" id="27" onclick="findMe(this)"></div>
+        <div class="same" id="28" onclick="findMe(this)"></div>
+        <div class="same" id="29" onclick="findMe(this)"></div>
+        <div class="same" id="30" onclick="findMe(this)"></div>
+        <div class="same" id="31" onclick="findMe(this)"></div>
+        <div class="same" id="32" onclick="findMe(this)"></div>
+        <div class="same" id="33" onclick="findMe(this)"></div>
+        <div class="same" id="34" onclick="findMe(this)"></div>
+        <div class="same" id="35" onclick="findMe(this)"></div>
+        <div class="same" id="36" onclick="findMe(this)"></div>
+        <div class="same" id="37" onclick="findMe(this)"></div>
+        <div class="same" id="38" onclick="findMe(this)"></div>
+        <div class="same" id="39" onclick="findMe(this)"></div>
+        <div class="same" id="40" onclick="findMe(this)"></div>
+        <div class="same" id="41" onclick="findMe(this)"></div>
+        <div class="same" id="42" onclick="findMe(this)"></div>
+        <div class="same" id="43" onclick="findMe(this)"></div>
+        <div class="same" id="44" onclick="findMe(this)"></div>
+        <div class="same" id="45" onclick="findMe(this)"></div>
+    </div>
+    <hr>
+    <div id="button1" onclick="speed_PM('plus')">Speed UP</div>
+    <div id="button2" onclick="speed_PM('minus')">Speed Down</div>
+    <div id="button3" onclick="start_button('start')">Game Start</div>
+    <!-- <input onclick='findMe("plus")'/>
+    <input onclick='findMe("minus")'/> -->
+    <hr>
+
+    <script>
+        // 인터벌에서는 tick라는 변수명을 주로 사용한다.
+        var speed = '';
+        var count_num = 0;
+        var score = 0;
+
+        function speed_PM(속도)
+        {   
+        if(속도 == 'plus')
+            {
+                clearInterval(stop_watch);
+                speed = speed + 100;
+                console.log("느리게"+ speed);
+                stop_watch = setInterval(findMe, speed);
+            }
+            else if (속도 == 'minus')
+            {
+                clearInterval(stop_watch);
+                speed = speed - 100;
+                if(speed < 0)
+                {
+                    speed = 0;
+                }
+                console.log("빠르게"+ speed);
+                stop_watch = setInterval(findMe, speed);
+            }
+        } 
+        //  랜덤으로 검은색 함수 
+        var x;
+        var box;
+        var speed = parseInt(prompt("초를 입력하세요 1000 = 1s "));
+        function xx(result)
+        {
+            if(count_num < 30){
+                for(var i =1; i<46; i++){
+                        document.getElementById(i).style.backgroundColor='white';
+                    }
+                    x = Math.floor(Math.random()*45)+1;
+                    box = document.getElementById(x);
+                    box.style.backgroundColor='black';
+                    
+                    count_num ++;
+                    console.log(count_num+"번째");
+                    
+            }
+        }
+        var stop_watch = setInterval(xx,speed);
+        console.log("속도: "+speed);
+
+        // findMe 누를 시 +1 잘못 누르면 -0.5
+        function findMe(result){
+            
+            if(x.toString() == result.id){
+                score += 1;
+            }else{
+                score -= 0.5;
+            }
+            console.log("현재점수: "+ score + "입니다.");
+            
+        }
+    </script>
+</body>
+</html>

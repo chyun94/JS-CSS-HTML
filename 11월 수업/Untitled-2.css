@@ -41,6 +41,10 @@ body{
 .container a:nth-child(2):after{
     background: linear-gradient(45deg,#ff075b,#0e1538,#0e1538,#1aff22);
 }
+.container a:nth-child(3):before,
+.container a:nth-child(3):after{
+    background: linear-gradient(45deg,#24ff07,#9ba2c5,#667ae0,#eee2e3);
+}
 .container a:hover:before{
     inset: -3px;
 }

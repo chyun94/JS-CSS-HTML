@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        사용자 입력 및메세지 출력하는 자바스크립트 
+        다이얼로그 함수
+        ㄴ> prompt();
+        확인 다이얼로그
+        함수
+        ㄴ> confirm();
+
+        자바스크립트 데이터 타입
+        1. 숫자
+        2. 논리
+        3. 문자
+        4. 객체
+
+        변수 선언 방법
+        var 변수명(식별자)
+        
+        this키워드
+        1. div onclick = "muclick(this)" this = div 자신을 뜻함
+        2. function f(){
+            var x;
+            x=1;            //지역 변수 x
+            this.x=100;     //전역 변수 x
+        }
+
+        연산자
+        1. 산술 연산자
+        2. 증감 연산자
+        3. 비교 연산자
+        4. 대입 연산자 =, +=, -+, *=, /= 
+        5. 논리 연산자
+
+        형변환 함수
+        문자열 -> 숫자 : parseInt()
+        숫자 -> 문자열 : xxx.toString()
+
+        조건문
+        if문
+        1. 조건식
+        2. 조건이 true이여야 if문에 진입함
+        3. else if는 조건식 작성
+        4. else if는 생략 가능
+        5. else 조건식 쓰지 않는다.
+        6. else는 생략 가능
+        
+        switch
+        1. switch(식)
+        2. case 값;
+        3. case마다 break;를 넣는다
+        4. case에 break;가 없으면 아래 case에 모두 진입한다.
+        5. break의 역할 : 조건문 탈출
+        * 함수에서 탈출 하는 방법-> return; 
+            ex)
+            function div(a,b){
+                if(a>b){
+                    return a/b;
+                }else{
+                    return "error";
+                }
+            }
+            return;
+
+        반복문
+        1. for문 
+        2. while문
+            ㄴ> 무한루프 : while(참)
+            ex) var x=true;
+                while(x){
+                }
+        *반복문에서 탈출: break
+        *continue: 반복문을 돌다가 continue를 만나면 반복문의 첫 코드를 읽기 시작.
+
+        함수
+        함수의 선언:
+        function 함수명(재료)
+        함수의 호출: 함수를 사용하는 부분의 코드 
+        함수의 재료: 재료를 받아 결과물을 만들기 위함
+        함수의 변수: this키워드, 전역, 지역
+        함수의 return: 탈출, 반환, 호출 시작 부분으로 돌아감
+        함수의 종류: 사용자 정의 함수, 전역함수(내장함수 ex)parseInt() 와 같은것. ) 
+
+        객체(Object)
+        코어객체
+        1. Array
+        ㄴ> 배열 객체
+        2. Date
+        ㄴ> 시간 객체
+        3. Math
+        ㄴ> 수학 객체
+        4. String
+        ㄴ> 문자열 객체
+
+        객체화: 지정 가능하도록 이름을 지어주는 것
+        ex) var x = new Date();
+        여기서 x는 객체화
+
+        객체의 특징
+        1. 프로퍼티가 있다, 값과 쌍을 이룬다.(특징)
+        2. 메소드가 있다(기능)
+
+        객체에 접근하는 방법
+        1. 객체의 이름에 먼저 접근
+        x.프로퍼티=30;
+        변수 = x.프로퍼티;
+        x.메소드();
+
+        배열 객체
+        index 인덱스
+        0부터 시작
+        length프로퍼티(배열의 길이를 반환)
+
+        Date객체
+        Date객체가 생성되는 순간의 시간을 담는다.
+
+        String객체
+        index사용 가능
+        배열과 달리 string객체는 수정 불가능
+
+        Math객체
+        주요 메소드 random, floor
+        Math.random() => 0.0000...1 ~ 0.9999...9
+        ex) 4~18까지의 랜덤 수를 발생시키는 코드
+        MAth.floor((Math.random()*15)+4 => 4~18
+        
+        
+    </pre>
+    <script>
+        
+    </script>
+</body>
+</html>
