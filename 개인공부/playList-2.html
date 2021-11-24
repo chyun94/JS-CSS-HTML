@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div.container{
+        display: block;
+    }
+    button{
+        border: 1px solid black;
+        background: black;
+        color: whitesmoke;
+        font-weight: bold;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 100px;
+        cursor: pointer;
+        margin: 10px;
+    }
+    button:hover{
+        color: yellow;
+        font-size: 16px;
+        transition: all 0.5s;
+    }
+</style>
+<body>
+    <pre>
+        1. 6개의 버튼 
+        2. N개의 곡을 입력 받기
+        3. 셔플은 전체 재생과 같이 사용 가능
+        
+    </pre>
+    <div class="container">
+        <button id="BTN1" class="btn1" onclick="playList('play')">반복</button>
+        <button id="BTN2" class="btn2" onclick="playList()">셔플</button>
+        <button id="BTN3" class="btn3" onclick="playList()">한 곡만</button>
+        <button id="BTN4" class="btn4" onclick="playList()">뒤로</button>
+        <button id="BTN5" class="btn5" onclick="playList()">정지,재생</button>
+        <button id="BTN6" class="btn6" onclick="playList()">앞으로</button>
+    </div>
+
+    <script>
+        var musicBox = [];
+        songList = parseInt(prompt("몇 곡 재생시키겠습니까?"));
+        alert(songList+"곡을 재생 시킵니다.");
+
+        function playList(){
+            for(var i=0; i<=songList; i++){
+                console.log(songList);
+            }
+        }
+    </script>
+</body>
+</html>

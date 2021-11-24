@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-  <head>
+<head>
     
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -8,30 +8,78 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-    <link rel="stylesheet" href="JavaScript 인강2.css">
+    <link rel="stylesheet" href="부트스트렙이용.css">
     <title>Hello, world!</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-    </script>
+
     </head>
+    <style>
+
+    </style>
     <body>
         <div class="main-background">
-            <h1 class="display-4">Choice Studio</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
             <!-- 모달창 -->
             <div class="black-background">
                 <div class="white-background">
-                    Login plz
+                    <p>Login Plz</p>
                 </div>
             </div>
-        <a class="btn btn-primary btn-lg" href="#" role="button" id="login">Login</a>
+            <div class="nav-menu">
+                <h4 style="margin: 0;">Choice - Studio</h4>
+                <a id="nav-sub-button">Products</a>
+            </div>
+            <ul class="list-group nav-sub">
+                <li class="list-group-item list-group-item-action" href="#list-item-1">Item 1</li>
+                <li class="list-group-item list-group-item-action" href="#list-item-2">Item 2</li>
+                <li class="list-group-item list-group-item-action" href="#list-item-3">Item 3</li>
+                <li class="list-group-item list-group-item-action" href="#list-item-4">Item 4</li>
+            </ul>
 
+            <!-- <h1 class="display-4"><span><a href="#" class="url">C</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">h</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">o</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">i</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">c</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">e</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">&nbsp;</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">S</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">t</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">u</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">d</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">i</a></span></h1>
+            <h1 class="display-4"><span><a href="#" class="url">o</a></span></h1> -->
+            <div>
+                <p class="lead">This is a simple hero unit, a simple jumbotron-style component 
+                    for calling extra attention to featured content or information.
+                <br>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                <br>
+                Unde vero iste distinctio delectus maxime a vitae ad dolore sed! 
+                <br>
+                Quidem consequuntur voluptate molestias. 
+                <br>
+                Suscipit sunt placeat aliquid veritatis.
+                </p>
+                    
+                    <hr class="my-4">
+                <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+
+                <a class="btn btn-primary btn-lg" href="#" role="button" id="login">Login</a>
+            </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
     <script>
+        $('#nav-sub-button').click(function(){
+            $('.nav-sub').slideDown();
+        });
+        
         $('#login').on('click',function () {
             $('.black-background').fadeIn();
+            // fadeIn() fadeOut() slideDow() slideUp()
         })
+
+
     </script>
     <!-- Optional JavaScript; choose one of the two! -->
 

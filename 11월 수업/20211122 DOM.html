@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocumentObjectModel</title>
+<style>
+    
+    a{
+        text-decoration: none;
+        list-style: none;
+        color: black;
+    }
+</style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <section>
+        <p>p태그 1
+            DOM트리
+            브라우저는 HTML 페이지를 로드하면서 HTML 태그의 포함 관계에 따라
+            <br>
+            DOM객체들을 TREE구조로 만드는데 이것을 DOM트리 라고 부른다. 
+            <br>
+            자바스크립트 코드는 DOM트리를 따라 DOM객체들을 마음대로 접근할 수 있다.
+            <br>
+            <strong>강조0
+                <br>
+                HRML태그의 포함 관계에 따라 DOM 객체들이 부모 자식의 계층 관계로 구성된다.
+                <br>
+                <b>두껍게!
+                    <em>기울기!
+                        <i>
+                            더 기울기
+                        </i>
+                    </em>
+                </b>
+            </strong>
+        </p>
+        <div id="p1">
+            <div id="c1">
+                <div id="c2">
+                    <div id="c3">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p>p태그 2
+            <br>
+            DOM트리 특징
+            <br>
+            1. DOCUMENT 객체는 DOM 객체의 최상위에 있다.
+            <br>
+            2. HTML 태그에 의해 생성된 HTML 객체는 HEAD와 BODY 두 자식을 가진다.
+            <br>
+            3. DOM 트리의 루트는 DOCUMENT객체이다. 하지만 DOCUMENT객체는 DOM객체가 아니다.
+            <br>
+            4. DOM 객체의 종류는 HTML태그의 종류만큼 있다.
+            <br>
+            5. HTML 태그 하나 당 DOM 객체가 하나씩 생성된다. <br>
+            (같은 태그가 여러개 있다고 해도 각 태그마다 DOM객체가 생성)
+            <br>
+            6. HTML 태그의 포함 관계에 따라 DOM 객체들이 부모 자식의 계층 관계로 구성된다.
+            <br>
+            <q> q태그 1
+                <br>
+                HTML 태그의 요소
+                <br>
+                HTML 태그는 엘리먼트 라고도 불리며 다음 5가지 요소로 구성된다.
+                <br>
+                1. 엘리먼트 이름<br>
+                2. 속성<br>
+                3. CSS3스타일<br>
+                4. 이벤트 리스너<br>
+                5. 컨텐츠(innerHTML)<br>
+                <p id="itrst" style="color: green;" onclick="this.style.color='lightgreen'">p태그 입니다</p>
+                <code>ㅁㄴㅇ1
+                    <kbd>
+                        ㅁㄴㅇ1
+                    </kbd>
+                </code>
+            </q>
+        </p>
+        <p>p태그2
+        <br>
+            DOM 객체의 구성 요소
+            <br>
+            1. 프로퍼티
+            <br>
+            2. 메소드
+            <br>
+            3. 컬렉션(배열의 일종)
+            <br>
+            4. 이벤트리스너
+            <br>
+            5. css3스타일
+            
+            <p id="first">스크립트에서 가져오기var myP = document.getElementById("first");</p>
+            <br>
+            <sup>sup태그<br>
+                <sub>sub태그<br>
+                
+                </sub>
+            </sup>
+        </p>
+        <p>p태그3
+            <br>
+            DOM 객체들 사이의 관계
+            <br>
+            DOM 객체들은 DOM트리에서 부모 자식 형제의 관계로 연결된다.
+            <br>
+            parentElement 프로퍼티 = 부모객체
+            <br>
+            children 프로퍼티 = 직계 자식들의 컬렉션(배열)
+            <br>
+            firstElementChild = 첫번째 자식
+            <br>
+            lastElementChild = 마지막 자식
+            <br>
+            previousElementSibling 프로퍼티 = 왼쪽 형제 객체
+            <br>
+            nextElementSibling 프로퍼티 = 오른쪽 형제 객체
+            <br>
+
+
+            <span>
+                span태그3
+                <br>
+                DOM 객체의 주요 공통 프로퍼티, 컬렉션, 메소드
+                <br>
+                1. id 태그의 id속성 값
+                <br>
+                2. style 객체정보
+                <br>
+                3. title 태그의 title속성 값
+                <br>
+                4. tagName 태그이름 문자여르 항상 대문자로 표시됨(DIV,SPAN)
+                <br>
+                5. childElementCount 자식 DOM 객체 개수
+                <br>
+                6. firstElementChild 첫 번째 자식 객체
+                <br>
+                7. lastElementChild 마지막 자식 객체
+                <br>
+                8. nextElementSibling 다음 형제 객체(오른쪽)
+                <br>
+                9. previousElementSibling 이전 형제 객체(왼쪽)
+                <br>
+                10. parentElement 부모객체
+                <br>
+                11. offsetHeight 패딩 테두리 등을 포함한 높이
+                <br>
+                12. offsetWidth 패딩 테두리 등을 포함한 폭
+                <br>
+                13. offsetLeft 객체의 출력위치, 수직 옵셋
+                <br>
+                14. offsetTop 객체의 출력위치 수직 옵셋
+                <br>
+                <hr>
+                <h3>프로퍼티</h3>
+                15. children 자식 dom객체들의 컬렉션
+                <h3>컬렉션</h3>
+                <br>
+
+
+            </span>
+        </p>
+        <p id="firstP" style="color:blue; background:yellow" onclick="this.style.color='teal'">
+            이것은
+            <span style="color:red">
+                문장입니다.
+            </span>
+        </p>
+         
+    </section>
+
+    <footer>
+        <a href="#">
+            <strong>
+                강조1
+            </strong>
+        </a>
+        <a href="#">
+            <strong>
+                강조2
+            </strong>
+        </a>
+    </footer>
+    <script>
+        var myP = document.getElementById("first");
+        console.log("myP는"+myP+"=> HTML의 first id를 가진 태그의 모든것을 출력");
+        if(myP.id=="first"){
+            console.log("myP의id는first이므로 P 객체이다");
+        }else{
+            console.log("first P의 객체가 아니다");
+        }
+
+        var p = document.getElementById("firstP");
+        var text = "p.id =" + p.id +"|n";
+        text += "p.tagName = " + p.tagName +"|n";
+        text += "p.innerHTML = " + p.innerHTML +"|n";
+        text += "p.style.color = " + p.style.color +"|n";
+        text += "p.onclick = " + p.onclick +"|n";
+        text += "p.childElementCount = " + p.childElementCount +"|n";
+        text += "넓이" + p.offsetWidth +"|n";
+        text += "높이" + p.offsetHeight +"|n";
+        alert(text); 
+    </script>
+</body>
+</html>

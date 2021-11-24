@@ -19,9 +19,9 @@ button.A{
     margin-left: 35px;
 }
 .main-background{
-    background-image: url(img/new-york-1819861.jpg);
+    background-image: url(../img/new-york-1819861.jpg);
     background-size: cover;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 .black-background{
