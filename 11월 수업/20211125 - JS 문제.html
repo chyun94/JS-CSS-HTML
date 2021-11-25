@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 슬라이드</title>
+</head>
+<style>
+    body {
+        width: 300px;
+        height: auto;
+    }
+
+    div>img {
+        width: 250px;
+        height: auto;
+        background: #333;
+    }
+
+    .container {
+        display: block;
+    }
+
+    #image_box {
+        width: 250px;
+        height: auto;
+        border: 1px solid black;
+        display: block;
+    }
+</style>
+
+<body>
+    <pre>
+        총 10종의 강아지 사진을 보고 품종을 맞추는 퀴즈
+
+        1. 웹 페이지가 로드되면 10종의 사진 중 무작위로 
+            한 개 선정 후 화면에 출력
+        2. 정답을 입력하는 input 태그 존재
+        3. 다음 버튼 누르면 다음 무작위로 선정한 강아지 
+            사진으로 이미지 변경
+        4. 정답은 입력 인풋 태그에 입력하고 정답 버튼을 
+            누르면 사진에 출력된 품종이 입력한 텍스트와 
+            일치하는지 체크
+        5. 정답을 인풋태그에 입력하지 않고 다음을 누르면 
+            문제를 패스하는 것으로 처리
+    </pre>
+    <h3>랜덤 이미지 출력</h3>
+
+
+    <input type="text" class="" id="correct_input" placeholder="정답 입력">
+    <button onclick="insert()">입력</button>
+    
+    <input type="text" class="" value="" id="rest">
+
+
+    <button onclick="change_img()" id="next">NEXT</button>
+
+    <div id="image_box" onload="show_img()">
+
+    </div>
+
+</body>
+<script>
+    var imgArray = new Array();
+    imgArray[0] = "images/가.jpg";
+    imgArray[1] = "images/나.jpg";
+    imgArray[2] = "images/다.jpg";
+    imgArray[3] = "images/라.jpg";
+    imgArray[4] = "images/마.jpg";
+    imgArray[5] = "images/바.jpg";
+    imgArray[6] = "images/사.jpg";
+    imgArray[7] = "images/아.jpg";
+    imgArray[8] = "images/자.jpg";
+    imgArray[9] = "images/차.png";
+    
+    var imageIndex =0;
+    var randomImages = [];
+    var x;
+    var check = [];
+    var cnt = 0;
+    var correct ;
+    var score ;
+
+    //  중복 제거
+    for (var k = 0; k < 10; k++) {
+        var random_num = Math.floor(Math.random() * 10);
+        if (check.indexOf(random_num) == -1) {
+            check[k] = random_num;
+            randomImages[k] = imgArray[random_num];
+        }
+        else k--;
+        // console.log(random_num);
+    }
+    console.log(randomImages+"<br>");
+
+    //  랜덤으로 뽑기
+    var z = document.getElementById('image_box');
+    //  시작 화면부터 나오게 하기
+    z.innerHTML = "<img id='asd' src='"+imgArray[check[0]]+"'>"; 
+    cnt++;
+
+    //  next버튼을 누를 시 
+    function change_img() {
+        if(cnt >= 10){
+            return;
+        }
+        cnt++;
+        z.innerHTML = "<img id='asd' src='"+randomImages[cnt-1]+"'>";
+        // document.getElementById('asd').setAttribute('src',imgArray[randomImages[cnt]]);
+        
+    }
+
+    //  정답
+    function insert(){
+        if(randomImages[cnt]==imgArray[0]){
+            // 각각의 배열의 정답을 어디다 작성할지
+            correct = "가";
+        }else if(randomImages[cnt]==imgArray[1]){
+            correct = "나";
+        }else if(randomImages[cnt]==imgArray[2]){
+            correct = "다";
+        }else if(randomImages[cnt]==imgArray[3]){
+            correct = "라";
+        }else if(randomImages[cnt]==imgArray[4]){
+            correct = "마";
+        }else if(randomImages[cnt]==imgArray[5]){
+            correct = "바";
+        }else if(randomImages[cnt]==imgArray[6]){
+            correct = "사";
+        }else if(randomImages[cnt]==imgArray[7]){
+            correct = "아";
+        }else if(randomImages[cnt]==imgArray[8]){
+            correct = "자";
+        }else if(randomImages[cnt]==imgArray[9]){
+            correct = "차";
+        }
+        // 정답인지 아닌지
+        if(correct_input.value==correct){
+            rest.value = "correct";
+            console.log("correct");
+        }else{
+            rest.value = "wrong";
+            console.log("wrong");
+        }
+    }
+    //  N초마다 계속 돌기
+    // function changeImage(){
+    //     z.setAttribute("scr",imgArray[imageIndex]);
+    //     imageIndex++;
+    //     if(imageIndex>=imgArray.length){
+    //         imageIndex=0;
+    //     }
+    // }
+    // setInterval(change_img,1000);
+</script>
+
+</html>

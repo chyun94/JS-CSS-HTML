@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="20211118 - JS 인터벌.js">
 </head>
 <style>
     div.size{
@@ -98,14 +98,10 @@
         <div class="same" id="45" onclick="findMe(this)"></div>
     </div>
     <hr>
-    <div>
-        <div id="button3" onclick="start_button('시작')">Game Start</div>
-        <div id="button3" onclick="stop_button('멈춤')">Game Stop</div>
-        <div id="button1" onclick="speed_PM('plus')">Speed UP</div>
-        <div id="button2" onclick="speed_PM('minus')">Speed Down</div>
-    </div>
-    <!-- <input onclick='findMe("plus")'/>
-    <input onclick='findMe("minus")'/> -->
+    <div id="button1" onclick="speed_PM('plus')">Speed UP</div>
+    <div id="button2" onclick="speed_PM('minus')">Speed Down</div>
+    <div id="button3" onclick="start_button('start')">Game Start</div>
+
     <hr>
 
     <script>
@@ -113,26 +109,6 @@
         var speed = '';
         var count_num = 0;
         var score = 0;
-
-        function start_button(){
-            var a = confirm("게임을 시작하시겠습니까?");
-            if(a==true){
-                // 취소를 누를 시 함수를 종료 시켜야 한다.
-                alert("게임을 진행합니다.");
-            }else{
-                alert("게임을 진행하지 않습니다.");
-                return;
-            }
-            
-        }
-        function stop_button(){
-            var b = confirm("게임을 중지하시겠습니까?");
-            if(b==true){
-                alert("게임을 중지합니다.");
-            }else{
-                alert("게임을 다시 시작합니다.");
-            }
-        }
 
         function speed_PM(속도)
         {   
@@ -158,29 +134,29 @@
         //  랜덤으로 검은색 함수 
         var x;
         var box;
-        var start = start_button();
         var speed = parseInt(prompt("초를 입력하세요 1000 = 1s "));
-        function 게임(result)
+        function xx(result)
         {
             if(count_num < 30){
                 for(var i =1; i<46; i++){
-                document.getElementById(i).style.backgroundColor='white';
-                }
-                x = Math.floor(Math.random()*45)+1;
-                box = document.getElementById(x);
-                box.style.backgroundColor='black';
-                count_num ++;
-                console.log(count_num+"번째");
+                        document.getElementById(i).style.backgroundColor='white';
+                    }
+                    x = Math.floor(Math.random()*45)+1;
+                    box = document.getElementById(x);
+                    box.style.backgroundColor='black';
+                    
+                    count_num ++;
+                    console.log(count_num+"번째");
+                    
             }
         }
-        var stop_watch = setInterval(게임,speed);
+        var stop_watch = setInterval(xx,speed);
         console.log("속도: "+speed);
 
         // findMe 누를 시 +1 잘못 누르면 -0.5
-        // fineMe를 한 번 이상 클릭 못하게 해야됨
         function findMe(result){
-            var one_click = x.toString() == result.id;
-            if( one_click ){
+            
+            if(x.toString() == result.id){
                 score += 1;
             }else{
                 score -= 0.5;
