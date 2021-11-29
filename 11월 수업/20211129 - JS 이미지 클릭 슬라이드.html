@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div{
+        display: flex;
+    }
+    #box{
+        width: 400px;
+        overflow: hidden;
+        z-index: 1;
+        border: 1px solid black;
+    }
+    img{
+        position: relative;
+        width: 1200px;
+        transition: left 1s;
+        /* left: -400px; */
+    }
+    .before{
+        line-height: 423px;
+        padding: 20px;
+    }
+    .next{
+        line-height: 423px;
+        padding: 20px;
+    }
+</style>
+<body>
+    <div>
+        <div class="before" id="before" onclick="prev()" >←</div>
+        <div id="box"  onmouseover="clearInterval(stop_img)" onmouseout="stop_img = setInterval(img1,tick)"><img src="images/애플.png" alt="" id="img1"></div>
+        <div class="next" id="next" onclick="next()" >→</div>
+    </div>
+</body>
+
+<script>
+    var appleimg = document.querySelector('#img1');
+    var tick = 1000;    // 1000 = 1s
+    var imgIndex = -1;
+    var stop_img = setInterval(img1,tick);
+    // var clearInterval = clearInterval(prev);
+    // var clearInterval = clearInterval(next);
+
+    //  자동 슬라이드 시작
+    function img1(){
+        if(imgIndex<2){
+            imgIndex++;
+        }else{
+            imgIndex= 0;
+        }
+        appleimg.style.left = imgIndex*-400+"px";
+        console.log(imgIndex);
+    }
+    //  이전 페이지
+    function prev(){
+        clearInterval(stop_img);
+        if(imgIndex==0){
+            imgIndex=2;
+        }else{
+            imgIndex--;
+        }
+        appleimg.style.left = imgIndex*-400+"px";
+        console.log(imgIndex);
+    }
+    
+    //  다음 페이지
+    function next(){
+        clearInterval(stop_img);
+        if(imgIndex<2){
+            imgIndex++;
+        }else{
+            imgIndex= 0;
+        }
+        appleimg.style.left = imgIndex*-400+"px";
+        console.log(imgIndex);
+    }
+</script>
+</html>

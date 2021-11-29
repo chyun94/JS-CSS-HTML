@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="20211129 - appleHomePage.css">
+
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form action="" class="">
+        <div id="gnb">
+            <header>
+                <nav class="navbar">
+                    <div class="apple_logo">
+                        <a href="#">APPLE</a>
+                    </div>
+                    <div class="navbar_menu">
+                            <li><a href="#">Store</a></li>
+                            <li><a href="#">Mac</a></li>
+                            <li><a href="#">iPad</a></li>
+                            <li><a href="#">iPhone</a></li>
+                            <li><a href="#">Watch</a></li>
+                            <li><a href="#">AirPods</a></li>
+                            <li><a href="#">TV/Home</a></li>
+                            <li><a href="#">Apple 독점 제공</a></li>
+                            <li><a href="#">Acc</a></li>
+                            <li><a href="#">CS</a></li>
+                    </div>
+                    <div class="div navbar_icons">
+                        <li>
+                            <a href="#">검색</a>
+                        </li>
+                        <li>
+                            <a href="#">장바구니</a>
+                        </li>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        <div class="top_banner">
+            <section class="top" id="top">
+                <p>엄선된 최고의 연말연시 선물, 미리 쇼핑하세요. 지금 <a href="#">지금쇼핑하기</a></p>
+                <div class="slide_menu">
+                    <h2>누구나 행복한 올 연말연시.</h2>
+                    <a href="#" class="shop" id="shop">선물 쇼핑하기 <i class="fas fa-chevron-right"></i></a>                    
+                    <div style="display: flex;">
+                        <div class="before" onclick="prev()">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div id="box"  onmouseover="clearInterval(stop_img)" onmouseout="stop_img = setInterval(img1,tick)">
+                            <img src="Apple (대한민국)/애플.png" alt="" id="img1">
+                        </div>
+                        <div class="next" onclick="next()">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>                    
+                </div>
+            </section>
+            <div id="up">
+                <a href="#gnb" id="linktoslide">UP</a>
+            </div>
+            <section class="middle">
+                <div class="iPhone13Pro">
+                    <img src="" alt="">
+                        <a href="#"></a>
+                    </img>
+                    <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                    <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                </div>
+                <div class="six_menu">
+                    <div class="MacBookPro">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="AirPods">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="Watch">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="iPadMini">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="iPad">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                    <div class="TvPlus">
+                        <img src="" alt="">
+                            <a href="#"></a>
+                        </img>
+                        <a href="#">더 알아보기 <i class="fas fa-chevron-right"></i></a>
+                        <a href="#">구입하기 <i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="footerContainer">
+            <footer>
+                <ol>
+                    <li class="footerli">
+                        Apple TV+는 무료 체험 기간이 끝나면 월 6,500원에 이용할 수 있습니다. 하나의 멤버십으로 가족 공유 그룹 내 식구 전체가 이용 가능합니다. 무료 체험 혜택은 적용 대상 기기 활성화 이후 3개월 안에 신청할 수 있습니다. 멤버십은 매월 자동으로 갱신되며, 해지 시 종료됩니다. 
+                        특정 제한 사항 및 기타 약관이 <a href="">적용</a>됩니다.
+                    </li>
+                </ol>
+                <nav>
+
+                </nav>
+            </footer>
+        </div>
+    </form>
+</body>
+<script src="20211129 - appleHomePage.js"></script>
+</html>
