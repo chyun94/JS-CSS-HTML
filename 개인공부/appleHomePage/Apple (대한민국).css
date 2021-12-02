@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+:root{
+    --text-color:#E8EBF2;
+    --text-color-a:#fff;
+    --text-color-hover:rgb(15, 15, 15);
+    --background-color:#000000CC;
+    --background-hover-color:rgb(92, 92, 92) ;
+    --background-toggle-color:rgb(15, 15, 15) ;
+    --background-top_small_banner-xolor:rgb(248, 50, 50);
+}
+body{
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color-a)
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    /* 위는 8px 양 옆은 12px */
+    padding: 8px 10rem;
+    height: 2.5rem;
+}
+/* 
+logo위치 설정을 나중에 해보자..
+nav > div > img{
+    margin-left: 30rem;
+} 
+*/
+
+.navbar_menu{
+    display: flex;
+    /* li이기 때문에 스타일 제거 */
+    list-style: none;
+    /* 메뉴에 패딩이 들어가 있기때문에 중간이 아니여서 0 값 주기 */
+    padding-left: 0;
+}
+/* 너무 붙어있어 li를 띄어주자 */
+.navbar_menu li{
+    padding: 8px 12px;
+}
+.navbar_menu li:hover, .navbar_icons:hover{
+    font-weight: bold;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+.navbar_icons{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+    padding: 8px 12px;
+}
+/*  toggle메뉴 오른쪽 상단에 맞추기 
+    화면이 작을때만 나와야 해서 
+.navbar_togglebtn{
+    display: none;
+    position: absolute;
+    right: 3rem;
+    font-size: 2rem;
+}
+*/
+
+/* toggle버튼 */
+.toggle{
+    /* span에게 absolute를 줘야 하기 때문에 */
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+    display: none;
+}
+.toggle span{
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background: whitesmoke;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+.toggle span:nth-child(1){
+    transform: translateY(-8px);
+    width: 10px;
+    left: 6px;
+}
+.toggle.active span:nth-child(1){
+    width: 20px;
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 0.125s;
+    background-color: rgb(255, 44, 44);
+}
+.toggle span:nth-child(2){
+    transform: translateY(8px);
+    width: 10px;
+    left: 6px;
+}
+.toggle.active span:nth-child(2){
+    width: 20px;
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: 0.25;
+    background-color: rgb(255, 44, 44);
+}
+.toggle.active span:nth-child(3){
+    transform: translateX(60px);
+}
+
+@media screen and (max-width:760px){
+    .navbar{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 24px;
+        background-color: var(--background-toggle-color);
+    }
+    /* logo를 어떻게 하면 가운데로 가게 할까 */
+    .navbar_logo{
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar_menu{
+        flex-direction: column;
+        align-items: center;
+        /* 메뉴 너비를 줘야 가운데로 정렬됨 */
+        width: 100%;
+        display: none;
+    }
+    .navbar_menu li{
+        width: 100%;
+        /* 자동으로 왼쪽 정렬이 되기 때문에 가운데로 몰아줘야함 */
+        text-align: center;
+    }
+    .navbar_icons{
+        display: none;
+    }
+    /* .navbar_togglebtn{
+        display: block;
+    } */
+    /* 토글 클릭시 보여지려면 */
+    .navbar_menu.active{
+        display: flex;
+    /* trnsition 효과로 슬라이드 내려오는 효과 주기 */
+    }
+    .toggle{
+        display: flex;
+    }
+}
+/* top_small_banner */
+div.top_small_banner p{
+    background-color: var(--background-top_small_banner-xolor);
+    text-align: center;
+    font-size: 1rem;
+    padding: 1.5rem;
+    color: var(--text-color-a);
+}
+/* 색깔 보류 */
+/* div.top_small_banner p a{
+    color: var(--text-color-a);
+} */
+div.top_small_banner p a:hover{
+    font-weight: bold;
+}
+/* 슬라이드 이미지 */
+#box{
+    margin-top: 4%;
+    width: 700px;
+    overflow: hidden;
+    z-index: 1;
+}
+img#img1{
+    position: relative;
+    width: 2100px;
+    transition: left 3.5s;
+    /* left: -400px; */
+}
+.before{
+    line-height: 423px;
+    padding: 20px;
+    display: none;
+}
+.next{
+    line-height: 423px;
+    padding: 20px;
+    display: none;
+}
+div.slide_menu{
+    align-items: center;
+    text-align: center;
+    margin: 2%;
+}
+div.slide_menu img{
+    margin-top: 3%;
+    margin-bottom: 2%;
+    width: 80px;
+
+}
+section div h2{
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 2%;
+}
+section div a.shop{
+    font-size: 1.45rem;
+    background: rgb(124, 101, 255);
+    border-radius: 2.6rem;
+    padding: 1.2rem;
+}
+section div a.shop:hover{
+    background: rgb(133, 111, 255);
+}

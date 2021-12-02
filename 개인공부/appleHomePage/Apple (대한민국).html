@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>apple_korea</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" 
+    crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Apple (대한민국).css">
+</head>
+<body class="wrap">
+    <!-- nav라는 시멘트 태그로 감싸주기 -->
+    <nav class="navbar">
+        <div class="navbar_logo">
+            <a href="#">
+                <img src="Apple (대한민국)/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="">
+            </a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="#">Store</a></li>
+            <li><a href="#">Mac</a></li>
+            <li><a href="#">iPad</a></li>
+            <li><a href="#">iPhone</a></li>
+            <li><a href="#">Watch</a></li>
+            <li><a href="#">AirPods</a></li>                        
+            <li><a href="#">TV/Home</a></li>                            
+            <li><a href="#">Apple 독점 제공</a></li>
+            <li><a href="#">악세사리</a></li>
+            <li><a href="#">고객지원</a></li>
+        </ul>
+        <ul class="navbar_icons">
+            <li>
+                <a href="#"><i class="fas fa-search"></i></a>
+            </li>
+            <li>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </li>
+        </ul>
+        <!-- toggle메뉴를 만들어 보자... -->
+        <div class="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+    <div class="top_small_banner">
+        <p class="top_banner">엄선된 최고의 연말연시 선물, 미리 쇼핑하세요. 지금 <a href="#">쇼핑하기<i class="fas fa-chevron-right"></i></a>
+        </p>
+    </div>
+    <section class="top" id="top">
+        <div class="slide_menu">
+            <img src="Apple (대한민국)/logo_line_apple.png" alt="">
+            <h2 id="small_text">누구나 행복한 올 연말연시.</h2>
+            <a href="#" class="shop" id="shop">선물 쇼핑하기</a>                    
+            <div>
+                <div class="before" onclick="prev()">
+                    <i class="fas fa-chevron-left"></i>
+                </div>
+                <div id="box"  onmouseover="clearInterval(stop_img)" onmouseout="stop_img = setInterval(img1,tick)">
+                    <img src="Apple (대한민국)/애플.png" alt="" id="img1">
+                </div>
+                <div class="next" onclick="next()">
+                    <i class="fas fa-chevron-right"></i>
+                </div>
+            </div>                    
+        </div>
+    </section>
+</body>
+<script src="Apple (대한민국).js" defer></script>
+</html>

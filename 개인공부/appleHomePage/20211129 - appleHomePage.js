@@ -1,7 +1,8 @@
 var appleimg = document.querySelector('#img1');
-var tick = 1500;    // 1000 = 1s
+var tick = 3500;    // 1000 = 1s
 var imgIndex = -1;
 var stop_img = setInterval(img1,tick);
+
     //  자동 슬라이드 시작
     function img1(){
         if(imgIndex<2){
@@ -9,7 +10,7 @@ var stop_img = setInterval(img1,tick);
         }else{
             imgIndex= 0;
         }
-        appleimg.style.left = imgIndex*-500+"px";
+        appleimg.style.left = imgIndex*-800+"px";
         // console.log(imgIndex);
     }
     //  이전 페이지
@@ -20,7 +21,7 @@ var stop_img = setInterval(img1,tick);
         }else{
             imgIndex--;
         }
-        appleimg.style.left = imgIndex*-500+"px";
+        appleimg.style.left = imgIndex*-800+"px";
         // console.log(imgIndex);
     }
     
@@ -32,6 +33,6 @@ var stop_img = setInterval(img1,tick);
         }else{
             imgIndex= 0;
         }
-        appleimg.style.left = imgIndex*-500+"px";
+        appleimg.style.left = imgIndex*-800+"px";
         // console.log(imgIndex);
     }

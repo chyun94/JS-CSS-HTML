@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this키워드</title>
+</head>
+<body>
+    <pre>
+        this키워드
+        this는 객체 자신을 가리키는 키워드
+        <div onclick="this.style.backgroundColor='red'">레드클릭</div>
+        <hr>
+        document 객체
+        document.write()
+        객체에는 프로퍼티와 메소드가 있다
+        <hr>
+        document는 DOM 트리의 최상위 객체이다.
+        브라우저는 HTML 문서를 로드하기 전에 document 객체를 먼저 만든다.
+        document 객체를 뿌리로 하여 DOM트리를 만든다.
+        document 객체는 이름 그대로 HTML문서 전체를 대변하는 객체이며,
+        모든 DOM 객체를 접근하는 경로의 시작점이다.
+        <hr>
+        document 객체는 많은 프로퍼티를 통해 HTML 문서의 전반적인 속성을 나타낸다.
+        여러 메소드를 통해 DPM객체의 검색, 새로운 DOM객체의 생성 등 HTML문서의
+        전반적인 제어를 지원한다.
+        <hr>
+        document 객체는 window의 자식이다.
+        그래서 접근하는 방법이 아래와 같이 두 가지로 나뉜다.
+        1. window.document
+        2. document
+        위 두가지 방법이 있는데 그냥 2번의 방법으로 접근하면 된다.
+        <hr>
+        *document 객체는 dom객체가 아니다.
+        따라서 연결된 CSS3스타일 시트도 없고 아래 코드도 오류이다.
+        document.style="red";
+        <hr>
+        document 객체의 프로퍼티
+        location
+        domain
+        readyState
+        title
+        head
+        dagaultView
+        activeElement
+        documentElement
+        URL
+
+        document 객체의 메소드
+        getElementById()
+        getElementsByTagName()
+        getElementsByClassName()
+        getElementsByName()
+        addEventListener()
+        close()
+        creatElement()
+        open()
+        removeEventListener()
+        write()
+        <!-- L소문자임 아래꺼 ㅋ -->
+        writeln()
+
+    </pre>
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <input type="text">
+    <script>
+        
+    </script>
+</body>
+</html>

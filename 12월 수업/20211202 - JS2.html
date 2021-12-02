@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크박스</title>
+</head>
+<script>
+    //  버튼 클릭시 javascript 호출 한다.
+    function javascript(){
+        console.log(document.getElementsByName("check").length);
+
+    //  check를 가진 값의 이름을 가져오기
+        var site = document.getElementsByName("check").length;
+        for(var i=0; i<site; i++){
+            console.log(document.getElementsByName("check")[i].value);
+        }
+
+    //  check를 가진 check중에서 체크된 것만 값 가져오기
+        var site = document.getElementsByName("check").length;
+        for(var i = 0; i < site; i++){
+            if(document.getElementsByName("check")[i].checked == true){
+                console.log(document.getElementsByName("check")[i].value+"(체크)");
+            }
+        }
+    //  check중에 특별한 객체를 체크해주기
+    document.getElementsByName("check")[0].checked = true;
+    }
+</script>
+<body>
+    <input type="button" onclick="javascript()" value='버튼'/>
+    <br>
+    <input type="checkbox" name="check" value="값1"/>값1<br/>
+    <input type="checkbox" name="check" value="값2"/>값2<br/>
+    <input type="checkbox" name="check" value="값3"/>값3<br/>
+    <input type="checkbox" name="check" value="값4"/>값4<br/>
+</body>
+
+</html>

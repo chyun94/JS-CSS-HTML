@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="info">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 주요 프로퍼티</title>
+    <script>
+        var text = "문서 로딩 중일 때 readyState =" + document.readyState + "\n";
+    </script>
+</head>
+<body style="background-color: yellow; color:rgb(75, 60, 60); direction:ltr" onload="printProperties()">
+    <pre>
+        direction:ltr 는 왼쪾에서 오른쪽
+        direction:rlt 는 오른쪽에서 왼쪽
+    </pre>
+    <pre>
+        <br>
+        document.location
+        -> 읽기 전용 속성은 반환 location문서의 URL에 대한 정보를 포함
+            해당 URL을 변경, 다른 URL을 로드하는 방법을 제공
+
+        document.URL
+        -> 인터페이스의 URL 읽기 전용 속성은 문서의 주소를 문자열로 반환합니다.
+        ex) document.getElementById("url").textContent = document.URL;
+
+        document.title
+        -> document.title 속성을 가져 오거나 현재 설정 제목 문서를 가져옴
+        var docTitle = document.title;
+        document.title = newTitle;
+        script
+            alert(document.title); // displays "Hello World!"
+            document.title = "Goodbye World!";
+            alert(document.title); // displays "Goodbye World!"
+        script
+
+        document.head.id
+        -> head 태그의 id 값을 가져올 수 있습니다.
+        ex) let theHead = document.head;
+            console.log(theHead.id); // "my-document-head";
+            console.log(theHead === document.querySelector("head")); // true
+
+        document.body.color
+        -> 문서의 배경색 설정을 해준다
+
+        document.domain
+        -> 도메인 주소 출력
+
+        document.lastModified
+        -> 인터페이스 의 lastModified속성은 
+            Document현재 문서가 마지막으로 수정된 날짜와 
+            시간이 포함된 문자열을 반환합니다.
+
+        document.defaultView
+        ->  브라우저의 document.defaultView는 문서와 연결된 window 객체를 반환합니다. 
+            가능하지 않은 경우 null을 대신 반환합니다.
+
+        document.readyState
+        ->  Document.readyState 속성을 통해  document의 로딩 상태를 확인할 수 있다.
+            Document.readyState 속성 값이 바뀔 때 
+            readystatechange (en-US) 이벤트가 document에서 일어난다.
+            document의 readyState 상태는 아래 3가지가 될 수 있다.
+            loading
+            document 로딩 중.
+            interactive
+            문서의 로딩은 끝이 나고 해석 중 이지만  
+            images, stylesheets, frames과 같은 하위 자원들은 로딩되고 있는 상태이다.
+            complete
+            문서와 모든 하위 자원들의 로드가 완료된 상태이다. 
+            이 상태는 load  이벤트가 발생되기 직전 상태이다.
+
+        document.referrer
+        ->  링크를 통해 현재 페이지로 이동 시킨, 전 페이지의 URI 정보를 반환.
+
+        document.activeElement
+        ->  https://developer.mozilla.org/ko/docs/Web/API/Document/activeElement 참고
+
+        document.documentElement.tagName
+        ->  Element 인터페이스의 tagName 읽기 전용 속성은 요소에 호출된 태그 명을 
+            가져온다. 예를 들면, 만약 <img> 요소일 경우, 해당 요소의 tagName 속성의 내용은 
+            "IMG" 가 된다 (이것은 HTML인 경우에 대한 내용이고, 
+            XML/XHTML 문서에서는 대소문자가 다르게 나올 수 있다).
+    </pre>
+<h3>document의 주요 프로퍼티</h3>
+<hr>
+<a href="http://www.naver.com">네이버 홈페이지</a>
+<div>이곳은div영역입니다.</div>
+<input type="text" id="input" value="여기 포커스가 있습니다.">
+
+<script>
+    //문서가 완전히 로드(출력) 되었을 때, 현재 document의 프로퍼티 출력
+    function printProperties(){
+        // input 태그에 포커스를 준다.
+        document.getElementById('input').focus();
+
+        text += "1.location =" + document.location + "\n";
+        text += "2.URL =" + document.URL + "\n"
+        text += "3.title =" + document.title + "\n"
+        text += "4.head의 id =" + document.head.id + "\n"
+        text += "5.body color =" + document.body.color + "\n"
+        text += "6.domain =" + document.domain + "\n"
+        text += "7.lastModified =" + document.lastModified + "\n"
+        text += "8.defaultView =" + document.defaultView + "\n"
+        text += "9.문서의 로드 완료 후 =" + document.readyState + "\n"
+        // referrer 참조 
+        text += "10.referrer =" + document.referrer + "\n"
+        text += "11.activeElement =" + document.activeElement + "\n"
+        text += "12.documentElement의 태그 이름 =" + document.documentElement.tagName + "\n";
+        alert(text);
+
+    }
+</script>
+</body>
+</html>
