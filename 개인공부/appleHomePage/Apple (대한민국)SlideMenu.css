@@ -1,0 +1,33 @@
+/* 슬라이드 이미지 */
+div.slide_box{
+    align-items: center;
+    text-align: center;
+}
+#box{
+    margin-top: 4%;
+    width: 600px;
+    overflow: hidden;
+    z-index: 1;
+}
+img#img1{
+    position: relative;
+    width: 1800px;
+    transition: left 3.5s;
+}
+.before i{
+    line-height: 423px;
+    padding: 20px;
+    display: none;
+}
+.next i{
+    line-height: 423px;
+    padding: 20px;
+    display: none;
+}
+/* div9개 이미지 */
+div.nine_box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 20px;
+}

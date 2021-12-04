@@ -15,16 +15,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="Apple (대한민국).css">
+    <link rel="stylesheet" href="Apple (대한민국)SlideMenu.css">
+    <link rel="stylesheet" href="Apple (대한민국)Slection1.css">
+    <link rel="stylesheet" href="Apple (대한민국)Slection2.css">
+    <link rel="stylesheet" href="Apple (대한민국)footer.css">
 </head>
 <body class="wrap">
     <!-- nav라는 시멘트 태그로 감싸주기 -->
     <nav class="navbar">
-        <div class="navbar_logo">
-            <a href="#">
-                <img src="Apple (대한민국)/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt="">
-            </a>
-        </div>
-        <ul class="navbar_menu">
+        <!-- <div class="navbar_logo">
+            
+        </div> -->
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="navbar_menu">
+            <li>
+                <a href="#">
+                    <i class="fab fa-apple"></i>
+                    <!-- <img id="kk" src="Apple (대한민국)/globalnav_apple_image__b5er5ngrzxqq_large.svg" alt=""> -->
+                </a>
+            </li>
+            <input type="text" name="" id="search" placeholder="검색">
+            <i class="fas fa-search" id="second2" style="color: whitesmoke;"></i>
             <li><a href="#">Store</a></li>
             <li><a href="#">Mac</a></li>
             <li><a href="#">iPad</a></li>
@@ -35,8 +50,6 @@
             <li><a href="#">Apple 독점 제공</a></li>
             <li><a href="#">악세사리</a></li>
             <li><a href="#">고객지원</a></li>
-        </ul>
-        <ul class="navbar_icons">
             <li>
                 <a href="#"><i class="fas fa-search"></i></a>
             </li>
@@ -44,23 +57,25 @@
                 <a href="#"><i class="fas fa-shopping-cart"></i></a>
             </li>
         </ul>
-        <!-- toggle메뉴를 만들어 보자... -->
-        <div class="toggle">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
+        <!-- <ul class="navbar_icons">
+        </ul> -->
     </nav>
     <div class="top_small_banner">
         <p class="top_banner">엄선된 최고의 연말연시 선물, 미리 쇼핑하세요. 지금 <a href="#">쇼핑하기<i class="fas fa-chevron-right"></i></a>
         </p>
     </div>
+    
     <section class="top" id="top">
-        <div class="slide_menu">
-            <img src="Apple (대한민국)/logo_line_apple.png" alt="">
+        <div>
+            <img class="appleImg" src="Apple (대한민국)/logo_line_apple.png" alt="">
             <h2 id="small_text">누구나 행복한 올 연말연시.</h2>
-            <a href="#" class="shop" id="shop">선물 쇼핑하기</a>                    
             <div>
+                <a href="#" class="shop" id="shop">선물 쇼핑하기</a>                    
+            </div>
+        </div>
+        
+        <div class="slide_menu">
+            <div class="slide_box">
                 <div class="before" onclick="prev()">
                     <i class="fas fa-chevron-left"></i>
                 </div>
@@ -72,7 +87,194 @@
                 </div>
             </div>                    
         </div>
+        <div class="mid_banner">
+            <h3>iPhone 13 Pro</h3>
+            <h4>이게 바로 프로.</h4>
+                <a href="#" style="color: blueviolet;">더 알아보기></a>
+                <a href="#" style="color: blueviolet;">구입하기></a>
+            <img class="size" src="Apple (대한민국)/hero_iphone_13pro__dhnsegysa42u_largetall_2x.jpg" alt="">
+            <img class="size" src="Apple (대한민국)/hero_iphone_13__f194u1rdooeq_largetall_2x.jpg" alt="">
+        </div>
+        <div class="sec1">
+            <div class="sec_goods">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/iphone__cyamwsdph26a_largetall_2x.png" alt="아이폰13">
+                    <p></p>
+                    <p></p>
+                </figure>
+            </div>
+            <div class="sec_goods" style="background: #FCF2D9;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/airpods__b0941p5gmwj6_largetall_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+            <div class="sec_goods">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/watch__csqqcayzqueu_largetall_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+        </div>
+        <div class="sec2">
+            <div class="sec_goods" style="background: #FCF2D9;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/ipadair__fkr21evsr6a2_largetall_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+            <div class="sec_goods" style="background: #EEEFFE;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/ipadmini__f0pd6cilwaie_largetall_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+            <div class="sec_goods" style="background: #EEEFFE;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/snowflake_iphone13pro__ta035tuxjuy6_large_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+        </div>
+        <div class="sec3">
+            <div class="sec_goods" style="background: #EEEFFE;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/snowflake_macbook__esgp0248s8k2_large_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+            <div class="sec_goods" style="background: #FCF2D9;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/snowflake_imac__f39xjfmxwua2_large_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+            <div class="sec_goods" style="background: #F5F5F7;">
+                <figure class="sec_size">
+                    <img src="Apple (대한민국)/snowflake_ipadpro__flv1rvsaa7au_large_2x.png" alt="">
+                        <p></p>
+                        <p></p>
+                    </img>
+                </figure>
+            </div>
+        </div>
     </section>
+    
+    <section class="middle" id="middle"> 
+        <div class="">
+            <img src="Apple (대한민국)/Logo of happy face emoji.png" alt="">
+        </div>
+        <p class="">제때 준비하는 뜻깊은 연말연시 선물. 의미 있는 이모티콘, 이름, 이니셜, 숫자를 각인해 더욱 특별하게. 오직 Apple에서만.</p>
+        <a href=""></a>
+        <a href=""></a>
+        <div class="">
+            <img src="Apple (대한민국)/Logo of three Apple watches.png" alt="">
+        </div>
+        <p class="">소중한 사람의 스타일에 맞는 케이스와 밴드 조합 찾기. 오직 Apple에서만.</p>
+        <a href=""></a>
+        <a href=""></a>
+    </section>
+    <footer>
+        <section class="small_sentence">
+            <ul>
+                <li class="line">
+                    Apple TV+는 무료 체험 기간이 끝나면 월 6,500원에 이용할 수 있습니다. 해지는 무료 체험 기간 중에도 가능합니다. 하나의 멤버십으로 가족 공유를 통해 공유 가능합니다. 무료 체험 혜택은 2021년 11월 4일부터 대상 기기 활성화 이후 3개월 이내에 신청할 수 있습니다. 멤버십은 매월 자동으로 갱신되며, 해지 시 종료됩니다. 제한 사항 및 기타 
+                </li>
+            </ul>
+        </section>
+        <div class="footer_1">
+            <nav>
+                <div class="footer_a">
+                    <div>
+                        <h3>쇼핑 및 알아보기</h3>
+                        <ul>
+                            <li><a href="#">스토어</a></li>
+                            <li><a href="#">Mac</a></li>
+                            <li><a href="">iPad</a></li>
+                            <li><a href="">iPhone</a></li>
+                            <li><a href="">Watch</a></li>
+                            <li><a href="">AirPods</a></li>
+                            <li><a href="">TV 및 홈</a></li>
+                            <li><a href="">iPod touch</a></li>
+                            <li><a href="">AirTag</a></li>
+                            <li><a href="">액세서리</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer_b">
+                    <div>
+                        <h3>서비스</h3>
+                        <li><a href="">Apple Music</a></li>
+                        <li><a href="">Apple TV+</a></li>
+                        <li><a href="">Apple Arcade</a></li>
+                        <li><a href="">iCloud</a></li>
+                        <li><a href="">Apple Books</a></li>
+                        <li><a href="">Apple Podcast</a></li>
+                        <li><a href="">App Store</a></li>
+                        <h3>계정</h3>
+                        <li><a href="">Apple ID 관리</a></li>
+                        <li><a href="">Apple Store 계정</a></li>
+                        <li><a href="">iCloud.com</a></li>
+                    </div>
+                </div>
+                <div class="footer_c">
+                    <div>
+                        <h3>Apple Sore</h3>
+                        <li><a href="">매장 찾기</a></li>
+                        <li><a href="">Genius Bar</a></li>
+                        <li><a href="">Today at Apple</a></li>
+                        <li><a href="">Apple 캠프</a></li>
+                        <li><a href="">Apple Store 앱</a></li>
+                        <li><a href="">리퍼 및 특가 제품</a></li>
+                        <li><a href="">금융 혜택</a></li>
+                        <li><a href="">Apple Trade In</a></li>
+                        <li><a href="">주문 상태</a></li>
+                        <li><a href="">쇼핑 도움말</a></li>
+                    </div>
+                </div>
+                <div class="footer_d">
+                    <div>
+                        <h3>비즈니스</h3>
+                        <li><a href="">Apple과 비즈니스</a></li>
+                        <li><a href="">비즈니스를 위한 제품 쇼핑하기</a></li>
+                        <h3>교육</h3>
+                        <li><a href="">Apple과 교육</a></li>
+                        <li><a href="">초중고용 제품 쇼핑하기</a></li>
+                        <li><a href="">대학 생황을 위한 제품 쇼핑하기</a></li>
+                    </div>
+                </div>
+                <div class="footer_e">
+                    <h3>Apple의 가치관</h3>
+                    <li><a href="">손쉬운 사용</a></li>
+                    <li><a href="">환경</a></li>
+                    <li><a href="">개인정보 보호</a></li>
+                    <li><a href="">협력업체에 대한 책임</a></li>
+                    <h3>Apple 정보</h3>
+                    <li><a href="">Newsroom</a></li>
+                    <li><a href="">Apple 리더십</a></li>
+                    <li><a href="">채용 안내</a></li>
+                    <li><a href="">윤리 및 규정 준수</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">일자리 창출</a></li>
+                    <li><a href="">Apple 연락처</a></li>
+                </div>
+            </nav>
+        </div>
+    </footer>
 </body>
 <script src="Apple (대한민국).js" defer></script>
 </html>

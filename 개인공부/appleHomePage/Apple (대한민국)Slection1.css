@@ -1,0 +1,125 @@
+:root {
+    --aqua: #EAF2FC;
+    --seashell: #FDEDDF;
+    --mistyrose: #FBEDF9;
+    --cornsilk: #FCF2D9;
+    --purplehaze: #EEEFFE;
+    --honeydew: #E8F6F5;
+    --slategray: #F5F5F7;
+}
+section div.sec1{
+    max-width: 1278px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 38px;
+    padding: 80px 38px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+section div.sec1 div.sec_goods{
+    width: 28.75rem;
+    height: 39.8333rem;
+    background-color: #f5f5f7;
+    border-radius: 2rem;
+}
+section div.sec1 div.sec_goods img{
+    width: 28.3333rem;
+    height: 26.6666rem;
+    position: relative;
+    left: 50%;
+    margin-left: -170px;
+    background-size: 340px 320px;
+    background-repeat: no-repeat;
+    animation-name: rotate;
+    animation-duration: 10s;
+}
+section div.sec1 div.sec_goods img:hover{
+    background-image: url();
+}
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(40deg);
+    }
+}
+section div.sec2{
+    max-width: 1278px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 38px;
+    padding: 80px 38px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+section div.sec2 div.sec_goods{
+    width: 28.75rem;
+    height: 39.8333rem;
+    background-color: #f5f5f7;
+    border-radius: 2rem;
+}
+section div.sec2 div.sec_goods img{
+    width: 28.3333rem;
+    height: 26.6666rem;
+    position: relative;
+    left: 50%;
+    margin-left: -170px;
+    background-size: 340px 320px;
+    background-repeat: no-repeat;
+    animation-name: rotate2;
+    animation-duration: 10s;
+    animation-delay: 2s;
+}
+@keyframes rotate2{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(40deg);
+    }
+}
+section div.sec3{
+    max-width: 1278px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 38px;
+    padding: 80px 38px 5px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+section div.sec3 div.sec_goods{
+    width: 28.75rem;
+    height: 39.8333rem;
+    background-color: #f5f5f7;
+    border-radius: 2rem;
+}
+section div.sec3 div.sec_goods img{
+    width: 28.3333rem;
+    height: 26.6666rem;
+    position: relative;
+    left: 50%;
+    margin-left: -170px;
+    background-size: 340px 320px;
+    background-repeat: no-repeat;
+    animation-name: rotate3;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+@keyframes rotate3{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(40deg);
+    }
+}
+div.mid_banner img.size{
+    width: 100%;
+}

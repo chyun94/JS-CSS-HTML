@@ -7,13 +7,13 @@ const menu = document.querySelector('.navbar_menu');
 togglebtn.addEventListener('click',()=>{
     menu.classList.toggle('active');
     // icons.classList.toggle('active');
-})
+    });
 
-// toggle디자인2
-let menutoggle = document.querySelector('.toggle');
-        menutoggle.onclick = function(){
-            menutoggle.classList.toggle('active')
-        }
+// toggle디자인 (햄버거 메뉴)
+const menutoggle = document.querySelector('.toggle');
+            menutoggle.onclick = function(){
+            menutoggle.classList.toggle('active');
+        }   
 
 //  section - 1 slide banner
 var appleimg = document.querySelector('#img1');
@@ -30,7 +30,7 @@ function img1(){
     }else{
         imgIndex= 0;
     }
-    appleimg.style.left = imgIndex*-700+"px";
+    appleimg.style.left = imgIndex*-600+"px";
     console.log(imgIndex);
 }
 //  이전 페이지
@@ -41,7 +41,7 @@ function prev(){
     }else{
         imgIndex--;
     }
-    appleimg.style.left = imgIndex*-700+"px";
+    appleimg.style.left = imgIndex*-600+"px";
     console.log(imgIndex);
 }
 
@@ -53,6 +53,6 @@ function next(){
     }else{
         imgIndex= 0;
     }
-    appleimg.style.left = imgIndex*-700+"px";
+    appleimg.style.left = imgIndex*-600+"px";
     console.log(imgIndex);
 }
