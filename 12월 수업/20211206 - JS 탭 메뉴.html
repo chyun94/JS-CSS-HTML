@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap 메뉴</title>
+</head>
+<style>
+.c1 {
+    display : none;
+}
+.p{
+    display: block;
+}
+div {
+    border : 3px solid rgb(253, 211, 211);
+    width: 100px;
+    text-align: center;
+}
+p{
+    display: inline-block;
+    border: 3px solid rgb(207, 134, 23);
+}
+
+</style>
+<body>
+    <p onclick="clickBox1()" class="1">클릭1</p>
+    <p onclick="clickBox2()" class="2">클릭2</p>
+    <p onclick="clickBox3()" class="3">클릭3</p>
+
+    <div id="name1" style="background-color: blanchedalmond;">111</div>
+    <div id="name2" style="background-color: burlywood">222</div>
+    <div id="name3" style="background-color: crimson">333</div>
+</body>
+
+<script>
+    var box1=document.getElementById("name1");
+    var box2=document.getElementById("name2");
+    var box3=document.getElementById("name3");
+    var onclick1=document.getElementById('1');
+    var onclick1=document.getElementById('2');
+    var onclick1=document.getElementById('3');
+
+    function clickBox1(){
+        box1.classList.remove("c1");
+        box2.classList.add("c1");
+        box3.classList.add("c1");
+    }
+
+    function clickBox2(){
+        box1.classList.add("c1");
+        box2.classList.remove("c1");
+        box3.classList.add("c1");
+    }
+    function clickBox3(){
+        box1.classList.add("c1");
+        box2.classList.add("c1");
+        box3.classList.remove("c1");
+    }
+</script>
+</html>

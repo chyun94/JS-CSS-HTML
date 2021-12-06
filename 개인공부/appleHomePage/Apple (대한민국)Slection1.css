@@ -7,13 +7,17 @@
     --honeydew: #E8F6F5;
     --slategray: #F5F5F7;
 }
+figure.sec_size p i{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
 section div.sec1{
     max-width: 1278px;
     width: auto;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 38px;
-    padding: 80px 38px 5px;
+    padding: 10rem 38px 5px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -23,27 +27,31 @@ section div.sec1 div.sec_goods{
     height: 39.8333rem;
     background-color: #f5f5f7;
     border-radius: 2rem;
+    box-shadow: 10px 10px 30px silver;
+}
+section div.sec1 div.sec_goods:hover{
+    width: 29rem;
+    height: 40rem;
 }
 section div.sec1 div.sec_goods img{
-    width: 28.3333rem;
-    height: 26.6666rem;
+    width: 21.3333rem;
+    height: auto;
     position: relative;
     left: 50%;
     margin-left: -170px;
     background-size: 340px 320px;
     background-repeat: no-repeat;
     animation-name: rotate;
-    animation-duration: 10s;
+    animation-duration: 30s;
+    margin-top: 2rem;
 }
-section div.sec1 div.sec_goods img:hover{
-    background-image: url();
-}
+
 @keyframes rotate{
     from{
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(40deg);
+        transform: rotate(360deg);
     }
 }
 section div.sec2{
@@ -52,7 +60,7 @@ section div.sec2{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 38px;
-    padding: 80px 38px 5px;
+    padding: 40px 38px 5px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -62,25 +70,31 @@ section div.sec2 div.sec_goods{
     height: 39.8333rem;
     background-color: #f5f5f7;
     border-radius: 2rem;
+    box-shadow: 10px 10px 30px silver;
+}
+section div.sec2 div.sec_goods:hover{
+    width: 29rem;
+    height: 40rem;
 }
 section div.sec2 div.sec_goods img{
-    width: 28.3333rem;
-    height: 26.6666rem;
+    width: 21.3333rem;
+    height: auto;
     position: relative;
     left: 50%;
     margin-left: -170px;
     background-size: 340px 320px;
     background-repeat: no-repeat;
     animation-name: rotate2;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-delay: 2s;
+    margin-top: 2rem;
 }
 @keyframes rotate2{
     from{
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(40deg);
+        transform: rotate(360deg);
     }
 }
 section div.sec3{
@@ -89,7 +103,7 @@ section div.sec3{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-gap: 38px;
-    padding: 80px 38px 5px;
+    padding: 40px 38px 10rem;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
@@ -99,27 +113,43 @@ section div.sec3 div.sec_goods{
     height: 39.8333rem;
     background-color: #f5f5f7;
     border-radius: 2rem;
+    box-shadow: 10px 10px 30px silver;
+}
+section div.sec3 div.sec_goods:hover{
+    width: 29rem;
+    height: 40rem;
 }
 section div.sec3 div.sec_goods img{
-    width: 28.3333rem;
-    height: 26.6666rem;
+    width: 21.3333rem;
+    height: auto;
     position: relative;
     left: 50%;
     margin-left: -170px;
     background-size: 340px 320px;
     background-repeat: no-repeat;
     animation-name: rotate3;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-delay: 4s;
+    margin-top: 2rem;
 }
 @keyframes rotate3{
     from{
         transform: rotate(0deg);
     }
     to{
-        transform: rotate(40deg);
+        transform: rotate(360deg);
     }
 }
 div.mid_banner img.size{
     width: 100%;
+}
+
+div.mid_banner img.size:nth-of-type(1){
+    margin-top: 8rem;
+}
+
+@media screen and (max-width:760px){
+    div.sec_size{
+
+    }
 }

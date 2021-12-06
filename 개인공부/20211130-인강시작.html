@@ -29,6 +29,15 @@
     <button onclick="한글도가능1('아이디를 입력')">버튼1</button>
     <button onclick="한글도가능1('비밀번호 입력')">버튼2</button>
 
+    <div class="hangul_box" id="hangul">
+        <p id="제목">훈민정음</p>
+        <button id="덮기">책 덮기</button>
+    </div>
+    <button onclick="한글('가나다라')">가</button>
+    <button onclick="한글('나라가')">나</button>
+    <button onclick="한글('다다익선')">다</button>
+    <button onclick="한글('라쿤난쟁이')">라</button>
+
 </body>
 <script>
     document.getElementById('close').addEventListener('mouseover',function(){
@@ -43,5 +52,13 @@
     //     document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
     //     document.getElementById('alert').style.display = 'block';
     // }
+    document.getElementById('덮기').addEventListener('click',function(){
+        document.getElementById('hangul').style.display = 'none';
+    });
+    function 한글(한글) {
+        document.getElementById('제목').innerHTML = 한글;
+        document.getElementById('hangul').style.display = 'block';
+        document.getElementById('hangul').style.display = 한글;
+    }
 </script>
 </html>

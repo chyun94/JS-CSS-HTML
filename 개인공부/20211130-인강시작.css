@@ -5,3 +5,12 @@
     border-radius: 5px;
     display: none;
 }
+
+.hangul_box{
+    background-color: beige;
+    color: black;
+    font-weight: bold;
+    padding: 2rem;
+    border-radius: 2rem;
+    display: none;
+}
