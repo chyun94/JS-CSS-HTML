@@ -17,9 +17,14 @@ const menutoggle = document.querySelector('.toggle');
 
 //  section - 1 slide banner
 var appleimg = document.querySelector('#img1');
-var tick = 3500;    // 1000 = 1s
+var appleimg2 = document.querySelector('#img2');
+var appleimg3 = document.querySelector('#img3');
+var tick = 4000;    // 1000 = 1s
+var tick2 = 5500;    // 1000 = 1s
 var imgIndex = -1;
 var stop_img = setInterval(img1,tick);
+var stop_img2 = setInterval(img2,tick);
+var stop_img3 = setInterval(img3,tick);
 // var clearInterval = clearInterval(prev);
 // var clearInterval = clearInterval(next);
 
@@ -30,8 +35,8 @@ function img1(){
     }else{
         imgIndex= 0;
     }
-    appleimg.style.left = imgIndex*-600+"px";
-    console.log(imgIndex);
+    appleimg.style.left = imgIndex*-400+"px";
+    // console.log(imgIndex);
 }
 //  이전 페이지
 function prev(){
@@ -41,10 +46,9 @@ function prev(){
     }else{
         imgIndex--;
     }
-    appleimg.style.left = imgIndex*-600+"px";
-    console.log(imgIndex);
+    appleimg.style.left = imgIndex*-500+"px";
+    // console.log(imgIndex);
 }
-
 //  다음 페이지
 function next(){
     clearInterval(stop_img);
@@ -53,6 +57,22 @@ function next(){
     }else{
         imgIndex= 0;
     }
-    appleimg.style.left = imgIndex*-600+"px";
-    console.log(imgIndex);
+    appleimg.style.left = imgIndex*-500+"px";
+    // console.log(imgIndex);
+}
+function img2(){
+    if(imgIndex<1){
+        imgIndex++;
+    }else{
+        imgIndex=0;
+    }
+    appleimg2.style.left = imgIndex*-400+"px";
+}
+function img3(){
+    if(imgIndex<1){
+        imgIndex++;
+    }else{
+        imgIndex=0;
+    }
+    appleimg3.style.left = imgIndex*-400+"px";
 }

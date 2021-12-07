@@ -20,15 +20,14 @@ body{
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-@media screen and (max-width:760px){
-    body{font-size: 0.8rem;
-    }
-}
+
 a{
     text-decoration: none;
     color: var(--text-color-a)
 }
-
+li{
+    list-style: none;
+}
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -41,7 +40,6 @@ a{
     z-index: 100;
 }
 
-
 .navbar_menu{
     display: flex;
     /* li이기 때문에 스타일 제거 */
@@ -53,7 +51,7 @@ a{
 }
 /* 너무 붙어있어 li를 띄어주자 */
 .navbar_menu li{
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 1rem;
     font-size: 0.8rem;
 }
 .navbar_menu li i.fa-apple{
@@ -70,15 +68,6 @@ a{
     padding-left: 0;
     padding: 8px 12px;
 }
-/*  toggle메뉴 오른쪽 상단에 맞추기 
-    화면이 작을때만 나와야 해서 
-.navbar_togglebtn{
-    display: none;
-    position: absolute;
-    right: 3rem;
-    font-size: 2rem;
-}
-*/
 
 /* toggle버튼 */
 .toggle{
@@ -126,7 +115,7 @@ a{
 .toggle.active span:nth-child(3){
     transform: translateX(60px);
 }
-@media screen and (max-width:760px){
+@media screen and (max-width:954px){
     .navbar{
         align-items: flex-start;
         padding: 18px 2rem;
@@ -172,25 +161,24 @@ div.top_banner{
     color: var(--text-color-a);
     position: relative;
     top: 37px;
+    margin-bottom: 6%;
     
 }
 div.top_banner a:hover{
     font-weight: bold;
 }
 /* .shop */
-section.top img{
-    display: block;
-    align-items: center;
+section.top img.appleImg{
+    position: relative;
+    margin-top: 16%;
     text-align: center;
     margin: 0 auto;
     width: 71px;
-    margin-top: 1rem;
 }
 
 
 section.top h2#small_text{
-    
-    font-size: 6.6rem;
+    font-size: 4.6rem;
     font-weight: 600;
     /* 자간 설정 */
     letter-spacing: -0.5rem;
@@ -198,19 +186,19 @@ section.top h2#small_text{
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 4rem;
-    padding-bottom: 1rem;
+    padding-top: 3rem;
+    padding-bottom: 0.4rem;
 }
 section.top div{
-    margin: 0 auto;
-    margin-top: 4rem;
-    display: block;
     text-align: center;
     align-items: center;
 }
+section.top div#shopping{
+    margin:4%;
+}
 section.top div a.shop{
     color: #fff;
-    padding: 12px 22px;
+    padding: 1rem 22px;
     border-radius: 980px;
     background-color: #0071e3;
     font-size: 17px;
@@ -242,23 +230,45 @@ input.search{
 }
 
 div.mid_banner h3{
+    margin-top: 8%;
     font-size: 4.5rem;
     font-weight: 600;
     letter-spacing: -0.2rem;
     padding-bottom: 1rem;
+    z-index: 100;
+    /* position: relative; */
+}
+div.mid_banner h3#second{
+    margin-top: 4%;
+    font-size: 4.5rem;
+    font-weight: 600;
+    letter-spacing: -0.2rem;
+    padding-bottom: 1rem;
+    z-index: 100;
 }
 div.mid_banner h4{
     font-size: 2rem;
-    font-weight: 400;
-    padding-bottom: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    position: relative;
+    color: #34283c;
+}
+div.mid_banner h4#second{
+    font-size: 2rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    position: relative;
+    color: blanchedalmond;
 }
 section div.mid_banner div.mid a{
     color: rgb(143, 39, 240);
     margin: 2rme;
+    position: relative;
 }
 .mid_banner a {
     padding: 1rem;
-    font-size: 1.6rem;
+    font-size: 1rem;
+    position: relative;
 }
 .mid_banner a:hover{
     text-decoration-line: underline;
@@ -268,10 +278,32 @@ figure.sec_size p:nth-of-type(1){
     font-size: 2rem;
     font-weight: bold;
     padding: 1rem;
-    padding-top: 6rem;
+    padding-top: 3.5rem;
     cursor: pointer;
 } 
 figure.sec_size p:nth-of-type(2){
     font-size: 1.8rem;
     cursor: pointer;
+    margin-bottom: 0.5rem;
 } 
+div.apple_store{
+    margin: 0 auto;
+    width: 100%;
+}
+div.apple_store h3{
+    margin: 8% 3%;
+    font-size: 4.5rem;
+}
+div.apple_store h3:hover{
+    color: #939393 ;
+}
+@media screen and (min-width:768px) and (max-width:954px){
+    section.top h2#small_text{
+        font-size: 3rem;
+    }
+}
+@media screen and (min-width:320px) and (max-width:767px){
+    section.top h2#small_text{
+        font-size: 2.2rem;
+    }
+}
