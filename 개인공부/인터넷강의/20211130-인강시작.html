@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="20211130-인강시작.css">
+    <script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <pre>
+        Day 1   - Selector
+                    <!-- 
+                    <h2 id="hello">안녕하세요</h2>
+                    <h2 id="hi">올때메로나</h2> 
+                    document.getElementById('hello').innerHTML = "안녕하세요 = hello";
+                    document.getElementById('hi').style.fontSize = "40px";
+                    -->
+                - Alert Box 
+                - function
+                - addEventListener
+                <!-- function 한글도가능2(한글가능){
+                    document.getElementById('title').innerHTML = '비밀번호를 입력하세요';
+                    document.getElementById('alert').style.display = 'block';
+                } -->
+        Day 2   - Jquery
+                <!-- #을 붙이면 id가 test인것을 찾아달라는 말. 클레스명은 .(마침표) 을 붙여주면 된다.
+                document.querySelectorAll('#test')[0].innerHTML = 'ggd';
+                document.getElementById('test').innerHTML = '하이';
+                위와 같이 킨 코드를 jquery로는 아래처럼 변경이 가능하다.
+            
+                모든 html, 모든 text
+                $('#test').html('<p>하이<p>');
+                $('#test').text('하이');
+                아래는 출력만 하고 싶을 시
+                $('#test').text();
+                스타일 속성을 변경시
+                $('#test').css('color','green');
+                원하는 속성을(src) ddd로 바꾼다.
+                $('#test').attr('src', 'ddd');
+                jquery함수를 찾아보자 -->
+                - addClass()
+                - jquery Animation()
+    </pre>
+    <hr>
+    <h4 id="test" class="yellow">안녕하세요</h4>
+    <div class="alert-box" id="alert"> 
+        <p id="title"> Alert Box</p>
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="한글도가능1('아이디를 입력')">버튼1</button>
+    <button onclick="한글도가능1('비밀번호 입력')">버튼2</button>
+
+    <p class="greeting">하이</p>
+    <p class="greeting">하이</p>
+    <p class="greeting">하이</p>
+
+    <button class="btn">버튼BTN</button>
+    <button class="btn1">버튼BTN</button>
+    <button class="btn2">버튼BTN2</button>
+
+</body>
+<script>
+    // $('.yellow').css('background','yellow');
+    // document.getElementsByClassName('greeting')[0].innerHTML = '안녕~';
+    // document.getElementsByClassName('greeting')[1].innerHTML = 'Hellow';
+    // document.getElementsByClassName('greeting')[2].innerHTML = 'おはようー';
+
+    // $('.greeting').html('아녀어엉');
+    // $('.greeting').eq(0).html('아녀어엉');   0번째만 바꾸기
+
+    // $('btn').on('click',function(){
+    // });
+
+    //버튼 누를시 하이를 사라지게 하기
+    document.getElementsByClassName('btn')[0].addEventListener('click',function(){
+        document.getElementsByClassName('greeting')[0].style.display = 'none';
+    });
+    // 위를 jquery로 해보기
+    $('.btn').on('click',function(){
+        $('.greeting').hide();
+    });
+    $('.btn1').on('click',function(){
+        $('.greeting').slideUp();
+    });
+    $('.btn2').on('click',function(){
+        $('.greeting').show();
+    });
+</script>
+<script>
+    //닫기버튼 만드는 매소드
+    document.getElementById('close').addEventListener('click',function(){
+        document.getElementById('alert').style.display = 'none';
+    });
+    function 한글도가능1(파라미터){
+        document.getElementById('title').innerHTML = 파라미터;
+        document.getElementById('alert').style.display = 'block';
+        document.getElementById('alert').style.display = 파라미터;
+    }
+    
+</script>
+
+</html>

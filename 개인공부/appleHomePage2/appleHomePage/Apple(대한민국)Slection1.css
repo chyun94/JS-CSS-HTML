@@ -7,18 +7,16 @@
     --honeydew: #E8F6F5;
     --slategray: #F5F5F7;
 }
-div.sec_goods p.buy a{
-    color: black;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: block;
-}
-figure.sec_size p a i{
+figure.sec_size p i{
     font-size: 1.7rem;
     font-weight: 600;
 }
-
-div.sec_goods p.buy a:hover{
+div.sec_goods p#buy a{
+    color: black;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+div.sec_goods p#buy a:hover{
     color: #0071e3;
 }
 section div.sec1{
@@ -53,7 +51,6 @@ section div.sec1 div.sec_goods img{
     animation-duration: 30s;
     margin-top: 2rem;
 }
-
 @keyframes rotate{
     from{
         transform: rotate(0deg);

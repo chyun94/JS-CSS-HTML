@@ -19,8 +19,7 @@ const menutoggle = document.querySelector('.toggle');
 var appleimg = document.querySelector('#img1');
 var appleimg2 = document.querySelector('#img2');
 var appleimg3 = document.querySelector('#img3');
-var tick = 4000;    // 1000 = 1s
-var tick2 = 5500;    // 1000 = 1s
+var tick = 2500;    // 1000 = 1s
 var imgIndex = -1;
 var stop_img = setInterval(img1,tick);
 var stop_img2 = setInterval(img2,tick);
@@ -35,7 +34,7 @@ function img1(){
     }else{
         imgIndex= 0;
     }
-    appleimg.style.left = imgIndex*-400+"px";
+    appleimg.style.left = imgIndex*-100+"%";
     // console.log(imgIndex);
 }
 // //  이전 페이지
@@ -46,7 +45,7 @@ function img1(){
 //     }else{
 //         imgIndex--;
 //     }
-//     appleimg.style.left = imgIndex*-400+"px";
+//     appleimg.style.left = imgIndex*-500+"px";
 //     // console.log(imgIndex);
 // }
 // //  다음 페이지
@@ -57,7 +56,7 @@ function img1(){
 //     }else{
 //         imgIndex= 0;
 //     }
-//     appleimg.style.left = imgIndex*-400+"px";
+//     appleimg.style.left = imgIndex*-500+"px";
 //     // console.log(imgIndex);
 // }
 function img2(){
@@ -66,7 +65,7 @@ function img2(){
     }else{
         imgIndex=0;
     }
-    appleimg2.style.left = imgIndex*-400+"px";
+    appleimg2.style.left = imgIndex*-100+"%";
 }
 function img3(){
     if(imgIndex<1){
@@ -74,5 +73,5 @@ function img3(){
     }else{
         imgIndex=0;
     }
-    appleimg3.style.left = imgIndex*-400+"px";
+    appleimg3.style.left = imgIndex*-100+"%";
 }

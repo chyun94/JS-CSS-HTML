@@ -27,7 +27,7 @@ div.slide_box{
 div#box img#img1{
     position: relative;
     width: 1200px;
-    transition: left 4s;
+    transition: left 3.5s;
 }
 
 div.slide_second{
@@ -36,7 +36,7 @@ div.slide_second{
 img#img2{
     position: relative;
     width: 800px;
-    transition: left 5.5s;
+    transition: left 7s;
     height: 423px;
 }
 div.slide_third{
@@ -46,7 +46,7 @@ div.slide_third{
 img#img3{
     position: relative;
     width: 800px;
-    transition: left 5.5s;
+    transition: left 7s;
     height: 423px;
 }
 
@@ -82,7 +82,7 @@ img#img3{
     div.mid_banner h3, div.mid_banner h3#second{
         font-size: 3rem;
     }
-    div.mid_banner h4, div.mid_banner h4#second{
+    div.mid_banner h4, div.mid_banner h4#seconds{
         font-weight: 400;
         font-size: 1.4rem;
         margin-bottom: 2rem;

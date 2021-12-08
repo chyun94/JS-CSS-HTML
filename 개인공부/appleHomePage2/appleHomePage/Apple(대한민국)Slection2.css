@@ -1,0 +1,25 @@
+section.middle{
+    width: 100%;
+}
+section.middle div.middle_wrap{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+    /* background: #000; */
+    text-align: center;
+    /* border: 1px solid hotpink; */
+}
+section.middle div.middle_wrap > div{
+    width: 44%
+}
+
+section.middle div img {
+    width: 5rem;
+    padding-top: 2rem;
+}
+section.middle p{
+    font-size: 1.1rem;
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+}
