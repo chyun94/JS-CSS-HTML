@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width: 400px;
+        height: auto;
+    }
+    div.rectangle{
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 0;
+        left: 0;
+        border: 4px solid chocolate;
+        transform: translate(-90%, -90%);
+        color: cornsilk;
+        transition: opacity 0.5s;
+        
+    }
+    
+    div.sub_rectangle{
+        /* position: relative; */
+        width: 200px;
+        height: 293px;
+        background-color: chartreuse;
+    }
+</style>
+<body>
+    <div class="rectangle">마우스커서</div>
+
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt=""  
+        src="사진" id="사진2" onmouseout="rectangle.style.display ='none';" onmouseover="rectangle.style.display='block';">
+    </div>
+    <div class="sub_rectangle" id="sub_rec" onmouseout="rectangle.style.display ='none';" onmouseover="rectangle.style.display='block';"></div>
+    <!-- onmouseover: 마우스가 타겟 위에 올라감
+    onmouseout: 타겟에서 나감 -->
+</body>
+<script>
+    // 이미지를 객체화
+    var img_box = document.querySelector("#사진2");
+    // html의 div.rectangle을 객체화 시켜주자
+    var rectangle = document.querySelector(".rectangle");
+    // 확대창 객체화
+    var rectangle_enlargement = document.querySelector("#sub_rec");
+    // 이미지 넓이
+    
+    // 사진의 범위 내에서만 보이게 하기
+    img_box.addEventListener("mousemove",function(e){
+        //  client는 document 전체에 포함된 좌표값
+        // var mouseX = e.clientX;
+        // var mouseY = e.clientY;
+        //  offset은 지정된 객체를 기준으로 좌표값 0,0
+        var mouseX = e.offsetX;
+        var mouseY = e.offsetY;
+        // 사각형이라는 클래스 스타일에 x,y좌표값을 px로 대입? (좌표값 적용)
+        rectangle.style.left = mouseX + 'px';
+        rectangle.style.top = mouseY + 'px';
+        // console.log("x축:" + e.offsetX);
+        // console.log("y축:" + e.offsetY);
+    });
+    rectangle_enlargement.addEventListener("mousemove",function (params) {
+        var rectangle_enlargementX = params.offsetX;
+        var rectangle_enlargementY = params.offsetY;
+
+        rectangle.style.left = rectangle_enlargementX*2 + 'px';
+        rectangle.style.top = rectangle_enlargementY*2 + 'px';
+        console.log("x축:" + params.offsetX);
+        console.log("y축:" + params.offsetY);
+    })
+
+
+</script>
+</html>
