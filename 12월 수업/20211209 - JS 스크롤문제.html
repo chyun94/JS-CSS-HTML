@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    img{
+        width: 150px;
+        height: auto;
+        position: absolute;
+        /* position: fixed; */
+        display: block;
+    }
+        div.long{
+        width: 100%;
+        height: 500px;
+        background: chartreuse;
+    }
+    div{
+        overflow: hidden;
+    }
+</style>
+<body>
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2">
+    </div>
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2">
+    </div>
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2">
+    </div>
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2">
+    </div>
+    <div>
+        <img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2">
+    </div>
+    
+</body>
+<script>
+    var div_box = document.getElementById('select');
+    var count = 0;
+    function myscroll(e){
+        // console.log(e.clientY);
+        // console.log(e.clientX);
+        // console.log(e.offsetX);
+        // if(e.offsetY >0 && e.offsetY < 599){
+        //     div_box.style.backgroundColor='red';
+        // }else if(e.offsetY > 600 && e.offsetY > 1199){
+        //     div_box.style.backgroundColor='orange';
+        // }
+
+        //  이미지 두 배 확대
+        //  wheelDelta 120을 기준으로 
+        if(e.wheelDelta > 0){
+            // e.target.style.transform = "scale(1)";
+            e.target.style.transition = "all 1s";
+            // e.target.style.left= (-100)+"px";
+            // e.target.style.right = (-1000)+"px";
+            e.target.style.left= (-10)+"px";
+            e.target.style.top= (-10)+"px";
+            
+            console.log(e.clientX);
+        }else{
+            // e.target.style.transform = "scale(2)";
+            e.target.style.bottom= 30+"%";
+            e.target.style.left= 30+"%";
+            // e.target.style.bottom= 400+"px";
+            e.target.style.transition = "all 1s";
+            console.log(e.clientY);
+        }
+    }
+</script>
+</html>

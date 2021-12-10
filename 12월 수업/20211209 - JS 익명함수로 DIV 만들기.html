@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>익명함수로 DIV 만들기</title>
+    <script>
+
+        function createDIV(){
+            //  body태그 객체화 시키기
+            var obj = document.getElementById("parent");
+            var newDIV = document.createElement("div");
+            newDIV.innerHTML = "새로 생성된 DIV입니다. 누르면 다시 사라짐ㅋ"
+            newDIV.setAttribute("id","myDiv");
+            newDIV.style.backgroundColor = "yellowgreen";
+            // 아래는 익명 함수 - 이 코드에서만 사용할것이기 때문에 따로 이름을 작성 할 필요가 없다.
+            newDIV.onclick = function(){
+                var p = this.parentElement; //부모 HTML태그 요소
+                p.removeChild(this);    // 자신을 부모로부터 제거
+            }
+            obj.appendChild(newDIV);
+        }
+    </script>
+</head>
+<body id="parent">
+    <h3>DIV객체를 동적으로 생성, 삽입하는 예제</h3>
+    <hr>
+    <p>DOM트리에 동적으로 객체를 삽입할 수 있다.
+        createElement(), appendChild(),
+        removeChild() 메소드를 이용하여 새로운 객체를 생성 삽입 삭제하는 예제
+        <a href="javascript:createDIV()">DIV생성</a>
+    </p>
+</body>
+</html>

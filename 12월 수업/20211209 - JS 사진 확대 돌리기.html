@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;padding: 0;
+    }
+    img{
+        width: 250px;
+        height: auto;
+    }
+    div.long{
+        width: 250px;
+        height: 3000px;
+        background: chartreuse;
+    }
+</style>
+<body>
+    <!-- <div>
+        <img src="../개인공부/img/화보 (1).jpg" alt="" id="사진">
+    </div>
+    <button onClick="rotateImg()">Rotate Image</button> -->
+
+    <div class="long"><img src="../개인공부/img/화보 (2).jpg" alt="" onwheel="myscroll(event)" src="사진" id="사진2"></div>
+
+</body>
+<script>
+    //  초기화
+    // var rotation = 0;
+    // function rotateImg() {
+    //     rotation += 90; 
+    //     // if(rotation === 360){
+    //     //     rotation=0;
+    //     // }
+    //     console.log(rotation);
+    //     // getElementedById()와 querySelector차이점
+    // document.querySelector("#사진").style.transform = `rotate(${rotation}deg)`;
+    // }
+</script>
+
+<script>
+    var rotation = 0;
+    function myscroll(e){
+        rotation += 90;
+        if(e.wheelDelta > 0){
+            document.querySelector("#사진2").style.transform = `rotate(${rotation}deg)`;
+            // console.log(1);
+            console.log(e.offsetX);
+            // 윈도우 화면 기준으로 위치를 알려줌
+            console.log(e.clientX);
+        }else{
+            document.querySelector("#사진2").style.transform = `rotate(${-rotation}deg)`;
+            // console.log(2);
+            console.log(e.offsetY);
+            console.log(e.clientY);
+        }
+
+        if(rotation === 360){
+            rotation = 0;
+        }
+        // console.log(rotation);
+    }
+</script>
+
+</html>

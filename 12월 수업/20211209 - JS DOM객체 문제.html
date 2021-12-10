@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20211209 - JS DOM객체 문제</title>
+</head>
+<body>
+    <pre>
+        body에 p태그 안에 button을 누르면 동적으로 생성된 새로운 
+        div객체가 출력된다.
+        동적으로 생성되는 새로운 div 객체의 id는 newDiv
+        배경색상은 red이고 내부 컨텐츠는 "새롭게 생성된 div입니다." 이다.
+
+        동적으로 생성된 div를 클릭하면 div가 동적으로 삭제된다.
+        ->addEventListener를 사용하면 된다.
+    </pre>
+
+    <button id="btn">Did you try Click Here?</button>
+    <p>
+    </p>
+
+</body>
+<script>
+    
+    var newDiv = document.createElement("div");
+    newDiv.innerHTML = "if you click here, this sentence is deleted";
+    newDiv.setAttribute("id","newDiv");
+    newDiv.style.backgroundColor="red";
+
+    var btn = document.getElementById("btn");
+    newDiv.addEventListener("click",function(){
+        btn.appendChild(newDiv);
+    });
+    
+</script>
+</html>
