@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.wrap{
+    font-size: 12px;
+    font-family:sans-serif;
+    width: 100%
+}
+a{
+    text-decoration: none;
+    color: rgb(27, 27, 27);
+}
+ul,li{
+    list-style: none;
+}
+:root{
+    --nav-text-color:#3e3e3e;
+}
+div.top_banner{
+    width: 100%;
+    background: #313131;
+}
+div.top_banner p{
+    font-size:1rem;
+    text-align: center;
+    color: #f3f3f3;
+    padding: 0.4rem;
+}
+div.top_banner span,i{
+    color: #ee4c03;
+    font-size: 1rem;
+    padding: 0.2rem;
+}
+div.top_banner p:hover{
+    cursor: pointer;
+}
+.gnb_first{
+    display: flex;
+    padding-left: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-wrap: wrap;
+    /* position: fixed; */
+
+}
+.nav_menu{
+    display: flex;
+    justify-content: flex-start;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    
+}
+.nav_menu li{
+    padding-right: 1.4rem;
+    letter-spacing: -0.1rem;
+}
+/* li태그에 마우스 오버시 줄 생기는 효과 추가 */
+.gnb_second{
+    display: flex;
+    justify-content: space-between;
+}
+.ul_gnb_second_f{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 3.6666rem;
+    font-size: 1rem;
+}
+.ul_gnb_second_f li, .ul_gnb_second_s li{
+    padding-right: 1.2rem;
+    padding-bottom: 3rem;
+    font-weight: 400;
+}
+.ul_gnb_second_f li:hover, 
+.ul_gnb_second_s li:hover{
+    font-weight: bold;
+}
+.ul_gnb_second_s{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 2.66666rem;
+    font-size: 1rem;
+}
+.section_slide{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+.section_slide img{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+.section_slide h2{
+    position: absolute;
+    margin: 0 auto;
+    top: 30%;
+    left: 62%;
+    font-size: 3rem;
+    color: #f3f3f3;
+    text-shadow: 10px 10px 30px rgb(37, 37, 37);
+}
+
+/* section_first */
+div.section_first{
+    display: flex;
+}
+div.section_first > div.sec_first_photo > div.first_p, div.second_p{
+    width: 486px;
+    height: 486px;
+    margin: 1.5rem;
+}
+div.first_p > img{
+    width: 100%;
+    height: 100%;
+    
+}
+div.first_p > span{
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: #939393;
+}
+div.second_p > img{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* section_second */
+/* section_third */
