@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zxx">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,15 +10,17 @@
     <title>동서가구</title>
 </head>
 <body class="wrap">
+    <script src="dongsea_furniture.js"></script>
     <header class="hd_ba_nav">
         <div class="top_banner">
             <p>기분 좋은 첫 만남,<span class="text_red_color"> 10% </span>할인쿠폰<span><i class="fas fa-cart-arrow-down"></i></span></p>
         </div>
+        <img src="images/logo.png" alt="동서가구logo">
         <nav class="gnb_first">
             <ul class="nav_menu">
-                <li><a href="#">DF</a></li>
+                <!-- <li><a href="#">DF</a></li> -->
                 <li><a href="#">NEW</a></li>
-                <li><a href="#">BED</a></li>
+                <li><a href="#">BEST</a></li>
                 <li><a href="#">SOFA</a></li>
                 <li><a href="#">OFFICE</a></li>
                 <li><a href="#">GELLARY</a></li>
@@ -45,138 +47,319 @@
         </div>
     </header>
     <div class="section_slide">
-        <!-- 자동 슬라이드 위에 글자 -->
-        <div>
-            <a href="#">
-                <img src="images/living-room-5502968_1920.jpg" alt="">
-            </a>
+        <div class="mySlides fade">
+            <img src="images/living-room-5502968_1920.jpg" style="width:100%" alt="slide_one">
         </div>
-        <h2 class="section_slide_text">
-            미드센츄리 감성에 더한 <br> 모던 스타일
-        </h2>
+        <div class="mySlides fade">
+            <img src="images/home-5526692_1920.jpg" style="width:100%" alt="slide_two">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/interior-3587920_1920.jpg" style="width:100%" alt="slide_three">
+        </div>
     </div>
-    <div class="section_first">
-        <!-- block으로 가면 편하게 가능할 듯 -->
-        <div class="sec_first_photo">
-            <div class="first_p">
-                <img src="images/5fefbc1848c9843b1bd0e9c8.jpg" alt="">
-                    <span class="goods_title">
-                        미드 센추리 감성 Billa records
-                    </span>
-                    <p class="goods_text"></p>
-                </img>
+    <div class="section_middle">
+        <div class="section_first">
+            <!-- block으로 가면 편하게 가능할 듯 -->
+            <div class="sec_first_photo">
+                <div class="first_p">
+                <img src="images/5fefbc1848c9843b1bd0e9c8.jpg" alt="megazine1">
+                </div>
+            <h2 class="goods_title">
+                미드 센추리 감성 Villa records
+            </h2>
+            <p class="goods_text">Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Sunt illum harum officiis nobis reiciendis. 
+                officiis nobis reiciendis. Fugiat liberllum harum
+                Fugiat libero ex adipisci saepe, 
+                quisquam doloribus id provident labore eaque totam, 
+                iciis nobis reiciendis. 
+                officis nobis reiciendisuiadipisci saepe.
+            </p>
+                <div class="second_p">
+                <img src="images/16264189704992.jpg" alt="megazine2">
+                </div>
+            <h2 class="goods_title">
+                안락한 나의 집 
+            </h2>
+            <p class="goods_text">Lorem ipsum dolor sit amet, 
+                consectetur adipisicing elit. 
+                Sunt illum harum officiis nobis reiciendis. 
+                Fugiat liquisquam doloribus ibero ellum harum officiis nobis reiciendis. 
+                Fugiat liberx adipisci saepe, 
+                quisquam doloribus id provident labore eaque totam, 
+                quibusdam incidunt, assumenda sequi.
+            </p>
             </div>
-            <div class="second_p">
-                <img src="images/stil-ugWkSOh2UsU-unsplash.jpg" alt="">
-                    <span class="goods_title">
-                        안락한 나의 집 
-                    </span>
-                    <p class="goods_text"></p>
-                </img>
+            <div class="sec_second_photo">
+                <div class="f_photo">
+                    <a href="#"><img src="images/15671440627920.jpg_304.jpg" alt="goods_first"></a>
+                </div>
+                <div class="f_photo">
+                    <a href="#"><img src="images/15671406247200.jpg_304.jpg" alt="goods_second"></a>
+                </div>
+                <div class="f_photo">
+                    <a href="#"><img src="images/16027485504120.png_304.png" alt="goods_thirth"></a>
+                </div>
+                <div class="f_photo">
+                    <a href="#"><img src="images/16040396088630.png_304.png" alt="goods_fourth"></a>
+                </div>
+            </div>
+            <div class="sec_third_photo">
+                <div class="sec_third_photo_f">
+                    <img src="images/8728_main_059.jpg" alt="megazine_bigSize_f">
+                    <span>문을 넘어서면</span>
+                    <a href="#">more</a>
+                </div>
+                <div class="sec_third_photo_f">
+                    <img src="images/6409_main_01.jpg" alt="megazine_bigSize_S">
+                </div>
             </div>
         </div>
-
-        <div class="sec_second_photo">
-            <div class="1_photo">
-                <a href="#"><img src="" alt=""></a>
-            </div>
-            <div class="2_photo">
-                <a href="#"><img src="" alt=""></a>
-            </div>
-            <div class="3_photo">
-                <a href="#"><img src="" alt=""></a>
-            </div>
-            <div class="4_photo">
-                <a href="#"><img src="" alt=""></a>
+    </div>
+    <div class="section_second">
+        <div class="left_slide_photo">
+                <div class="left_column">
+                    <img src="images/16354009301030.png_304.png" alt="ff" onclick="myFunction(this);">
+                </div>
+                <div class="left_column">
+                    <img src="images/16323846866920.png_304.png" alt="ss" onclick="myFunction(this);">
+                </div>
+                <div class="left_column">
+                    <img src="images/16267420350990.png_304.png" alt="tt" onclick="myFunction(this);">
+                </div>
+                <div class="left_column">
+                    <img src="images/16341866866660.png_304.png" alt="ffourth" onclick="myFunction(this);">
+                </div>
+            <div class="left_container">
+                <img id="expandedImg" style="width:100%" alt="expandedImg" src="">
             </div>
         </div>
-        <div class="sec_third_photo">
-            <div>
-                <img src="" alt="">
-                <span>문을 넘어서면</span>
-                <a href="#">more</a>
+        <div class="right_double_photo">
+            <div class="cover_box">
+                <a href="#"><img src="images/room-1336497_1920.jpg" alt="time_watch_img"></a>
+                <div class="right_sub">
+                    <h2 class="right_sub_title_f">48Years Traditional</h2>
+                    <p class="right_sub_text_f">가구 장인과 만나다</p>
+                </div>
             </div>
-            <div>
-                <img src="" alt="">
+            <div class="cover_box">
+                <a href="#"><img src="images/couch-447484_1920.jpg" alt="lemp_img"></a>
+                <div class="right_sub">
+                    <h2 class="right_sub_title_f">NATURE SOFA</h2>
+                    <p class="right_sub_text_f">자연이 함께하는 명품가구</p>
+                </div>
             </div>
         </div>
     </div>
     <div class="section_third">
-        <div class="left_photo">
-            <p>골드만 뱅커스탠드_브레스/그린</p>
-            <div class="background_color">
-                <img src="" alt="">
-            </div>
-        </div>
-        <div class="right_photo">
-            <div>
-                <a href="#"><img src="" alt=""></a>
-            </div>
-            <div>
-                <a href="#"><img src="" alt=""></a>
-            </div>
-        </div>
-    </div>
-    <div class="forth">
         <h2>NEW</h2>
-        <div class="new_goods">
+        <div class="new_more">
             <a href="#">more</a>
+        </div>
+        <div class="new_goods">
             <div class="goods_photos">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
+                <img src="images/register_main_036.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>에테나 TV다이</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">70%</span>
+                <del>162,180</del>
+                <br> 
+                <span>95,400</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_055.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>올리브 아일랜드 식탁</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">42%</span>
+                <del>219,000</del>
+                <br> 
+                <span>126,00</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_025.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>메이 식탁겸용 책상</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">0%</span>
+                <del>159,000</del>
+                <br> 
+                <span>159,000</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_079.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>올리브 수납 렌지대</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">43%</span>
+                <del>109,000</del>
+                <br> 
+                <span>64,000</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/12061_main_04.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>데스크 게이밍 책상</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">52%</span>
+                <del>175,500</del>
+                <br> 
+                <span>85,000</span>
             </div>
         </div>
         <h2>BEST</h2>
-        <div class="best_goods">
+        <div class="best_more">
             <a href="#">more</a>
+        </div>
+        <div class="new_goods">
             <div class="goods_photos">
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a>
-                <a href="#"><img src="" alt=""></a> 
+                <img src="images/register_main_036.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>에테나 TV다이</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">70%</span>
+                <del>162,180</del>
+                <br> 
+                <span>95,400</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_055.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>올리브 아일랜드 식탁</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">42%</span>
+                <del>219,000</del>
+                <br> 
+                <span>126,00</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_025.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>메이 식탁겸용 책상</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">0%</span>
+                <del>159,000</del>
+                <br> 
+                <span>159,000</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/register_main_079.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>올리브 수납 렌지대</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">43%</span>
+                <del>109,000</del>
+                <br> 
+                <span>64,000</span>
+            </div>
+            <div class="goods_photos">
+                <img src="images/12061_main_04.jpg" alt="">
+                <div class="overlay">
+                    <div class="goodsText">
+                        <p>데스크 게이밍 책상</p>
+                    </div>
+                </div>
+            </div>
+            <div class="new_price">
+                <span class="goods_discount">52%</span>
+                <del>175,500</del>
+                <br> 
+                <span>85,000</span>
             </div>
         </div>
     </div>
-    <div class="megazine">
-        <div class="megazine_first">
-            <div class="left_text">
-                <h4>PRODUCT</h4>
-                <h2>2021 Indoor Collection</h2>
-                <p>Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. 
-                    Omnis, voluptatibus?</p>
+    <div class="megazine_box">
+        <div class="megazine_container">
+            <div class="megazine_row">
+                <div class="megazine_column-66">
+                <h1 class="megazine_xlarge-font"><b>PRODUCT</b></h1>
+                <h2 class="megazine_large-font" style="color:rgb(72, 84, 248);"><b>2021 Indoor Collection</b></h2>
+                <p class="long_text"><span style="font-size:36px">48년 전통</span> 
+                <br> You should buy this app because lorem ipsum consectetur adipiscing elit, 
+                <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                <br> Ut enim ad minim veniam, 
+                <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <button class="megazine_button" style="color: rgb(72, 84, 248);background-color:rgb(214, 255, 255)" >View More</button>
+                </div>
+                <div class="megazine_column-33">
+                    <img src="images/inside-3145341_1920.jpg" alt="megazine_one">
+                </div>
             </div>
-            <div class="right_photo">
-                <a href="#"><img src="" alt=""></a>
             </div>
-        </div>
-        <div class="megazine_second">
-            <div class="left_photo">
-                <a href=""><img src="" alt=""></a>
+        <div class="megazine_container" style="background-color:#f1f1f1">
+            <div class="megazine_row">
+                <div class="megazine_column-33">
+                <img src="images/sofa-5213406_1920.jpg" alt="App">
+                </div>
+                <div class="megazine_column-66">
+                <h1 class="megazine_xlarge-font"><b>Megazine</b></h1>
+                <h2 class="megazine_large-font" style="color:red;"><b>Your choice</b></h2>
+                <p class="long_text"><span style="font-size:24px">A revolution in resolution.</span> 
+                <br> You should buy this app because lorem ipsum consectetur adipiscing elit, 
+                <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                <br> Ut enim ad minim veniam, 
+                <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <button class="megazine_button" style="background-color:red">Read More</button>
+                </div>
             </div>
-            <div class="right_text">
-                <h4>PRODUCT</h4>
-                <h2>2021 Outdoor Collection</h2>
-                <p>Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. 
-                    Omnis, voluptatibus?</p>
             </div>
-        </div>
-        <div class="megazine_third">
-            <div class="left_photo">
-                <a href=""><img src="" alt=""></a>
+            <!-- The App Section -->
+            <div class="megazine_container">
+            <div class="megazine_row">
+                <div class="megazine_column-66">
+                <h1 class="megazine_xlarge-font"><b>Show Room</b></h1>
+                <h2 class="megazine_large-font" style="color:MediumSeaGreen;"><b>Comfortable Space</b></h2>
+                <div class="megazine_text">
+                    <p class="long_text"><span style="font-size:36px">Take photos like a pro.</span> 
+                    <br> You should buy this app because lorem ipsum consectetur adipiscing elit, 
+                    <br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                    <br> Ut enim ad minim veniam, 
+                    <br> quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <button class="megazine_button">Download Application</button>
+                </div>
+                <div class="megazine_column-33">
+                    <img src="images/furniture-998265_1920.jpg" alt="megazine_two">
+                </div>
             </div>
-            <div class="right_text_center">
-                <h2>Newsletter</h2>
-                <p>Lorem ipsum dolor sit amet, 
-                    consectetur adipisicing elit. 
-                    Omnis, voluptatibus?</p>
-            </div>
-            <button>SUBSCRIBE</button>
         </div>
     </div>
     <footer>
@@ -206,7 +389,7 @@
                 <span>(주)시공사</span>
                 <span>대표자:윤호권,박헌용</span>
                 <span>개인정보책임자: 이시민cs@casa.co.kr</span>
-                <span>고객센터1644-4676</span>
+                <span>고객센터1644-4931</span>
             </div>
             <div class="footer_third_line">
                 <span>서울특별시 성동구 성수동1가656-1748</span>
@@ -216,5 +399,29 @@
             </div>
         </div>
     </footer>
+<script>
+// 슬라이드 이미지
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 3500);
+}
+// 클릭 이미지
+function myfunction(imgs){
+    var expandedImg = document.getElementById("expandedImg");
+    expandedImg.src = imgs.src;
+    expandedImg.parentElement.style.display="block";
+}
+
+</script>
 </body>
 </html>

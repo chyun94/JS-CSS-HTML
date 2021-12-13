@@ -5,58 +5,63 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    #board{
+        float: left;
+        width: 400px;
+        height: 591px;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid black;
+    }
+    #img1{
+        /* board에서 넓이,높이를 지정해 줬기에 그에 맞게 100%로 지정 */
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    #cover{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* cover는 보이지는 않지만 이미지 위에 덮어주는 투명한 레이아웃이라 생각하면 된다.
+        제일 위로 불러와주기 위해 z-index를 사용한다. */
+        z-index: 2;
+    }
+    #pad{
+        float: left;
+        width: 400px;
+        height: 591px;
+        overflow: hidden;
+        border: 1px solid black;
+    }
+    /* html상태에서는 없지만 DOM객체로 만들때 적용되는 속성 */
+    #chaser{
+        border: 3px solid yellow;
+        position: absolute;
+        transition: all 0.0s;
+        width: 50px;
+        height: 50px;
+        transform: translate(-50% , -50%);
+        opacity: 0;
+    }
+    </style>
 </head>
-<style>
-#board{
-    float: left;
-    width: 400px;
-    height: auto;
-    overflow: hidden;
-    position: relative;
-}
-#img1{
-    /* board에서 넓이,높이를 지정해 줬기에 그에 맞게 100%로 지정 */
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-#cover{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    /* cover는 보이지는 않지만 이미지 위에 덮어주는 투명한 레이아웃이라 생각하면 된다.
-    제일 위로 불러와주기 위해 z-index를 사용한다. */
-    z-index: 100;
-}
-#pad{
-    float: left;
-    width: 400px;
-    height: auto;
-    overflow: hidden;
-}
-/* html상태에서는 없지만 DOM객체로 만들때 적용되는 속성 */
-#chaser{
-    border: 3px solid yellow;
-    position: absolute;
-    transition: all 0.0s;
-    width: 50px;
-    height: 50px;
-    transform: translate(-50% -50%);
-    opacity: 0;
-}
-</style>
 <body>
     <div id="board" onmouseleave="delet_box()">
-        <img id="img1" src="../개인공부/img/화보 (1).jpg" alt="">
+        <img id="img1" src="../개인공부/img/2.jpg" alt="">
+        <!-- 터치 스크린 (안보이는) -->
         <div id="cover" onmousemove="chase_box(event)"></div>
     </div>
+
     <div id="pad"></div>
+
     <script>
         // box,board,pad를 객체화 시켜주자.
         var box = document.createElement("div");    //DOM객체로 div만들어주기
-        box.setAttribute('id',chaser);              //만들어진 div에 chaser의 id속성 부여
+        box.setAttribute('id', 'chaser');              //만들어진 div에 chaser의 id속성 부여
         var board = document.getElementById("board");
         // 모든 DOM 객체는 Node객체를 상속 받는다
         board.appendChild(box);                     //
@@ -76,23 +81,21 @@
             var box_Xhalf = box.offsetWidth/2;
             var box_Yhalf = box.offsetHeight/2;
 
-            if(x<=box_Xhalf){
-                x = box_Xhalf;
-            }else{
-                if(x>=(board_X-box_Xhalf-3)) x=board_X-box_Xhalf-3;
-            }
-            if(y<=box_Yhalf){
-                y = box_Yhalf;
-            }else{
-                if(y>=(board_Y-box_Yhalf-3)) y=board_Y-box_Yhalf-3;
-            }
+            if(x<=box_Xhalf)x = box_Xhalf;
+            else if(x>=(board_X-box_Xhalf-3)) x=board_X-box_Xhalf-3;
+            
+            if(y<=box_Yhalf)y = box_Yhalf;
+            else if(y>=(board_Y-box_Yhalf-3)) y=board_Y-box_Yhalf-3;
+            
 
             box.style.left = x+"px";
             box.style.top = y+"px";
             var a = (-1*x*(board_X/box_X))+(box_Xhalf*(board_X/box_X));
-            var b = (-1*x*(board_Y/box_Y))+(box_Yhalf*(board_Y/box_Y));
+            var b = (-1*y*(board_Y/box_Y))+(box_Yhalf*(board_Y/box_Y));
             console.log(a,b);
-            pad.innerHTML="<img src='개인공부/img/화보 (1).jpg' style='width:"+((board_X/box_X)*100)+"%;height:"+((board_Y/box_Y)*100)+ "%;tranform:translateX("+a+"px)translateY("+b+"px);'>"
+            pad.innerHTML="<img src='../개인공부/img/2.jpg' style='width:"
+            +((board_X/box_X)*100)+"%;height:"+((board_Y/box_Y)*100)
+            + "%;tranform:translateX("+a+"px) translateY("+b+"px);'>"
         }
         function delet_box(){
             box.style.opacity="0";
