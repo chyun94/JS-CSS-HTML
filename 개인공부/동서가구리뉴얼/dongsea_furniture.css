@@ -82,13 +82,12 @@ ul.nav_menu{
     height: 2px;
     top: 0;
     left: 50%;
-    background-color: goldenrod;
+    background-color: rgb(3, 3, 3);
     content: '';
     transform-origin: left;
     transform: scale(0);
     transition: 0.3s;
     display: block;
-
 }
 .nav_menu li:hover:after{
     transform: scale(1);
@@ -419,10 +418,6 @@ div.goodsText > p {
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     white-space: nowrap;
-}
-div.new_goods{
-    /* border: 1px solid burlywood; */
-    /* padding: 2rem; */
 }
 div.new_package_box{
     /* border: 1px solid red; */
