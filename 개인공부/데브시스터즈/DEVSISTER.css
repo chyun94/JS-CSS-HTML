@@ -35,7 +35,6 @@ li{
 .TOP_logo_div a img{
     width: 180px;
     margin: 0 20%;
-    vertical-align: top;
 }
 /* TOP_gnb_menu */
 .TOP_gnb_menu{
@@ -76,7 +75,7 @@ li{
     justify-content: flex-end;
 }
 /* DropMenu */
-.TOP_gnb_menu_in{
+.TOP_gnb_menu_in ul{
     display: none;
 }
 .MID{
