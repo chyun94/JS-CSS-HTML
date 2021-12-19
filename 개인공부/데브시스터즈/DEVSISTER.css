@@ -75,8 +75,20 @@ li{
     justify-content: flex-end;
 }
 /* DropMenu */
-.TOP_gnb_menu_in ul{
+.TOP_gnb_menu > ul > li{
+    position: relative;
+}
+.TOP_gnb_menu > ul > li > div > ul{
     display: none;
+    position: absolute;
+    font-size: 1rem;
+    background: #ffffff;
+    color: #FD7622;
+    width: 100%;
+    
+}
+.TOP_gnb_menu > ul > li:hover > div > ul{
+    display: block;
 }
 .MID{
     width: 100%;

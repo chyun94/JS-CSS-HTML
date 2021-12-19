@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLB_Korea</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="cover">
+            <h1 class="logo"><img src="img/logo_mlb.png" alt="mlb_logo"></h1>
+            <div class="gnb" id="gnb">
+                <ul class="gnb_menu" id="gnb_menu">
+
+                    <li><a href="#">APPAREL</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">아우터</a></li>
+                            <li><a href="#">상의</a></li>
+                            <li><a href="#">하의</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">CAP</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">볼캡</a></li>
+                            <li><a href="#">스냅백</a></li>
+                            <li><a href="#">비니</a></li>
+                            <li><a href="#">HAT</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">SHOES</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">운동화</a></li>
+                            <li><a href="#">센들</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#">BAG</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">백팩</a></li>
+                            <li><a href="#">힙색</a></li>
+                            <li><a href="#">크로스백</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="#">ACC & PET</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">악세서리</a></li>
+                            <li><a href="#">PET</a></li>
+                            <li><a href="#">쥬얼리</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">KIDS</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">아우터</a></li>
+                            <li><a href="#">상의</a></li>
+                            <li><a href="#">하의</a></li>
+                            <li><a href="#">모자</a></li>
+                            <li><a href="#">슈즈</a></li>
+                            <li><a href="#">악세서리</a></li>
+                        </ul>
+                    </li>
+                        
+                    <li><a href="#">MONOGRAM</a>
+                        <ul class="drop_menu">
+                            <li><a href="#">어페럴</a></li>
+                            <li><a href="#">모자</a></li>
+                            <li><a href="#">슈즈</a></li>
+                            <li><a href="#">가방</a></li>
+                            <li><a href="#">ACC</a></li>
+                            <li><a href="#">키즈</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="gnb_img" id="gnb_img">
+                <a href="#"><img src="img/ico_nav_search.png" alt=""></a>
+                <a href="#"><img src="img/ico_nav_bag.png" alt=""></a>
+                <a href="#"><img src="img/ico_nav_my.png" alt=""></a>
+            </div>
+        </div>
+    </header>
+    <div>
+        <section>
+
+        </section>
+    </div>
+    <script>
+    $(".gnb_menu li").hover(function() {
+    $(this).children("ul").stop().slideToggle(500)
+    })
+    </script>
+</body>
+</html>

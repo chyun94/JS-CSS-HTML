@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--==================== UNICONS ====================-->
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+        
+        <!--==================== SWIPER CSS====================-->
+        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+        <!--==================== CSS ==========-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Choi's portfolio</title>
+    </head>
+    <body>
+        
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">Choi's</a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link active-link">
+                                <i class="uil uil-estate nav__icon"></i> Home
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">
+                                <i class="uil uil-user nav__icon"></i> About
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#skills" class="nav__link">
+                                <i class="uil uil-file-alt nav__icon"></i> Skills
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#services" class="nav__link">
+                                <i class="uil uil-briefcase-alt nav__icon"></i> Services
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#portfolio" class="nav__link">
+                                <i class="uil uil-scenery nav__icon"></i> Portfolio
+                            </a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#contact" class="nav__link">
+                                <i class="uil uil-message nav__icon"></i> Contactme
+                            </a>
+                        </li>
+
+                    </ul>
+                    
+                    <i class="uil uil-times nav__close" id="nav-close"></i>
+                </div>
+
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="uil uil-apps"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__content grid">
+                        <div class="home__social">
+                            <a href="https://blog.naver.com/choi__n719" target="_blank" class="home__social-icon">
+                                <i class="uil uil-blogger-alt"></i>
+                            </a>
+    
+                            <a href="https://www.instagram.com/hyun.b719/" target="_blank" class="home__social-icon">
+                                <i class="uil uil-instagram"></i>                           
+                            </a>
+                            <a href="https://github.com/chyun94" target="_blank" class="home__social-icon">
+                                <i class="uil uil-github-alt"></i>                            
+                            </a>
+                        </div>
+    
+                        <div class="home__img">
+                            <svg class="home__blob" viewBox="0 0 200 187">
+                                <mask id="mask0" mask-type="alpha">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                </mask>
+                                <g mask="url(#mask0)">
+                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+
+                                    <!--==================== 
+                                        Insert your image in the Img folder and Change your image |
+                                        Center your image with X: horizontal, Y: vertical 
+                                    ====================-->
+                                    <image class="home__blob-img" x="30" y="30" href="assets/img/me.png"/>
+                                </g>
+                            </svg>
+                        </div>
+
+                        <div class="home__data">
+                            <h1 class="home__title">안녕하세요 <br> 최 현빈입니다.</h1>
+                            <h3 class="home__subtitle">차근차근<i class="uil uil-arrow-growth"></i></h3>
+                            <p class="home__description">좋아하는 일은 취미로, 하고싶어 하는 것을 직업으로.
+                                기본을 제일 중요하게 생각하되 정체되어 있지 않고 꾸준한 성장을 하고자 합니다. <br>
+                                현재 JS를 이용한 문제를 풀고 있으며, <br>
+                                <span> <i class="uil uil-react">Recat</i></span> 와 <span><i> J-query</i></span>도 공부하고 있습니다.
+                                <br>추 후 여유가 생기면 좀 더 동적인 효과를 위해 SCSS도 꼭 접목하고 싶습니다.
+                            </p>
+                            <a href="#contact" class="button button--flex">
+                                Contact Me <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- 스크롤 다운 -->
+                    <div class="home__scroll">
+                        <a href="#about" class="home__scroll-button button--flex">
+                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                            <span class="home__scroll-name">Scroll down</span>
+                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <h2 class="section__title">저에대해서 소개를 합니다</h2>
+                <span class="section__subtitle">계획만은 기회는 오지 않는다. <br> 기회는 행동하는 것이다.</span>
+
+                <div class="about__container container grid">
+                    <img src="assets/img/choi.png" alt="" class="about__img">
+
+                    <div class="about__data">
+                        <p class="about__description">제 이야기가 좀 더 궁금하시면 아래의 이력에서 확인하실 수 있습니다!
+                        </p>
+
+                        <div class="about__info">
+                            <div>
+                                <span class="about__info-title">최현빈</span>
+                                <span class="about__info-name">나란 사람은?</span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">94.07.19</span>
+                                <span class="about__info-name"> 생년월일 </span>
+                            </div>
+
+                            <div>
+                                <span class="about__info-title">인천</span>
+                                <span class="about__info-name">출생지역</span>
+                            </div>
+
+                            
+                        </div>
+
+                        <div class="about__buttons">
+                            <!--==================== Change your CV ====================-->
+                            <a download="" href="assets/pdf/choi's의 이력서.pdf" class="button button--flex">
+                                이력서 받기 &emsp;<i class="uil uil-download-alt button__icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SKILLS ====================-->
+            <section class="skills section" id="skills">
+                <h2 class="section__title">기술</h2>
+                <span class="section__subtitle">저는 이런것이 가능해요</span>
+
+                <div class="skills__container container grid">
+                    <div>
+                        <!--=============== SKILLS 1 ===============-->
+                        <div class="skills__content skills__open">
+                            <div class="skills__header">
+                                <i class="uil uil-brackets-curly skills__icon"></i>
+    
+                                <div>
+                                    <h1 class="skills__title">프론트 엔드</h1>
+                                    <span class="skills__subtitle">4개월 이상</span>
+                                </div>
+    
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+    
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">HTML</h3>
+                                        <span class="skills__number">80%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__html"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">CSS</h3>
+                                        <span class="skills__number">70%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__css"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">JavaScript</h3>
+                                        <span class="skills__number">40%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__js"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">React</h3>
+                                        <span class="skills__number">5%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__jp"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--=============== SKILLS 2 ===============-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-server-network skills__icon"></i>
+    
+                                <div>
+                                    <h1 class="skills__title">기타</h1>
+                                    <span class="skills__subtitle">4년</span>
+                                </div>
+    
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+    
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">일본어</h3>
+                                        <span class="skills__number">80%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__php"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <!--=============== SKILLS 3 ===============-->
+                        <div class="skills__content skills__close">
+                            <div class="skills__header">
+                                <i class="uil uil-swatchbook skills__icon"></i>
+    
+                                <div>
+                                    <h1 class="skills__title">디자인</h1>
+                                    <span class="skills__subtitle">4개월 이상</span>
+                                </div>
+    
+                                <i class="uil uil-angle-down skills__arrow"></i>
+                            </div>
+    
+                            <div class="skills__list grid">
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Adobe XD</h3>
+                                        <span class="skills__number">80%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__xd"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Ad Illustrator</h3>
+                                        <span class="skills__number">40%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__ai"></span>
+                                    </div>
+                                </div>
+    
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Photoshop</h3>
+                                        <span class="skills__number">85%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__photoshop"></span>
+                                    </div>
+                                </div>
+
+                                <div class="skills__data">
+                                    <div class="skills__titles">
+                                        <h3 class="skills__name">Procreate</h3>
+                                        <span class="skills__number">60%</span>
+                                    </div>
+                                    <div class="skills__bar">
+                                        <span class="skills__percentage skills__procreate"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== QUALIFICATION ====================-->
+            <section class="qualification section">
+                <h2 class="section__title">발자취</h2>
+                <span class="section__subtitle">이력을 한눈에</span>
+
+                <div class="qualification__container container">
+                    <div class="qualification__tabs">
+                        <div class="qualification__button button--flex qualification__active" data-target="#education">
+                            <i class="uil uil-graduation-cap qualification__icon"></i>
+                            학력
+                        </div>
+
+                        <div class="qualification__button button--flex" data-target="#work">
+                            <i class="uil uil-briefcase-alt qualification__icon"></i>
+                            경력
+                        </div>                      
+                    </div>
+
+                    <div class="qualification__sections">
+                        <!--=============== QUALIFICATION CONTENT 1 ===============-->
+                        <div class="qualification__content qualification__active" data-content id="education">
+                            <!--=============== 학력 1 ===============-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">일어일문학과</h3>
+                                    <span class="qualification__subtitle">대전 - 대전대학교</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2013.3 - 2020.8
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            
+                            <!--=============== 학력 2 ===============-->
+                            <div class="qualification__data">                                 
+                                <div></div>
+
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                        
+                                <div>
+                                    <h3 class="qualification__title">공정무역 <a  href="https://news.mt.co.kr/mtview.php?no=2019012516517417603"><i class="uil uil-question-circle"></i></a></h3>
+                                    <span class="qualification__subtitle">대전 - 대전대학교</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2018.3 - 2019.3
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <!--=============== 학력 3 ===============-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">교수법</h3>
+                                    <span class="qualification__subtitle">일본 - 홋카이 학원대학</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019.4 - 2020.3
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+    
+                            <!--=============== 학력 4 ===============-->
+                            <div class="qualification__data">
+                                <div></div>
+                                
+                                <div class="qualification__time">
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">대전대학교,<br>홋카이학원대학교</h3>
+                                    <span class="qualification__subtitle">졸업</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2020.08
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!--=============== 경력 ===============-->
+                        <div class="qualification__content" data-content id="work">
+                            <!--=============== 경력 1 ===============-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">한국어 과외</h3>
+                                    <span class="qualification__subtitle">일본 - 개인 과외</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019.06 - 2019.10
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            
+                            <!--=============== 경력 2 ===============-->
+                            <div class="qualification__data">
+
+                                <div class="qualification__time">
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">로타리 활동 <a href="assets/pdf/choi's_로타리.pdf"><i class="uil uil-question-circle"></i></a> </h3>
+                                    <span class="qualification__subtitle">일본 - 외교 발표</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2019.06 - 2019.12
+                                    </div>
+                                </div>
+                            </div>
+                            <!--=============== 경력 3 ===============-->
+                            <div class="qualification__data">
+                                <div>
+                                    <h3 class="qualification__title">JSL인재개발원</h3>
+                                    <span class="qualification__subtitle">대전 - java 백엔드</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2020.07 - 2021.02 
+                                    </div>
+                                </div>
+    
+                                <div>
+                                    <span class="qualification__rounder"></span>
+                                    <span class="qualification__line"></span>
+                                </div>
+                            </div>
+                            <!--=============== 경력 4 ===============-->
+                            <div class="qualification__data">
+                                <div></div>
+                                
+                                <div class="qualification__time">
+                                    <span class="qualification__rounder"></span>
+                                    <!-- <span class="qualification__line"></span> -->
+                                </div>
+
+                                <div>
+                                    <h3 class="qualification__title">Ui/Ux 웹퍼블리셔</h3>
+                                    <span class="qualification__subtitle">대전 - 미래융합 교육센터</span>
+                                    <div class="qualification__calendar">
+                                        <i class="uil uil-calendar-alt"></i>
+                                        2021.07 - 2021.12
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== SERVICES ====================-->
+            <section class="services section" id="services">
+                <h2 class="section__title">서비스</h2>
+                <span class="section__subtitle">제공</span>
+
+                <div class="services__container container grid">
+                    <!--=============== SERVICES 1 ===============-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-web-grid services__icon"></i>
+                            <h3 class="services__title">Ui/Ux <br> Designer</h3>
+                        </div>
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Ui/Ux <br> Designer</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+    
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>반응형 디자인</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>애니메이션 구현</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=============== SERVICES 2 ===============-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-arrow services__icon"></i>
+                            <h3 class="services__title">Frontend <br> Developer</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Frontend <br> Developer</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+    
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>JQuery</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--=============== SERVICES 3 ===============-->
+                    <div class="services__content">
+                        <div>
+                            <i class="uil uil-pen services__icon"></i>
+                            <h3 class="services__title">Branding <br> Designer</h3>
+                        </div>
+
+                        <span class="button button--flex button--small button--link services__button">
+                            View More 
+                            <i class="uil uil-arrow-right button__icon"></i>
+                        </span>
+
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <h4 class="services__modal-title">Branding <br> Designer</h4>
+                                <i class="uil uil-times services__modal-close"></i>
+    
+                                <ul class="services__modal-services grid">
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>잡지</p>
+                                        
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>일러스트</p>
+                                    </li>
+                                    <li class="services__modal-service">
+                                        <i class="uil uil-check-circle services__modal-icon"></i>
+                                        <p>사진</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--==================== PORTFOLIO ====================-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">포트폴리오</h2>
+                <span class="section__subtitle">최근 작업</span>
+
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+                        <!--=============== PORTFOLIO 1 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/애플홈페이지.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Apple_korea홈페이지 마크업</h3>
+                                <p class="portfolio__description">애플 코리아 마크업, 반응형 <br><br>
+                                    1. CSS의 Media로 반응형 제작<br>
+                                    2. 'setIntervar'로 슬라이드 기능 구현<br>
+                                    3. JS와 CSS로 토글메뉴 기능 구현<br>
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!--=============== PORTFOLIO 2 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/동서가구.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">동서가구 리뉴얼</h3>
+                                <p class="portfolio__description">전체적인 리디자인 <br><br>
+                                    1. 몬드리안 느낌으로 리디자인
+                                    <br>
+                                    2. JS와CSS로 제품 확대 기능 추가
+                                    <br>
+                                    3. CSS의 애니메이션 효과를 추가
+                                    <br>
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+    
+                        <!--=============== PORTFOLIO 3 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/데브시스터즈.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">데브시스터즈 마크업</h3>
+                                <p class="portfolio__description">데브시스터즈 마크업<br><br>
+                                    1. x,y좌표를 이용해 마우스 커서 디자인<br>
+                                    2. 슬라이드 기능 구현<br>
+                                    
+                                </p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
+            <!--==================== 기타 포폴 ====================-->
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title">포트폴리오</h2>
+                <span class="section__subtitle">프로크리에이트 작업</span>
+                <div class="portfolio__container container swiper-container">
+                    <div class="swiper-wrapper">
+
+                        <!--==================== 포폴1 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/procreate4.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">프로크리에이트 작업</h3>
+                                    <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                                    <span class="home__scroll-name">Scroll down</span>
+                                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                            </div>
+                        </div>
+                        <!--==================== 포폴2 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/porcreate1.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">프로크리에이트 작업</h3>
+                                <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                                    <span class="home__scroll-name">Scroll down</span>
+                                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                            </div>
+                        </div>
+                        <!--==================== 포폴3 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/porcreate2.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">프로크리에이트 작업</h3>
+                                <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                                <span class="home__scroll-name">Scroll down</span>
+                                <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                            </div>
+                        </div>
+                        <!--==================== 포폴4 ====================-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/porcreate3.jpg" alt="" class="portfolio__img">
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">프로크리에이트 작업</h3>
+                                <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                                    <span class="home__scroll-name">Scroll down</span>
+                                    <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="swiper-button-next">
+                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+            </div>
+            <div class="swiper-button-prev">
+                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+            </div>
+
+            <div class="swiper-pagination"></div>
+            <!--==================== PROJECT IN MIND ====================-->
+            <section class="project section">
+                <div class="project__bg">
+                    <div class="project__container container grid">
+                        <div class="project__data">
+                            <h2 class="project__title">Choi's 선택 받는것</h2>
+                            <p class="project__description">스쳐지나가는 모든것은 연결되어 있다고 생각합니다.</p>
+                            <a href="#" class="button button--flex button--white">
+                                Contact Me
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+    
+                        <img src="assets/img/choi_small_size.png" alt="" class="project__img">
+                    </div>
+                </div>
+            </section>
+
+
+            <!--==================== CONTACT ME ====================-->
+            <section class="contact section" id="contact">
+                <h2 class="section__title">Contact Me</h2>
+                <span class="section__subtitle">연락하기</span>
+
+                <div class="contact__container container grid">
+                    <div>
+                        <div class="contact__information">
+                            <i class="uil uil-phone contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Call Me</h3>
+                                <span class="contact__subtitle">010-2231-8195</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-envelope contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Email</h3>
+                                <span class="contact__subtitle">hyunin94@naver.com</span>
+                            </div>
+                        </div>
+
+                        <div class="contact__information">
+                            <i class="uil uil-map-marker contact__icon"></i>
+                            <div>
+                                <h3 class="contact__title">Location</h3>
+                                <span class="contact__subtitle">대한민국 대전광역시 중구 목동</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contact__form grid">
+                        <div class="contact__inputs grid">
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Name</label>
+                                <input type="text" class="contact__input">
+                            </div>
+                            <div class="contact__content">
+                                <label for="" class="contact__label">Email</label>
+                                <input type="email" class="contact__input">
+                            </div>
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Project</label>
+                            <input type="text" class="contact__input">
+                        </div>
+                        <div class="contact__content">
+                            <label for="" class="contact__label">Message</label>
+                            <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        </div>
+                        
+                        <div>
+                            <a href="#" class="button button--flex">
+                                메세지 보내기
+                                <i class="uil uil-message button__icon"></i>
+                            </a>
+                        </div>
+                    </form>
+                </div>
+
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__bg">
+                <div class="footer__container container grid">
+                    <div>
+                        <h1 class="footer__title">Choi's</h1>
+                        <span class="footer__subtitle">성장하는 사람은 <br> 성공하는 사람</span>
+                    </div>
+
+                    <ul class="footer__links">
+                        <li>
+                            <a href="#services" class="footer__link"></a>
+                        </li>
+                        <li>
+                            <a href="#portfolio" class="footer__link"></a>
+                        </li>
+                        <li>
+                            <a href="#contact" class="footer__link"></a>
+                        </li>
+                    </ul>
+
+                    <div class="footer__socials">
+                        <a href="https://blog.naver.com/choi__n719" target="_blank" class="footer__social">
+                            <i class="uil uil-blogger-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/hyun.b719/" target="_blank" class="footer__social">
+                            <i class="uil uil-instagram"></i>
+                        </a>
+                        <a href="https://github.com/chyun94" target="_blank" class="footer__social">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <p class="footer__copy">&#169; Choi's Portfolio. All right reserved</p>
+            </div>
+        </footer>
+        <!--==================== 마우스 ====================-->
+        <div class="mouse" id="mouse">
+            <span class="l-1 letter">C</span>
+            <span class="l-2 letter">h</span>
+            <span class="l-3 letter">o</span>
+            <span class="l-4 letter">i</span>
+            <span class="l-5 letter">'</span>
+            <span class="l-6 letter">s</span>
+            <span class="l-7 letter">t</span>
+            <span class="l-8 letter">o</span>
+            <span class="l-9 letter">r</span>
+            <span class="l-10 letter">y</span>
+        </div>
+        <!--========== 스크롤 위로 ==========-->
+        <a href="#" class="scrollup" id="scroll-top">
+            <i class="uil uil-arrow-up scrollup__icon"></i>
+        </a>
+
+        <!--==================== SWIPER JS ====================-->
+        <script src="assets/js/swiper-bundle.min.js"></script>
+
+        <!--==================== MAIN JS ====================-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
