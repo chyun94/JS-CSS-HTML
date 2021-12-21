@@ -115,6 +115,15 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
         clickable: true,
     },
 });
+let swiperPortfolio_second = new Swiper('.portfolio__container_second', {
+    cssMode: true,
+    loop: true,
+
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
 
 /*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
 const sections = document.querySelectorAll('section[id]')

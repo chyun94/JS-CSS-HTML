@@ -3,24 +3,35 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+        
         <!--==================== UNICONS ====================-->
         <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
         
-        <!--==================== SWIPER CSS====================-->
+        <!--==================== 스왑 CSS====================-->
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
 
-        <!--==================== CSS ==========-->
+        <!--==================== CSS링크 ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
         <title>Choi's portfolio</title>
     </head>
     <body>
         
-        <!--==================== HEADER ====================-->
+        <!--==================== 헤더 ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Choi's</a>
+                <a href="#" class="nav__logo" id="logo_rainbow">
+                    <span class="l-1 letter">C</span>
+                    <span class="l-2 letter">h</span>
+                    <span class="l-3 letter">o</span>
+                    <span class="l-4 letter">i</span>
+                    <span class="l-5 letter">'</span>
+                    <span class="l-6 letter">s</span>
+                    <span class="l-7 letter">t</span>
+                    <span class="l-8 letter">o</span>
+                    <span class="l-9 letter">r</span>
+                    <span class="l-10 letter">y</span>
+                </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -121,11 +132,11 @@
                         <div class="home__data">
                             <h1 class="home__title">안녕하세요 <br> 최 현빈입니다.</h1>
                             <h3 class="home__subtitle">차근차근<i class="uil uil-arrow-growth"></i></h3>
-                            <p class="home__description">좋아하는 일은 취미로, 하고싶어 하는 것을 직업으로.
-                                기본을 제일 중요하게 생각하되 정체되어 있지 않고 꾸준한 성장을 하고자 합니다. <br>
-                                현재 JS를 이용한 문제를 풀고 있으며, <br>
-                                <span> <i class="uil uil-react">Recat</i></span> 와 <span><i> J-query</i></span>도 공부하고 있습니다.
-                                <br>추 후 여유가 생기면 좀 더 동적인 효과를 위해 SCSS도 꼭 접목하고 싶습니다.
+                            <p class="home__description">좋아하는 일은 취미로, 잘하는 것을 직업으로. <br>
+                                기본을 제일 중요하게 정체되어 있지 않고, <br> 꾸준한 배움을 원합니다. <br>
+                                <i><span>Stylish</span></i> 하고 <i><span>Simple</span></i>함을 추구합니다. <br>
+                                <hr><br>
+                                
                             </p>
                             <a href="#contact" class="button button--flex">
                                 Contact Me <i class="uil uil-message button__icon"></i>
@@ -160,7 +171,7 @@
                         <div class="about__info">
                             <div>
                                 <span class="about__info-title">최현빈</span>
-                                <span class="about__info-name">나란 사람은?</span>
+                                <span class="about__info-name">차분한 사람</span>
                             </div>
 
                             <div>
@@ -179,21 +190,21 @@
                         <div class="about__buttons">
                             <!--==================== Change your CV ====================-->
                             <a download="" href="assets/pdf/choi's의 이력서.pdf" class="button button--flex">
-                                이력서 받기 &emsp;<i class="uil uil-download-alt button__icon"></i>
+                                Resume Download &emsp;<i class="uil uil-download-alt button__icon"></i>
                             </a>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!--==================== SKILLS ====================-->
+            <!--==================== 기술 ====================-->
             <section class="skills section" id="skills">
                 <h2 class="section__title">기술</h2>
                 <span class="section__subtitle">저는 이런것이 가능해요</span>
 
                 <div class="skills__container container grid">
                     <div>
-                        <!--=============== SKILLS 1 ===============-->
+                        <!--=============== 프론트 엔드 ===============-->
                         <div class="skills__content skills__open">
                             <div class="skills__header">
                                 <i class="uil uil-brackets-curly skills__icon"></i>
@@ -249,7 +260,7 @@
                             </div>
                         </div>
     
-                        <!--=============== SKILLS 2 ===============-->
+                        <!--=============== 기타  ===============-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-server-network skills__icon"></i>
@@ -277,7 +288,7 @@
                     </div>
 
                     <div>
-                        <!--=============== SKILLS 3 ===============-->
+                        <!--=============== 디자인 ===============-->
                         <div class="skills__content skills__close">
                             <div class="skills__header">
                                 <i class="uil uil-swatchbook skills__icon"></i>
@@ -451,14 +462,15 @@
                             
                             <!--=============== 경력 2 ===============-->
                             <div class="qualification__data">
-
+                                <div></div>
+                                
                                 <div class="qualification__time">
                                     <span class="qualification__rounder"></span>
                                     <span class="qualification__line"></span>
                                 </div>
 
                                 <div>
-                                    <h3 class="qualification__title">로타리 활동 <a href="assets/pdf/choi's_로타리.pdf"><i class="uil uil-question-circle"></i></a> </h3>
+                                    <h3 class="qualification__title">로타리 활동 <a href="assets/pdf/choi's_로타리.pdf"><i class="uil uil-question-circle"></i></a></h3>
                                     <span class="qualification__subtitle">일본 - 외교 발표</span>
                                     <div class="qualification__calendar">
                                         <i class="uil uil-calendar-alt"></i>
@@ -466,6 +478,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <!--=============== 경력 3 ===============-->
                             <div class="qualification__data">
                                 <div>
@@ -505,13 +518,13 @@
                 </div>
             </section>
 
-            <!--==================== SERVICES ====================-->
+            <!--==================== 서비스 ====================-->
             <section class="services section" id="services">
                 <h2 class="section__title">서비스</h2>
                 <span class="section__subtitle">제공</span>
 
                 <div class="services__container container grid">
-                    <!--=============== SERVICES 1 ===============-->
+                    <!--=============== 서비스 1 ===============-->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-web-grid services__icon"></i>
@@ -541,7 +554,7 @@
                         </div>
                     </div>
 
-                    <!--=============== SERVICES 2 ===============-->
+                    <!--=============== 서비스 2 ===============-->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-arrow services__icon"></i>
@@ -572,7 +585,7 @@
                         </div>
                     </div>
 
-                    <!--=============== SERVICES 3 ===============-->
+                    <!--=============== 서비스 3 ===============-->
                     <div class="services__content">
                         <div>
                             <i class="uil uil-pen services__icon"></i>
@@ -628,7 +641,7 @@
                                     2. 'setIntervar'로 슬라이드 기능 구현<br>
                                     3. JS와 CSS로 토글메뉴 기능 구현<br>
                                 </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
+                                <a href="http://chyun94.dothome.co.kr/apple.index.html" class="button button--flex button--small portfolio__button">
                                     Link
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
@@ -667,12 +680,48 @@
                                     2. 슬라이드 기능 구현<br>
                                     
                                 </p>
-                                <a href="#" class="button button--flex button--small portfolio__button">
+                                <a href="http://chyun94.dothome.co.kr/DEVSISTERS.html" class="button button--flex button--small portfolio__button">
                                     Link
                                     <i class="uil uil-arrow-right button__icon"></i>
                                 </a>
                             </div>
                         </div>
+                        <!--=============== PORTFOLIO 4 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/homeCheck.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">HomeCheck 마크업</h3>
+                                <p class="portfolio__description">HomeCheck 마크업<br><br>
+                                    1. css를 활용하여 마크업 <br>
+                                    2. 반응형 구현
+                                    
+                                </p>
+                                <a href="http://chyun94.dothome.co.kr/homecheck.html" class="button button--flex button--small portfolio__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <!--=============== PORTFOLIO 5 ===============-->
+                        <div class="portfolio__content grid swiper-slide">
+                            <img src="assets/img/lh.png" alt="" class="portfolio__img">
+    
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">LH한국 토지공사 마크업</h3>
+                                <p class="portfolio__description">LH한국 토지공사 마크업<br><br>
+                                    1. css만을 활용하여 마크업 <br>
+                                    2. 반응형 구현
+                                    
+                                </p>
+                                <a href="http://chyun94.dothome.co.kr/lh_index.html" class="button button--flex button--small portfolio__button">
+                                    Link
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        
                     </div>
 
                     <div class="swiper-button-next">
@@ -689,7 +738,7 @@
             <section class="portfolio section" id="portfolio">
                 <h2 class="section__title">포트폴리오</h2>
                 <span class="section__subtitle">프로크리에이트 작업</span>
-                <div class="portfolio__container container swiper-container">
+                <div class="portfolio__container_second container swiper-container">
                     <div class="swiper-wrapper">
 
                         <!--==================== 포폴1 ====================-->
@@ -735,33 +784,30 @@
                     </div>
                 </div>
             </section>
-
-            <div class="swiper-button-next">
-                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-            </div>
-            <div class="swiper-button-prev">
+            
+            
+            <!-- <div class="swiper-button-prev">
                 <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-            </div>
-
+            </div> -->
             <div class="swiper-pagination"></div>
-            <!--==================== PROJECT IN MIND ====================-->
+            <!--==================== 다짐? ====================-->
             <section class="project section">
                 <div class="project__bg">
                     <div class="project__container container grid">
                         <div class="project__data">
                             <h2 class="project__title">Choi's 선택 받는것</h2>
-                            <p class="project__description">스쳐지나가는 모든것은 연결되어 있다고 생각합니다.</p>
+                            <p class="project__description">자신이 누군가를 선택받는 것도 좋지만 '나(자신)'을
+                                <br>필요로 해주는 사람이 있다는 것은 엄청난 '행복' 이라고 생각합니다.
+                            </p>
                             <a href="#" class="button button--flex button--white">
                                 Contact Me
                                 <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
-    
                         <img src="assets/img/choi_small_size.png" alt="" class="project__img">
                     </div>
                 </div>
             </section>
-
 
             <!--==================== CONTACT ME ====================-->
             <section class="contact section" id="contact">
@@ -817,7 +863,7 @@
                         
                         <div>
                             <a href="#" class="button button--flex">
-                                메세지 보내기
+                                Send Message
                                 <i class="uil uil-message button__icon"></i>
                             </a>
                         </div>
@@ -827,13 +873,13 @@
             </section>
         </main>
 
-        <!--==================== FOOTER ====================-->
+        <!--==================== 푸터 ====================-->
         <footer class="footer">
             <div class="footer__bg">
                 <div class="footer__container container grid">
                     <div>
                         <h1 class="footer__title">Choi's</h1>
-                        <span class="footer__subtitle">성장하는 사람은 <br> 성공하는 사람</span>
+                        <span class="footer__subtitle">'성장'하는 사람은 <br> '성공'하는 사람</span>
                     </div>
 
                     <ul class="footer__links">
@@ -882,10 +928,10 @@
             <i class="uil uil-arrow-up scrollup__icon"></i>
         </a>
 
-        <!--==================== SWIPER JS ====================-->
+        <!--==================== 스와이프 JS ====================-->
         <script src="assets/js/swiper-bundle.min.js"></script>
 
-        <!--==================== MAIN JS ====================-->
+        <!--==================== JS링크 ====================-->
         <script src="assets/js/main.js"></script>
     </body>
 </html>

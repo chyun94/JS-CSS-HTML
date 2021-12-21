@@ -75,6 +75,20 @@ body.dark-theme {
   --scroll-thumb-color: hsl(var(--hue-color), 12%, 36%);
 }
 /*========== Mouse ==========*/
+.logo_rainbow{
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translate(30%, 80%);
+  display: flex;
+  z-index: 100;
+}
+#logo_rainbow .letter{
+  animation-name: loadingF;
+  animation-duration: 1.8s;
+  animation-iteration-count: infinite;
+  animation-direction: linear;
+}
 .mouse{
   position: absolute;
   left: 0;
@@ -154,7 +168,7 @@ color: rgb(99, 99, 192);
   color: var(--first-color);
 }
 
-/*==================== BASE ====================*/
+/*==================== 기초 ====================*/
 * {
   box-sizing: border-box;
   padding: 0;
@@ -191,7 +205,7 @@ img {
   height: auto;
 }
 
-/*==================== REUSABLE CSS CLASSES ====================*/
+/*==================== css클레스 ====================*/
 .section {
   padding: 2rem 0 4rem;
 }
@@ -211,7 +225,7 @@ img {
   text-align: center;
 }
 
-/*==================== LAYOUT ====================*/
+/*==================== 레이아웃 ====================*/
 .container {
   max-width: 768px;
   margin-left: var(--mb-1-5);
@@ -232,7 +246,7 @@ img {
   background-color: var(--body-color);
 }
 
-/*==================== NAV ====================*/
+/*==================== nav메뉴 ====================*/
 .nav {
   max-width: 968px;
   height: var(--header-height);
@@ -323,7 +337,7 @@ img {
   box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.15);
 }
 
-/*==================== HOME ====================*/
+/*==================== 메인(home) ====================*/
 .home__container {
   gap: 1rem;
 }
@@ -405,7 +419,7 @@ img {
   font-size: 1.25rem;
 }
 
-/*========== BUTTONS ==========*/
+/*========== 버튼 디자인 ==========*/
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -493,7 +507,7 @@ img {
   justify-content: center;
 }
 
-/*==================== SKILLS ====================*/
+/*==================== 기술부분 ====================*/
 .skills__container {
   row-gap: 0;
 }
@@ -619,7 +633,7 @@ img {
   transform: rotate(-180deg);
 }
 
-/*==================== QUALIFICATION ====================*/
+/*==================== 이력 ====================*/
 .qualification__tabs {
   display: flex;
   justify-content: space-evenly;
@@ -691,7 +705,7 @@ img {
   color: var(--first-color);
 }
 
-/*==================== SERVICES ====================*/
+/*==================== 서비스 ====================*/
 .services__container {
   gap: 1.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -791,7 +805,7 @@ img {
   visibility: visible;
 }
 
-/*==================== PORTFOLIO ====================*/
+/*==================== 포폴부분 ====================*/
 .portfolio__container {
   overflow: initial;
 }
